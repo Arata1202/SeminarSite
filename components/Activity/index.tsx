@@ -184,7 +184,7 @@ export default function Activity() {
             <img
               alt=""
               src="/images/member/8007A0FE-E8A9-4322-BEC6-B230B17A7345_1_201_a.jpeg"
-              className="w-full object-cover"
+              className="w-full object-cover rounded-2xl"
             />
           </div>
           <div className="mt-10">
@@ -224,7 +224,7 @@ export default function Activity() {
             <img
               alt=""
               src="/images/member/B84EE05A-F8C7-4BF2-95A1-7D630BE17E57_1_201_a.jpeg"
-              className="w-full object-cover"
+              className="w-full object-cover rounded-2xl"
             />
           </div>
           <div className="mt-10">
@@ -264,7 +264,7 @@ export default function Activity() {
             <img
               alt=""
               src="/images/member/6D9D88FF-01AC-4AF8-A43C-53C85CEFDA32_1_201_a.jpeg"
-              className="w-full object-cover"
+              className="w-full object-cover rounded-2xl"
             />
           </div>
           <div className="mt-10">
@@ -298,7 +298,7 @@ export default function Activity() {
             <img
               alt=""
               src="/images/member/6D9D88FF-01AC-4AF8-A43C-53C85CEFDA32_1_201_a.jpeg"
-              className="w-full object-cover"
+              className="w-full object-cover rounded-2xl"
             />
           </div>
           <h1 className="text-3xl font-bold">
