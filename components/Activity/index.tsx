@@ -1,11 +1,5 @@
 import '../../app/globals.css';
 import { FireIcon, ChevronRightIcon, HomeIcon, CalendarDaysIcon } from '@heroicons/react/24/solid';
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-} from '@heroicons/react/24/outline';
 
 export default function Activity() {
   const timeline = [
@@ -108,32 +102,6 @@ export default function Activity() {
         'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
       date: '4月',
       dateTime: '2021-08',
-    },
-  ];
-  const features = [
-    {
-      name: '輪読',
-      description:
-        'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-      icon: CloudArrowUpIcon,
-    },
-    {
-      name: 'ディベート',
-      description:
-        'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-      icon: LockClosedIcon,
-    },
-    {
-      name: '就活報告メール',
-      description:
-        'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-      icon: ArrowPathIcon,
-    },
-    {
-      name: '卒業論文',
-      description:
-        'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-      icon: FingerPrintIcon,
     },
   ];
   return (

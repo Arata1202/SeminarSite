@@ -7,7 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "eslint components/ app/ --fix",
+    "prepare": "husky install",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint components/ app/ --fix",
+      "prettier --write"
+    ]
   },
   "prettier": {
     "trailingComma": "all",
@@ -47,6 +55,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "postcss": "^8.4.45",
     "tailwindcss": "^3.4.10"
   }

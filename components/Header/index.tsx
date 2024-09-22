@@ -1,41 +1,9 @@
 'use client';
 
 import { useState, Fragment } from 'react';
-import { Dialog, Popover, Transition } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { Dialog, Transition } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import styles from './index.module.css';
-
-const products = [
-  {
-    name: 'Analytics',
-    description: 'Get a better understanding of your traffic',
-    href: '#',
-  },
-  {
-    name: 'Engagement',
-    description: 'Speak directly to your customers',
-    href: '#',
-  },
-  {
-    name: 'Security',
-    description: 'Your customers’ data will be safe and secure',
-    href: '#',
-  },
-  {
-    name: 'Integrations',
-    description: 'Connect with third-party tools',
-    href: '#',
-  },
-  {
-    name: 'Automations',
-    description: 'Build strategic funnels that will convert',
-    href: '#',
-  },
-];
-const callsToAction = [
-  { name: 'Watch demo', href: '#' },
-  { name: 'Contact sales', href: '#' },
-];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -157,7 +125,12 @@ export default function Header() {
                   <XMarkIcon className="h-6 w-6 text-gray-900" aria-hidden="true" />
                   <span className="sr-only">Close menu</span>
                 </button>
-                <div className="bg-gray-300 text-center py-2 text-xl font-bold">Menu</div>
+                <div
+                  className="text-white text-center py-2 text-xl font-bold"
+                  style={{ backgroundColor: '#017247' }}
+                >
+                  Menu
+                </div>
                 <ul className="mt-5 space-y-6">
                   <li>
                     <a

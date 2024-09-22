@@ -8,8 +8,6 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export default function Example() {
-  const [agreed, setAgreed] = useState(false);
-
   const [show, setContactConfirmShow] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const [formData, setContactFormData] = useState<FormData | null>(null);

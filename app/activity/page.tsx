@@ -1,5 +1,3 @@
-import { getList } from '@/libs/microcms';
-import { LIMIT } from '@/constants';
 import Activity from '@/components/Activity';
 
 export const revalidate = 60;
@@ -17,9 +15,6 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const data = await getList({
-    limit: LIMIT,
-  });
   return (
     <>
       <Activity />

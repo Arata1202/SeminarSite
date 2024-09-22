@@ -1,6 +1,5 @@
 import '../../app/globals.css';
 import {
-  UserIcon,
   CheckBadgeIcon,
   AcademicCapIcon,
   UserGroupIcon,

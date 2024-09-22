@@ -1,5 +1,3 @@
-import { getList } from '@/libs/microcms';
-import { LIMIT } from '@/constants';
 import Copyright from '@/components/Copyright';
 
 export const revalidate = 60;
@@ -20,9 +18,6 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const data = await getList({
-    limit: LIMIT,
-  });
   return (
     <>
       <Copyright />
