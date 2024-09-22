@@ -162,7 +162,7 @@ export default function Activity() {
                   <div key={item.name} className="text-left">
                     <time
                       dateTime={item.dateTime}
-                      className="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+                      className="flex items-center text-sm font-semibold leading-6 text-green-700"
                     >
                       <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 h-1 w-1 flex-none">
                         <circle r={2} cx={2} cy={2} fill="currentColor" />
@@ -202,7 +202,7 @@ export default function Activity() {
                   <div key={item.name} className="text-left">
                     <time
                       dateTime={item.dateTime}
-                      className="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+                      className="flex items-center text-sm font-semibold leading-6 text-green-600"
                     >
                       <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 h-1 w-1 flex-none">
                         <circle r={2} cx={2} cy={2} fill="currentColor" />
@@ -242,7 +242,7 @@ export default function Activity() {
                   <div key={item.name} className="text-left">
                     <time
                       dateTime={item.dateTime}
-                      className="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+                      className="flex items-center text-sm font-semibold leading-6 text-green-600"
                     >
                       <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 h-1 w-1 flex-none">
                         <circle r={2} cx={2} cy={2} fill="currentColor" />
@@ -282,7 +282,7 @@ export default function Activity() {
                   <div key={item.name} className="text-left">
                     <time
                       dateTime={item.dateTime}
-                      className="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+                      className="flex items-center text-sm font-semibold leading-6 text-green-600"
                     >
                       <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 h-1 w-1 flex-none">
                         <circle r={2} cx={2} cy={2} fill="currentColor" />
