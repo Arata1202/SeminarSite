@@ -1,12 +1,7 @@
 import { Metadata } from 'next';
 import { getDetail } from '@/libs/microcms';
 import Article from '@/components/Article';
-import {
-  InformationCircleIcon,
-  ChevronRightIcon,
-  HomeIcon,
-  DocumentIcon,
-} from '@heroicons/react/24/solid';
+import { ChevronRightIcon, HomeIcon, DocumentIcon } from '@heroicons/react/24/solid';
 
 type Props = {
   params: {
@@ -25,11 +20,10 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   });
 
   return {
-    //検証 OK
-    title: data.title + '｜鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
+    title: data.title + ' - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
     description: data.description,
     openGraph: {
-      title: data.title + '｜鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
+      title: data.title + ' - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
       description: data.description,
       images: [data?.thumbnail?.url || ''],
       url: '' + data.id,
