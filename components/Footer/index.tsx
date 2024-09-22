@@ -90,11 +90,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <div className="footer_icon">
-              <img
-                alt="Company name"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-7"
-              />
+              <img alt="Company name" src="/images/icons/kan_logo.jpeg" className="h-7" />
             </div>
             <div className="flex space-x-6 footer_icon">
               {navigation.social.map((item) => (
@@ -102,7 +98,7 @@ export default function Footer() {
                   key={item.name}
                   href={item.href}
                   target="blank"
-                  className="text-gray-400 hover:text-gray-500"
+                  className="text-gray-400 hover:text-green-500"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="h-6 w-6" />
@@ -119,7 +115,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-blue-500"
+                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
                       >
                         {item.name}
                       </a>
@@ -134,7 +130,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-blue-500"
+                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
                       >
                         {item.name}
                       </a>
@@ -151,7 +147,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-blue-500"
+                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
                       >
                         {item.name}
                       </a>
@@ -166,7 +162,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-blue-500"
+                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
                       >
                         {item.name}
                       </a>

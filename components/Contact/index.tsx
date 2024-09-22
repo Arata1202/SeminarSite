@@ -119,7 +119,7 @@ export default function Example() {
         <nav className="flex" aria-label="Breadcrumb">
           <ol role="list" className="flex items-center space-x-4">
             <li>
-              <a href="/" className="flex text-gray-500 hover:text-blue-500">
+              <a href="/" className="flex text-gray-500 hover:text-green-500">
                 <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
               </a>
             </li>
@@ -131,7 +131,7 @@ export default function Example() {
                 />
                 <a
                   href="/contact"
-                  className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                  className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                 >
                   お問い合わせ
                 </a>
@@ -245,7 +245,7 @@ export default function Example() {
           <button
             type="submit"
             disabled={!captchaValue}
-            className="block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold text-gray-800 shadow-s border border-gray-300 hover:text-blue-500"
+            className="block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold text-gray-800 shadow-s border border-gray-300 hover:text-green-500"
           >
             送信
           </button>

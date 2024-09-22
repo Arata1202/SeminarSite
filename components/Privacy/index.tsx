@@ -11,7 +11,7 @@ export default function Privacy() {
         <nav className="flex" aria-label="Breadcrumb">
           <ol role="list" className="flex items-center space-x-4">
             <li>
-              <a href="/" className="flex text-gray-500 hover:text-blue-500">
+              <a href="/" className="flex text-gray-500 hover:text-green-500">
                 <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
               </a>
             </li>
@@ -23,7 +23,7 @@ export default function Privacy() {
                 />
                 <a
                   href="/privacy"
-                  className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                  className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                 >
                   プライバシーポリシー
                 </a>
@@ -69,7 +69,7 @@ export default function Privacy() {
           なお、設定方法に関しては
           <a
             href="https://policies.google.com/technologies/partner-sites?hl=ja"
-            className="text-blue-500 hover:text-blue-700"
+            className="text-green-700 hover:text-green-500"
             target="blank"
           >
             Googleポリシーと規約
@@ -89,7 +89,7 @@ export default function Privacy() {
           なお、この規約に関しては、
           <a
             href="https://marketingplatform.google.com/about/analytics/terms/jp/"
-            className="text-blue-500 hover:text-blue-700"
+            className="text-green-700 hover:text-green-500"
             target="blank"
           >
             Googleアナリティクス利用規約
@@ -97,7 +97,7 @@ export default function Privacy() {
           および
           <a
             href="https://policies.google.com/technologies/partner-sites?hl=ja"
-            className="text-blue-500 hover:text-blue-700"
+            className="text-green-700 hover:text-green-500"
             target="blank"
           >
             Googleポリシーと規約
@@ -169,7 +169,7 @@ export default function Privacy() {
             詳細については、以下のリンクをご参照ください：
             <a
               href="https://policies.google.com/technologies/partner-sites?hl=ja"
-              className="text-blue-500 hover:text-blue-700"
+              className="text-green-500 hover:text-green-700"
               target="blank"
             >
               Googleポリシーと規約
@@ -208,7 +208,7 @@ export default function Privacy() {
           <br />
           <br />
           連絡先：
-          <a href="/contact" className="text-blue-500 hover:text-blue-700">
+          <a href="/contact" className="text-green-700 hover:text-green-500">
             お問い合わせ
           </a>
         </p>
