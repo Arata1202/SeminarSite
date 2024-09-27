@@ -142,16 +142,10 @@ export default function Activity() {
               <div className="text-black">活動内容</div>
             </div>
           </h1>
-          <h1 className="text-3xl font-bold">
-            <div className="flex items-center pb-2 pt-2 mt-10">
-              {/* <FireIcon className="h-8 w-8 mr-2" aria-hidden="true" /> */}
-              <div className="text-black">全学年共通</div>
-            </div>
-          </h1>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl">
             <img
               alt=""
-              src="/images/member/8007A0FE-E8A9-4322-BEC6-B230B17A7345_1_201_a.jpeg"
+              src="/images/activity/8007A0FE-E8A9-4322-BEC6-B230B17A7345_1_201_a.jpeg"
               className="w-full object-cover rounded-2xl"
             />
           </div>
@@ -182,16 +176,10 @@ export default function Activity() {
               </div>
             </div>
           </div>
-          <h1 className="text-3xl font-bold">
-            <div className="flex items-center pb-2 pt-2 mt-10">
-              {/* <FireIcon className="h-8 w-8 mr-2" aria-hidden="true" /> */}
-              <div className="text-black">２年生</div>
-            </div>
-          </h1>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl">
             <img
               alt=""
-              src="/images/member/B84EE05A-F8C7-4BF2-95A1-7D630BE17E57_1_201_a.jpeg"
+              src="/images/activity/B84EE05A-F8C7-4BF2-95A1-7D630BE17E57_1_201_a.jpeg"
               className="w-full object-cover rounded-2xl"
             />
           </div>
@@ -222,16 +210,10 @@ export default function Activity() {
               </div>
             </div>
           </div>
-          <h1 className="text-3xl font-bold">
-            <div className="flex items-center pb-2 pt-2 mt-10">
-              {/* <FireIcon className="h-8 w-8 mr-2" aria-hidden="true" /> */}
-              <div className="text-black">3年生</div>
-            </div>
-          </h1>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl">
             <img
               alt=""
-              src="/images/member/6D9D88FF-01AC-4AF8-A43C-53C85CEFDA32_1_201_a.jpeg"
+              src="/images/activity/6D9D88FF-01AC-4AF8-A43C-53C85CEFDA32_1_201_a.jpeg"
               className="w-full object-cover rounded-2xl"
             />
           </div>
@@ -265,16 +247,10 @@ export default function Activity() {
           <div className="mt-10 xl:mx-auto xl:max-w-7xl">
             <img
               alt=""
-              src="/images/member/6D9D88FF-01AC-4AF8-A43C-53C85CEFDA32_1_201_a.jpeg"
+              src="/images/activity/3CE3C84A-EF0E-45AD-90AF-6EA84222AC6D_1_201_a.jpeg"
               className="w-full object-cover rounded-2xl"
             />
           </div>
-          <h1 className="text-3xl font-bold">
-            <div className="flex items-center pb-2 pt-2 mt-10">
-              {/* <FireIcon className="h-8 w-8 mr-2" aria-hidden="true" /> */}
-              <div className="text-black">4年生</div>
-            </div>
-          </h1>
           <div className="mt-10">
             <div className="mx-auto max-w-7xl">
               <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
