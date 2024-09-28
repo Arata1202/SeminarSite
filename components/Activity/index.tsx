@@ -4,53 +4,39 @@ import { FireIcon, ChevronRightIcon, HomeIcon, CalendarDaysIcon } from '@heroico
 export default function Activity() {
   const timeline = [
     {
-      name: '新年会',
+      name: '宴会',
       description:
-        'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
+        '宴会は、学期の始まりや終わり、4年生の追いコンなどの大切なイベントで、ゼミ生と先生方が参加し、学年を超えた交流が行われます。鈴木ゼミでは、こうした機会を通じてゼミ生同士の絆を深め、コミュニケーションを行うことを重視しています。',
       date: '4月',
-      dateTime: '2021-08',
-    },
-    {
-      name: 'お疲れ様回',
-      description:
-        'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
-      date: '7月',
-      dateTime: '2022-12',
-    },
-    {
-      name: 'オープンゼミ',
-      description:
-        'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
-      date: '10月',
       dateTime: '2021-08',
     },
     {
       name: 'ディズニー視察',
       description:
-        'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
-      date: '12月',
+        '5月、12月にはディズニー研修が行われます。学年を超えたグループ活動を通じて、ゼミ生同士の距離が一気に縮まります。この研修の機会を活かし、マーケティングについて学びを深めます。',
+      date: '5月',
       dateTime: '2022-12',
+    },
+    {
+      name: 'ゼミ合宿',
+      description:
+        '毎年9月の前半に2泊3日でゼミ合宿を行います。ディベートやグループディスカッションなどの学びの場に加え、BBQ、花火など多彩なイベントも盛りだくさん。遊びに勉強に有意義な3日間を過ごすことができます。',
+      date: '9月',
+      dateTime: '2022-12',
+    },
+    {
+      name: 'オープンゼミ',
+      description:
+        'オープンゼミは、1年生が普段のゼミを体験できる貴重な機会です。先輩と直接話しながら、ゼミの雰囲気や活動内容を知ることができ、研究テーマへの理解も深まります。先輩からのアドバイスや経験談を聞くことで、ゼミへの参加意欲を高め、将来の学びに繋げていきます。',
+      date: '10月',
+      dateTime: '2021-08',
     },
     {
       name: '歓迎会',
       description:
-        'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
+        '新しいゼミ生が決まった後にゼミ全体で交流会を行います。クイズ大会などのレクリエーションを通して、これから一緒に活動する同期や先輩と交流を深める活動です。',
       date: '12月',
       dateTime: '2021-08',
-    },
-    {
-      name: '忘年会',
-      description:
-        'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
-      date: '12月',
-      dateTime: '2022-12',
-    },
-    {
-      name: '追いコン',
-      description:
-        'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
-      date: '12月',
-      dateTime: '2022-12',
     },
   ];
 
@@ -58,14 +44,14 @@ export default function Activity() {
     {
       name: '輪読',
       description:
-        'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
+        '２年生は春学期に消費者行動についての本を使い輪読を行います。「なぜ人は衝動買いをしてしまうのか」などの内容を通して消費者心理やマーケティングについて学ぶことができます。また、先輩のアドバイスやスライドの作り方や発表の仕方を回数を重ねながら学ぶことができます。',
       date: '4月',
       dateTime: '2021-08',
     },
     {
       name: 'ディベート',
       description:
-        'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
+        '2年生の秋と3年生の春に、経営戦略をテーマにしたディベートを行い、他大学との対戦を通じて論理的思考やコミュニケーション能力を磨きます。賛成・反対に分かれて議論し、リサーチやプレゼン力も向上させます。他大学の学生との交流を通じて多様な視点を学ぶ機会にもなります。ディベート大会は、ゼミの重要な活動で、メンバー全員の成長を支える大切な場です。',
       date: '9月',
       dateTime: '2022-12',
     },
@@ -73,23 +59,9 @@ export default function Activity() {
 
   const timeline_third = [
     {
-      name: 'ディベート',
+      name: 'ビジネスコンテスト',
       description:
-        'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
-      date: '4月',
-      dateTime: '2021-08',
-    },
-    {
-      name: '就活報告メール',
-      description:
-        'Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.',
-      date: '9月',
-      dateTime: '2021-12',
-    },
-    {
-      name: 'コンテスト',
-      description:
-        'Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.',
+        '3年生の秋には、企業が主催するビジネスコンテストに参加しています。昨年は見事に受賞し、プレゼンテーション力や企画力を磨きました。ディベートで培った分析力を活かし、論理的にビジネスアイデアを構築するスキルも向上します。チームでの協力やアイデア創出を通じて、実践的なビジネス感覚を養い、将来のキャリアに繋げることを目指しています。',
       date: '9月',
       dateTime: '2022-02',
     },
@@ -99,7 +71,7 @@ export default function Activity() {
     {
       name: '卒業論文',
       description:
-        'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
+        '4年生の1年間で卒業論文に取り組みます。テーマはマーケティングや消費者心理学など自由に選べ、自分の興味を深める良い機会です。卒論を通じて文章力やデータ分析力を養い、得たスキルは将来のキャリアにも役立ちます。自分の考えを形にする経験を通じて、さらなる成長が期待されます。',
       date: '4月',
       dateTime: '2021-08',
     },
