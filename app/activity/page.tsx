@@ -10,7 +10,7 @@ export const metadata = {
     title: '活動内容 - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
     description: '東洋大学経営学部マーケティング学科鈴木ゼミナールの活動内容を紹介しています。',
     images: '/images/icons/1200logo.jpg',
-    url: 'https://suzukiseminar.vercel.app/activity',
+    url: 'https://suzuki-seminar.com/activity',
   },
 };
 
