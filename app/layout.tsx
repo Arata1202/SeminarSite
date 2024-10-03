@@ -40,7 +40,7 @@ export default async function RootLayout({ children }: Props) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-RDPNECEGML', {
+            gtag('config', 'G-S1SHC8JCBV', {
               page_path: window.location.pathname,
             });
           `,
