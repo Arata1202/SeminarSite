@@ -12,7 +12,7 @@ export const metadata = {
     description:
       '東洋大学経営学部マーケティング学科鈴木ゼミナールのプライバシーポリシーについて紹介しています。',
     images: '/images/icons/1200logo.jpg',
-    url: 'https://suzukiseminar.vercel.app/privacy',
+    url: 'https://suzuki-seminar.com/privacy',
   },
 };
 

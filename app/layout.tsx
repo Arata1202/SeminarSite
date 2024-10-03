@@ -13,7 +13,7 @@ export const metadata = {
     title: '鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
     description: '東洋大学経営学部マーケティング学科鈴木ゼミナールの公式ホームページです。',
     images: '/images/icons/1200logo.jpg',
-    url: 'https://suzukiseminar.vercel.app',
+    url: 'https://suzuki-seminar.com',
   },
   icons: {
     icon: '/images/icons/favicon.ico',

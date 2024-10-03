@@ -10,7 +10,7 @@ export const metadata = {
     title: '選考 - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
     description: '東洋大学経営学部マーケティング学科鈴木ゼミナールの選考についてを紹介しています。',
     images: '/images/icons/1200logo.jpg',
-    url: 'https://suzukiseminar.vercel.app/selection',
+    url: 'https://suzuki-seminar.com/selection',
   },
 };
 

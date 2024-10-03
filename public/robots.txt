@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://suzukiseminar.vercel.app/
+Host: https://suzuki-seminar.com
 
 # Sitemaps
-Sitemap: https://suzukiseminar.vercel.app/sitemap.xml
+Sitemap: https://suzuki-seminar.com/sitemap.xml

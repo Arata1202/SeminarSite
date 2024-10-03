@@ -10,7 +10,7 @@ export const metadata = {
     title: 'お問い合わせ - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
     description: '東洋大学経営学部マーケティング学科鈴木ゼミナールのお問い合わせフォームです。',
     images: '/images/icons/1200logo.jpg',
-    url: 'https://suzukiseminar.vercel.app/contact',
+    url: 'https://suzuki-seminar.com/contact',
   },
 };
 

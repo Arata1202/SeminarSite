@@ -11,7 +11,7 @@ export const metadata = {
     description:
       '東洋大学経営学部マーケティング学科鈴木ゼミナールの免責事項について紹介しています。',
     images: '/images/icons/1200logo.jpg',
-    url: 'https://suzukiseminar.vercel.app/disclaimer',
+    url: 'https://suzuki-seminar.com/disclaimer',
   },
 };
 
