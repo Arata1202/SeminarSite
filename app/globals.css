@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.TopSubTitle {
+  font-size: 70px;
+}
+.TopSubTitleText {
+  max-width: 80%;
+}
+.SlideText {
+  font-size: 50px;
+}
+
 /* タブレット以下 */
 @media (max-width: 1023px) {
   .u_tablet_teacher_p {
@@ -10,6 +20,21 @@
   }
   .u_tablet_teacher_img {
     max-width: 100% !important;
+  }
+  .TopSubTitle {
+    font-size: 50px;
+  }
+  .SlideText {
+    font-size: 35px;
+  }
+  .main_side {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .ActivityText {
+    font-size: 20px;
+    top: 8px;
+    left: 8px;
   }
 }
 /* モバイル以外 */
@@ -29,6 +54,20 @@
   }
   .top_title {
     margin-top: 50px !important;
+  }
+  .TopSubTitle {
+    font-size: 30px;
+  }
+  .TopSubTitleText {
+    max-width: 100%;
+  }
+  .SlideText {
+    font-size: 18px;
+  }
+  .ActivityText {
+    font-size: 18px;
+    top: 8px;
+    left: 8px;
   }
 }
 
