@@ -20,7 +20,9 @@ export const metadata = {
 export default async function Page() {
   return (
     <>
-      <Copyright />
+      <div style={{ padding: '24px' }}>
+        <Copyright />
+      </div>
     </>
   );
 }

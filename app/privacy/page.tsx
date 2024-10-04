@@ -19,7 +19,9 @@ export const metadata = {
 export default async function Page() {
   return (
     <>
-      <Privacy />
+      <div style={{ padding: '24px' }}>
+        <Privacy />
+      </div>
     </>
   );
 }

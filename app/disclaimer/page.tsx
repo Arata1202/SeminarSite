@@ -18,7 +18,9 @@ export const metadata = {
 export default async function Page() {
   return (
     <>
-      <Disclaimer />
+      <div style={{ padding: '24px' }}>
+        <Disclaimer />
+      </div>
     </>
   );
 }
