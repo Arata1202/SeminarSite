@@ -13,7 +13,7 @@ export default function Page() {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     arrows: true,
     pauseOnHover: false,
@@ -74,6 +74,7 @@ export default function Page() {
   return (
     <>
       <div style={{ marginTop: '80px' }}>
+        <div className="p-5 font-bold">申し訳ございません。作成途中です！ by高野</div>
         <Slider {...settings}>
           {slides.map((slide, index) => (
             <div key={index} className="relative">
@@ -87,9 +88,9 @@ export default function Page() {
                   className="w-full max-w-none flex-none bg-gray-50 object-cover"
                 />
               </picture>
-              <div className="absolute bottom-8 right-8 SlideText font-bold z-100 text-white">
+              {/* <div className="absolute bottom-8 right-8 SlideText font-bold z-100 text-white">
                 <p>{slide.text}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </Slider>
