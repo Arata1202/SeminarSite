@@ -113,12 +113,10 @@ export default function Member() {
             </h1>
             <div className="u_tablet_teacher_p mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
               <p className="text-lg leading-8 text-gray-600 text-left">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-                commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna
-                aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Anim aute id
-                magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                sunt amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non
-                deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                ゼミではテキストの輪読、ディベート(大会)、論文執筆等への取り組みを通じて大学生としてのスキルを高められるように先輩方と教員でフォローしていきます。
+                <br />
+                <br />
+                大学生活を通じて何か成し遂げたいとやる気のある方の参加を希望します。
               </p>
             </div>
             <img
