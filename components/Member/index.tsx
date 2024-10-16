@@ -9,9 +9,9 @@ import {
 
 export default function Member() {
   const stats = [
-    { id: 1, name: '2年生', value: '10人' },
+    { id: 1, name: '2年生', value: '14人' },
     { id: 2, name: '3年生', value: '15人' },
-    { id: 3, name: '4年生', value: '18人' },
+    { id: 3, name: '4年生', value: '13人' },
   ];
   const people = [
     {
@@ -108,9 +108,10 @@ export default function Member() {
             </div>
           </h1>
           <div className="mt-10 mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
-            <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto text-left">
-              鈴木 寛
+            <h1 className="flex max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto text-left items-end">
+              鈴木 寛<div className="ml-5 text-xl sm:text-3xl">Kan Suzuki</div>
             </h1>
+
             <div className="u_tablet_teacher_p mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
               <p className="text-lg leading-8 text-gray-600 text-left">
                 ゼミではテキストの輪読、ディベート(大会)、論文執筆等への取り組みを通じて大学生としてのスキルを高められるように先輩方と教員でフォローしていきます。

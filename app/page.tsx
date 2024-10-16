@@ -93,7 +93,7 @@ export default function Page() {
         </Slider>
       </div>
 
-      <div style={{ padding: '0 24px 24px 24px' }}>
+      <div style={{ padding: '0 24px 24px 24px', marginBottom: '120px' }}>
         <div className="relative bg-white">
           <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl main_side">
             <div className="TopSubTitle mt-20 font-bold text-center">消費者行動 × 企業戦略</div>
