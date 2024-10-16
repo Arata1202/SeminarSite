@@ -6,7 +6,7 @@ const navigation = {
     { name: '組織', href: '/member' },
     { name: '活動内容', href: '/activity' },
   ],
-  support: [{ name: '選考', href: '/selection' }],
+  support: [{ name: '選考フロー', href: '/selection' }],
   company: [
     { name: 'プライバシーポリシー', href: '/privacy' },
     { name: '免責事項', href: '/disclaimer' },
@@ -75,7 +75,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0 footer_menu">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">選考</h3>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">選考フロー</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>

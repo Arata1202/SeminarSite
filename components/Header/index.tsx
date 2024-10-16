@@ -39,7 +39,7 @@ export default function Header() {
             組織
           </a>
           <a href="/selection" className="text-sm font-semibold leading-6 text-gray-900">
-            選考
+            選考フロー
           </a>
           {/* <a href="/blog" className="text-sm font-semibold leading-6 text-gray-900">
             ブログ
@@ -179,7 +179,7 @@ export default function Header() {
                       }}
                       className="block text-base font-semibold text-gray-900"
                     >
-                      ▶︎ 選考
+                      ▶︎ 選考フロー
                     </a>
                   </li>
                   {/* <li>
