@@ -21,23 +21,21 @@ export default function Page() {
 
   const slides = [
     {
-      mobile: '/images/top/mobile/1.jpeg',
-      tablet: '/images/top/tablet/1.jpeg',
-      desktop: '/images/top/pc/1.jpeg',
-      text: '9月の夏合宿ではBBQを楽しみました！',
+      mobile: '/images/top/mobile/1.png',
+      tablet: '/images/top/tablet/1.png',
+      desktop: '/images/top/pc/1.png',
     },
     {
-      mobile: '/images/top/mobile/1.jpeg',
-      tablet: '/images/top/tablet/1.jpeg',
-      desktop: '/images/top/pc/1.jpeg',
-      text: '9月の夏合宿ではBBQを楽しみました！',
+      mobile: '/images/top/mobile/2.png',
+      tablet: '/images/top/tablet/2.png',
+      desktop: '/images/top/pc/2.png',
     },
-    {
-      mobile: '/images/top/mobile/1.jpeg',
-      tablet: '/images/top/tablet/1.jpeg',
-      desktop: '/images/top/pc/1.jpeg',
-      text: '9月の夏合宿ではBBQを楽しみました！',
-    },
+    // {
+    //   mobile: '/images/top/mobile/1.jpeg',
+    //   tablet: '/images/top/tablet/1.jpeg',
+    //   desktop: '/images/top/pc/1.jpeg',
+    //   text: '9月の夏合宿ではBBQを楽しみました！',
+    // },
   ];
 
   const products = [
@@ -45,28 +43,28 @@ export default function Page() {
       id: 1,
       name: '活動内容',
       href: '/activity',
-      imageSrc: '/images/top/2A551869-3AA7-41BF-B32D-ECEF06ECC2C8_1_201_a.jpeg',
+      imageSrc: '/images/top/square/A89123FE-0501-4FA6-9AF3-83E03DF091E8_1_201_a.jpeg',
       imageAlt: 'Hand stitched, orange leather long wallet.',
     },
     {
       id: 1,
       name: '組織',
       href: '/member',
-      imageSrc: '/images/top/2A551869-3AA7-41BF-B32D-ECEF06ECC2C8_1_201_a.jpeg',
+      imageSrc: '/images/top/square/3703F8E0-4296-4C78-9178-DAF83E946772_1_201_a.jpeg',
       imageAlt: 'Hand stitched, orange leather long wallet.',
     },
     {
       id: 1,
       name: '選考',
       href: '/selection',
-      imageSrc: '/images/top/2A551869-3AA7-41BF-B32D-ECEF06ECC2C8_1_201_a.jpeg',
+      imageSrc: '/images/top/square/093A6628-2096-42B9-84B6-32C34F9D1D19_1_201_a.jpeg',
       imageAlt: 'Hand stitched, orange leather long wallet.',
     },
     {
       id: 1,
       name: 'お問い合わせ',
       href: '/contact',
-      imageSrc: '/images/top/2A551869-3AA7-41BF-B32D-ECEF06ECC2C8_1_201_a.jpeg',
+      imageSrc: '/images/top/square/2A3A4EC7-EE88-443A-8542-EFA5040521E5_1_201_a.jpeg',
       imageAlt: 'Hand stitched, orange leather long wallet.',
     },
   ];
@@ -74,7 +72,6 @@ export default function Page() {
   return (
     <>
       <div style={{ marginTop: '80px' }}>
-        <div className="p-5 font-bold">申し訳ございません。作成途中です！ by高野</div>
         <Slider {...settings}>
           {slides.map((slide, index) => (
             <div key={index} className="relative">
@@ -114,7 +111,7 @@ export default function Page() {
                         className="h-full w-full object-cover object-center"
                       />
                     </a>
-                    <div className="ActivityText absolute top-5 left-5 text-2xl font-bold">
+                    <div className="ActivityText absolute top-5 left-5 text-2xl font-bold text-white">
                       <p>{product.name}</p>
                     </div>
                   </div>

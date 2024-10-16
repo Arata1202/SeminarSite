@@ -11,6 +11,12 @@
 .SlideText {
   font-size: 50px;
 }
+.TopSubTitle {
+  text-shadow: 2px 4px 4px #808080;
+}
+.ActivityText {
+  text-shadow: 3px 5px 5px #808080;
+}
 
 /* タブレット以下 */
 @media (max-width: 1023px) {
