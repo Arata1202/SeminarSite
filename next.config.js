@@ -1,10 +1,4 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-module.exports = {
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.externals = [...config.externals, 'undici'];
-    }
-    return config;
-  },
-};
+module.exports = nextConfig;
