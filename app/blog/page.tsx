@@ -31,7 +31,12 @@ export default async function Page() {
                       className="h-4 w-4 flex-shrink-0 text-gray-400"
                       aria-hidden="true"
                     />
-                    <div className="ml-4 text-sm font-medium text-gray-500">ブログ</div>
+                    <a
+                      href={`/blog`}
+                      className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                    >
+                      ブログ
+                    </a>
                   </div>
                 </li>
               </ol>
