@@ -55,7 +55,7 @@ export default function Page() {
     },
     {
       id: 1,
-      name: '選考フロー',
+      name: '選考',
       href: '/selection',
       imageSrc: '/images/top/square/093A6628-2096-42B9-84B6-32C34F9D1D19_1_201_a.jpeg',
       imageAlt: 'Hand stitched, orange leather long wallet.',

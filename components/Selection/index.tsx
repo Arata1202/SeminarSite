@@ -48,7 +48,7 @@ export default function Selection() {
                   href="/selection"
                   className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                 >
-                  選考フロー
+                  選考
                 </a>
               </div>
             </li>
@@ -60,7 +60,7 @@ export default function Selection() {
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
             <FlagIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-            <div className="text-black">選考フロー</div>
+            <div className="text-black">選考</div>
           </div>
         </h1>
 
