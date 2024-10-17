@@ -29,22 +29,40 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          <a href="/" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="/"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+          >
             ホーム
           </a>
-          <a href="/activity" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="/activity"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+          >
             活動内容
           </a>
-          <a href="/member" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="/member"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+          >
             組織
           </a>
-          <a href="/selection" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="/selection"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+          >
             選考
           </a>
-          <a href="/blog" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="/blog"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+          >
             ブログ
           </a>
-          <a href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="/contact"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+          >
             お問い合わせ
           </a>
           {/* <Popover className="relative">
@@ -138,7 +156,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg"
+                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
                       ▶︎ ホーム
                     </a>
@@ -151,7 +169,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/activity';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg"
+                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
                       ▶︎ 活動内容
                     </a>
@@ -164,7 +182,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/member';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg"
+                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
                       ▶︎ 組織
                     </a>
@@ -177,7 +195,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/selection';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg"
+                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
                       ▶︎ 選考
                     </a>
@@ -190,7 +208,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/blog';
                       }}
-                      className="block text-base font-semibold text-gray-900"
+                      className="block text-base font-semibold text-gray-900 hover:text-green-500"
                     >
                       ▶︎ ブログ
                     </a>
@@ -203,7 +221,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/contact';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg"
+                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
                       ▶︎ お問い合わせ
                     </a>
