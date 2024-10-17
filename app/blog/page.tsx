@@ -38,7 +38,7 @@ export default async function Page() {
             </nav>
             <div className="flex items-center pb-2 pt-2 mt-5">
               <BellAlertIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-              <div>最新記事</div>
+              <div>最新記事a</div>
             </div>
           </h1>
         </div>
