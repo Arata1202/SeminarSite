@@ -17,6 +17,19 @@
 .ActivityText {
   text-shadow: 3px 5px 5px #808080;
 }
+.ActivityGradeSection {
+  bottom: 0px;
+  left: 70px;
+}
+.ActivityGrade {
+  font-size: 130px;
+  text-shadow: 2px 4px 4px #808080;
+  font-weight: bold;
+  color: white;
+}
+.top_title {
+  margin-top: 50px !important;
+}
 
 /* タブレット以下 */
 @media (max-width: 1023px) {
@@ -30,6 +43,9 @@
   .TopSubTitle {
     font-size: 50px;
   }
+  .top_title {
+    margin-top: 50px !important;
+  }
   .SlideText {
     font-size: 35px;
   }
@@ -41,6 +57,16 @@
     font-size: 20px;
     top: 8px;
     left: 8px;
+  }
+  .ActivityGradeSection {
+    bottom: 5px;
+    left: 10px;
+  }
+  .ActivityGrade {
+    font-size: 40px !important;
+    text-shadow: 2px 4px 4px #808080;
+    font-weight: bold;
+    color: white;
   }
 }
 /* モバイル以外 */
@@ -74,6 +100,16 @@
     font-size: 18px;
     top: 8px;
     left: 8px;
+  }
+  .ActivityGradeSection {
+    bottom: 5px;
+    left: 20px;
+  }
+  .ActivityGrade {
+    font-size: 30px;
+    text-shadow: 2px 4px 4px #808080;
+    font-weight: bold;
+    color: white;
   }
 }
 
