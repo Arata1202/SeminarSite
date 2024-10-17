@@ -2,32 +2,46 @@ import '../../app/globals.css';
 import { FireIcon, ChevronRightIcon, HomeIcon, CalendarDaysIcon } from '@heroicons/react/24/solid';
 
 export default function Activity() {
-  const timeline = [
+  const timeline_second = [
     {
-      name: '宴会',
+      name: '輪読',
       description:
-        '宴会は、学期の始まりや終わり、4年生の追いコンなどの大切なイベントで、ゼミ生と先生方が参加し、学年を超えた交流が行われます。鈴木ゼミでは、こうした機会を通じてゼミ生同士の絆を深め、コミュニケーションを行うことを重視しています。',
+        '２年生は春学期に消費者行動についての本を使い輪読を行います。「なぜ人は衝動買いをしてしまうのか」などの内容を通して消費者心理やマーケティングについて学ぶことができます。また、先輩のアドバイスやスライドの作り方や発表の仕方を回数を重ねながら学ぶことができます。',
+      date: '4月〜',
+      dateTime: '2021-08',
+    },
+    {
+      name: '懇親会',
+      description:
+        '懇親会は、学期の始まりや終わり、4年生の追いコンなどのゼミ全体の大切なイベントで、ゼミ生と先生方が参加し、学年を超えた交流が行われます。鈴木ゼミでは、こうした機会を通じてゼミ生同士の絆を深め、コミュニケーションを行うことを重視しています。',
       date: '4月',
       dateTime: '2021-08',
     },
     {
       name: 'ディズニー視察',
       description:
-        '5月にはディズニー視察が行われます。学年を超えたグループ活動を通じて、ゼミ生同士の距離が一気に縮まります。この視察の機会を活かし、マーケティングについて学びを深めます。',
+        '5月にはディズニー視察が行われます。ゼミ全体のグループ活動を通じて、ゼミ生同士の距離が一気に縮まります。この視察の機会を活かし、マーケティングについて学びを深めます。',
       date: '5月',
       dateTime: '2022-12',
     },
     {
       name: 'ゼミ合宿',
       description:
-        '毎年9月の前半に2泊3日でゼミ合宿を行います。ディベートやグループディスカッションなどの学びの場に加え、BBQ、花火など多彩なイベントも盛りだくさん。遊びに勉強に有意義な3日間を過ごすことができます。',
+        '毎年9月の前半に、2泊3日でゼミ全体のゼミ合宿を行います。ディベートやグループディスカッションなどの学びの場に加え、BBQ、花火など多彩なイベントも盛りだくさん。遊びに勉強に有意義な3日間を過ごすことができます。',
       date: '9月',
+      dateTime: '2022-12',
+    },
+    {
+      name: 'ディベート',
+      description:
+        '2年生の秋と3年生の春に、経営戦略をテーマにしたディベートを行い、他大学との対戦を通じて論理的思考やコミュニケーション能力を磨きます。賛成・反対に分かれて議論し、リサーチやプレゼン力も向上させます。他大学の学生との交流を通じて多様な視点を学ぶ機会にもなります。ディベート大会は、ゼミの重要な活動で、メンバー全員の成長を支える大切な場です。',
+      date: '9月〜',
       dateTime: '2022-12',
     },
     {
       name: 'オープンゼミ',
       description:
-        'オープンゼミは、1年生が普段のゼミを体験できる貴重な機会です。先輩と直接話しながら、ゼミの雰囲気や活動内容を知ることができ、研究テーマへの理解も深まります。先輩からのアドバイスや経験談を聞くことで、ゼミへの参加意欲を高め、将来の学びに繋げていきます。',
+        'ゼミ全体で行うオープンゼミは、1年生が普段のゼミを体験できる貴重な機会です。先輩と直接話しながら、ゼミの雰囲気や活動内容を知ることができ、研究テーマへの理解も深まります。先輩からのアドバイスや経験談を聞くことで、ゼミへの参加意欲を高め、将来の学びに繋げていきます。',
       date: '10月',
       dateTime: '2021-08',
     },
@@ -40,29 +54,12 @@ export default function Activity() {
     },
   ];
 
-  const timeline_second = [
-    {
-      name: '輪読',
-      description:
-        '２年生は春学期に消費者行動についての本を使い輪読を行います。「なぜ人は衝動買いをしてしまうのか」などの内容を通して消費者心理やマーケティングについて学ぶことができます。また、先輩のアドバイスやスライドの作り方や発表の仕方を回数を重ねながら学ぶことができます。',
-      date: '4月',
-      dateTime: '2021-08',
-    },
-    {
-      name: 'ディベート',
-      description:
-        '2年生の秋と3年生の春に、経営戦略をテーマにしたディベートを行い、他大学との対戦を通じて論理的思考やコミュニケーション能力を磨きます。賛成・反対に分かれて議論し、リサーチやプレゼン力も向上させます。他大学の学生との交流を通じて多様な視点を学ぶ機会にもなります。ディベート大会は、ゼミの重要な活動で、メンバー全員の成長を支える大切な場です。',
-      date: '9月',
-      dateTime: '2022-12',
-    },
-  ];
-
   const timeline_third = [
     {
       name: 'ビジネスコンテスト',
       description:
         '3年生の秋には、企業が主催するビジネスコンテストに参加しています。昨年は見事に受賞し、プレゼンテーション力や企画力を磨きました。ディベートで培った分析力を活かし、論理的にビジネスアイデアを構築するスキルも向上します。チームでの協力やアイデア創出を通じて、実践的なビジネス感覚を養い、将来のキャリアに繋げることを目指しています。',
-      date: '9月',
+      date: '9月〜',
       dateTime: '2022-02',
     },
   ];
@@ -72,7 +69,7 @@ export default function Activity() {
       name: '卒業論文',
       description:
         '4年生の1年間で卒業論文に取り組みます。テーマはマーケティングや消費者心理学など自由に選べ、自分の興味を深める良い機会です。卒論を通じて文章力やデータ分析力を養い、得たスキルは将来のキャリアにも役立ちます。自分の考えを形にする経験を通じて、さらなる成長が期待されます。',
-      date: '4月',
+      date: '4月〜',
       dateTime: '2021-08',
     },
   ];
@@ -114,40 +111,6 @@ export default function Activity() {
               <div className="text-black">活動内容</div>
             </div>
           </h1>
-          <div className="mt-10 xl:mx-auto xl:max-w-7xl">
-            <img
-              alt=""
-              src="/images/activity/8007A0FE-E8A9-4322-BEC6-B230B17A7345_1_201_a.jpeg"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          <div className="mt-10">
-            <div className="mx-auto max-w-7xl">
-              <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
-                {timeline.map((item) => (
-                  <div key={item.name} className="text-left">
-                    <time
-                      dateTime={item.dateTime}
-                      className="flex items-center text-sm font-semibold leading-6 text-green-700"
-                    >
-                      <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 h-1 w-1 flex-none">
-                        <circle r={2} cx={2} cy={2} fill="currentColor" />
-                      </svg>
-                      {item.date}
-                      <div
-                        aria-hidden="true"
-                        className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
-                      />
-                    </time>
-                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
-                      {item.name}
-                    </p>
-                    <p className="mt-1 text-base leading-7 text-gray-600">{item.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl relative">
             <img
               alt=""
