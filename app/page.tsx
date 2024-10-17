@@ -72,6 +72,11 @@ export default function Page() {
   return (
     <>
       <div style={{ marginTop: '80px' }}>
+        <div className="flex justify-center gap-x-6 bg-green-700 px-6 py-2.5 sm:px-3.5">
+          <p className="text:sm sm:text-2xl font-bold leading-6 text-white">
+            ようこそ、東洋大学 鈴木ゼミナールへ
+          </p>
+        </div>
         <Slider {...settings}>
           {slides.map((slide, index) => (
             <div key={index} className="relative">
