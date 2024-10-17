@@ -5,6 +5,7 @@ const navigation = {
   solutions: [
     { name: '組織', href: '/member' },
     { name: '活動内容', href: '/activity' },
+    { name: 'ブログ', href: '/blog' },
   ],
   support: [{ name: '選考', href: '/selection' }],
   company: [

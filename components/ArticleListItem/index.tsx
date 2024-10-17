@@ -4,6 +4,7 @@ import { Article } from '@/libs/microcms';
 import styles from './index.module.css';
 import TagList from '../TagList';
 import PublishedDate from '../Date';
+import { FolderIcon } from '@heroicons/react/24/solid';
 
 type Props = {
   article: Article;
@@ -12,7 +13,10 @@ type Props = {
 export default function ArticleListItem({ article }: Props) {
   return (
     <li className={styles.list}>
-      <Link href={`/articles/${article.id}`} className={styles.link}>
+      <Link
+        href={`/articles/${article.id}`}
+        className={`${styles.link} p-2 border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-200 transform hover:-translate-y-1`}
+      >
         {article.thumbnail ? (
           <picture>
             <source
@@ -41,15 +45,16 @@ export default function ArticleListItem({ article }: Props) {
             height={630}
           />
         )}
-        <dl className={styles.content}>
-          <dt className={styles.title}>{article.title}</dt>
-          <dd>
+        <div className={`${styles.content}`}>
+          <div className={`${styles.title}`}>{article.title}</div>
+          <div className={styles.description}>{article.description}</div>
+          <div className={styles.date}>
+            <FolderIcon className="h-5 w-5 mr-2 mt-3" aria-hidden="true" />
             <TagList tags={article.tags} hasLink={false} />
-          </dd>
-          <dd className={styles.date}>
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <PublishedDate date={article.publishedAt || article.createdAt} />
-          </dd>
-        </dl>
+          </div>
+        </div>
       </Link>
     </li>
   );

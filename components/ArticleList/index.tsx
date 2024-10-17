@@ -1,6 +1,7 @@
 import { Article } from '@/libs/microcms';
 import ArticleListItem from '../ArticleListItem';
-import { HomeIcon, ChevronRightIcon, LinkIcon } from '@heroicons/react/24/solid';
+import { HomeIcon, ChevronRightIcon, PencilIcon } from '@heroicons/react/24/solid';
+import Sidebar from '../Sidebar';
 
 type Props = {
   articles?: Article[];
@@ -48,15 +49,22 @@ export default function ArticleList({ articles }: Props) {
           {/* <p className="text-base font-semibold leading-7 text-indigo-600">Introducing</p> */}
           <h1 className="text-3xl font-bold">
             <div className="flex items-center pb-2 pt-2 mt-5">
-              <LinkIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+              <PencilIcon className="h-8 w-8 mr-2" aria-hidden="true" />
               <div className="text-black">ブログ</div>
             </div>
           </h1>
-          <ul>
-            {articles.map((article) => (
-              <ArticleListItem key={article.id} article={article} />
-            ))}
-          </ul>
+          <div className="max-w-[87rem] mx-auto mt-10">
+            <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
+              <div className="lg:col-span-2">
+                <ul>
+                  {articles.map((article) => (
+                    <ArticleListItem key={article.id} article={article} />
+                  ))}
+                </ul>
+              </div>
+              <Sidebar />
+            </div>
+          </div>
         </div>
       </div>
     </>
