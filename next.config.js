@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-    });
-    return config;
+const nextConfig = {
+  experimental: {
+    externalDir: true,
   },
 };
+
+module.exports = nextConfig;
