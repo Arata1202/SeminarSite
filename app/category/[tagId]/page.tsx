@@ -41,6 +41,20 @@ export default async function Page({ params }: Props) {
                     aria-hidden="true"
                   />
                   <a
+                    href={`/blog`}
+                    className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                  >
+                    ブログ
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <ChevronRightIcon
+                    className="h-4 w-4 flex-shrink-0 text-gray-400"
+                    aria-hidden="true"
+                  />
+                  <a
                     href={`${tag.id}`}
                     className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
                   >
