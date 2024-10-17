@@ -138,7 +138,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/';
                       }}
-                      className="block text-base font-semibold text-gray-900"
+                      className="block text-base font-semibold text-gray-900 text-lg"
                     >
                       ▶︎ ホーム
                     </a>
@@ -151,7 +151,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/activity';
                       }}
-                      className="block text-base font-semibold text-gray-900"
+                      className="block text-base font-semibold text-gray-900 text-lg"
                     >
                       ▶︎ 活動内容
                     </a>
@@ -164,7 +164,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/member';
                       }}
-                      className="block text-base font-semibold text-gray-900"
+                      className="block text-base font-semibold text-gray-900 text-lg"
                     >
                       ▶︎ 組織
                     </a>
@@ -177,7 +177,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/selection';
                       }}
-                      className="block text-base font-semibold text-gray-900"
+                      className="block text-base font-semibold text-gray-900 text-lg"
                     >
                       ▶︎ 選考
                     </a>
@@ -203,7 +203,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/contact';
                       }}
-                      className="block text-base font-semibold text-gray-900"
+                      className="block text-base font-semibold text-gray-900 text-lg"
                     >
                       ▶︎ お問い合わせ
                     </a>
