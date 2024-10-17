@@ -178,7 +178,7 @@ export default function Selection() {
           <p className="mt-6">11月21日（木）の3〜5限を予定しています。</p>
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-10">応募期限</h2>
           <p className="mt-6">
-            10月31日（木）の23:59までに、
+            10月30日（水）の23:59までに、
             <a
               className="text-green-700 hover:text-green-500"
               href="https://forms.gle/uVEL8K9113wd9EnC9"
