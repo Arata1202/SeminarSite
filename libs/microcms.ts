@@ -21,6 +21,20 @@ export type Writer = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
+export type IntroductionBlock = {
+  rich_text?: string;
+  custom_html?: string;
+  articleLink?: string;
+  bubble_image?: MicroCMSImage;
+  bubble_name?: string;
+  bubble_text?: string;
+  bubble_isRight?: boolean;
+  box_merit?: string;
+  box_demerit?: string;
+  box_point?: string;
+  box_common?: string;
+};
+
 export type ContentBlock = {
   adsense?: string;
   rich_text?: string;
@@ -42,6 +56,7 @@ export type Blog = {
   description: string;
   content: string;
   content_blocks: ContentBlock[];
+  introduction_blocks: IntroductionBlock[];
   thumbnail?: MicroCMSImage;
   tags?: Tag[];
   writer?: Writer;

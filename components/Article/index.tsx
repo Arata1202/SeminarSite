@@ -138,6 +138,103 @@ export default function ArticleComponent({ data }: Props) {
                       <PublishedDate date={data.publishedAt || data.createdAt} />
                     </div>
                   </div>
+                  <div className={styles.content}>
+                    {data.introduction_blocks.map((block, index) => (
+                      <div key={index}>
+                        {(block.bubble_name || block.bubble_text || block.bubble_image) && (
+                          <div className="my-10">
+                            <div
+                              className={`speech-bubble ${block.bubble_isRight ? 'right' : 'left'}`}
+                            >
+                              {block.bubble_image && (
+                                <div
+                                  className={`bubble-image-wrapper ${
+                                    block.bubble_isRight ? 'right' : 'left'
+                                  }`}
+                                >
+                                  <div>
+                                    <img
+                                      src={block.bubble_image.url}
+                                      width={75}
+                                      height={75}
+                                      alt="吹き出しのイメージ"
+                                      className="bubble-image"
+                                    />
+                                  </div>
+                                </div>
+                              )}
+                              <div
+                                className={`bubble-content ${
+                                  block.bubble_isRight ? 'right' : 'left'
+                                }`}
+                              >
+                                <p className="bubble-text">{block.bubble_text}</p>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        {block.rich_text && (
+                          <div
+                            className={styles.content}
+                            dangerouslySetInnerHTML={{
+                              __html: block.rich_text.replace(/<img/g, '<img loading="lazy"'),
+                            }}
+                          />
+                        )}
+                        {block.custom_html && (
+                          <div
+                            className={styles.content}
+                            dangerouslySetInnerHTML={{ __html: block.custom_html }}
+                          />
+                        )}
+                        {block.articleLink && typeof block.articleLink !== 'string' && (
+                          <div>
+                            <div className="flex mt-10">
+                              <LinkIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+                              <h1 className="text-2xl font-semibold mb-5">あわせて読みたい</h1>
+                            </div>
+                            <WithArticleItem article={block.articleLink as Article} />
+                          </div>
+                        )}
+                        {block.box_merit && (
+                          <div className={`${styles.tab_merit_box} flex items-center`}>
+                            <HandThumbUpIcon
+                              className={`h-8 w-8 ${styles.tab_merit_box_icon}`}
+                              aria-hidden="true"
+                            />
+                            <div dangerouslySetInnerHTML={{ __html: block.box_merit }} />
+                          </div>
+                        )}
+                        {block.box_demerit && (
+                          <div className={`${styles.tab_demerit_box} flex items-center`}>
+                            <HandThumbDownIcon
+                              className={`h-8 w-8 ${styles.tab_demerit_box_icon}`}
+                              aria-hidden="true"
+                            />
+                            <div dangerouslySetInnerHTML={{ __html: block.box_demerit }} />
+                          </div>
+                        )}
+                        {block.box_point && (
+                          <div className={`${styles.tab_point_box} flex items-center`}>
+                            <LightBulbIcon
+                              className={`h-8 w-8 ${styles.tab_point_box_icon}`}
+                              aria-hidden="true"
+                            />
+                            <div dangerouslySetInnerHTML={{ __html: block.box_point }} />
+                          </div>
+                        )}
+                        {block.box_common && (
+                          <div className={`${styles.tab_common_box} flex items-center`}>
+                            <InformationCircleIcon
+                              className={`h-8 w-8 ${styles.tab_common_box_icon}`}
+                              aria-hidden="true"
+                            />
+                            <div dangerouslySetInnerHTML={{ __html: block.box_common }} />
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                   <div className="w-full">
                     {headings.length > 0 && <TableOfContents headings={headings} />}
                   </div>
@@ -239,12 +336,6 @@ export default function ArticleComponent({ data }: Props) {
                       </div>
                     ))}
                   </div>
-                  <div
-                    className={styles.content}
-                    dangerouslySetInnerHTML={{
-                      __html: `${data.content}`,
-                    }}
-                  />
                 </main>
               </div>
               <div style={{ marginTop: '112px' }} className="ArticleSidebar">
