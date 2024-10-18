@@ -1,4 +1,4 @@
-import Disclaimer from '@/components/Disclaimer';
+import Disclaimer from '@/components/Fixed/Disclaimer';
 
 export const revalidate = 60;
 

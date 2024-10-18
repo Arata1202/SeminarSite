@@ -1,4 +1,4 @@
-import Member from '@/components/Member';
+import Member from '@/components/Fixed/Member';
 
 export const revalidate = 60;
 

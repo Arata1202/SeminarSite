@@ -1,4 +1,4 @@
-import '../../app/globals.css';
+import '../../../app/globals.css';
 import { FireIcon, ChevronRightIcon, HomeIcon, CalendarDaysIcon } from '@heroicons/react/24/solid';
 
 export default function Activity() {

@@ -1,4 +1,4 @@
-import Link from '@/components/Link';
+import Link from '@/components/Fixed/Link';
 
 export const revalidate = 60;
 

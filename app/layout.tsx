@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/Layouts/Header';
+import Footer from '@/components/Layouts/Footer';
 import './globals.css';
 import styles from './layout.module.css';
 import Script from 'next/script';

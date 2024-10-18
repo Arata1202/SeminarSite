@@ -1,4 +1,4 @@
-import Privacy from '@/components/Privacy';
+import Privacy from '@/components/Fixed/Privacy';
 
 export const revalidate = 60;
 

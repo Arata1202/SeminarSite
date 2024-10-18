@@ -1,4 +1,4 @@
-import Contact from '@/components/Contact';
+import Contact from '@/components/Fixed/Contact';
 
 export const revalidate = 60;
 

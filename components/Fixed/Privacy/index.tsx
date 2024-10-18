@@ -1,6 +1,6 @@
-import '../../app/globals.css';
+import '../../../app/globals.css';
 import './index.css';
-import PublishedDate from '@/components/Date';
+import PublishedDate from '@/components/Elements/Date';
 import { InformationCircleIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 export default function Privacy() {

@@ -1,4 +1,4 @@
-import Activity from '@/components/Activity';
+import Activity from '@/components/Fixed/Activity';
 
 export const revalidate = 60;
 

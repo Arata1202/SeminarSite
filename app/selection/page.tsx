@@ -1,4 +1,4 @@
-import Selection from '@/components/Selection';
+import Selection from '@/components/Fixed/Selection';
 
 export const revalidate = 60;
 

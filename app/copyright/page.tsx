@@ -1,4 +1,4 @@
-import Copyright from '@/components/Copyright';
+import Copyright from '@/components/Fixed/Copyright';
 
 export const revalidate = 60;
 

@@ -1,9 +1,9 @@
-import '../../app/globals.css';
+import '../../../app/globals.css';
 import './index.css';
-import PublishedDate from '../Date';
-import { ShieldExclamationIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
+import PublishedDate from '../../Elements/Date';
+import { LinkIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
-export default function Disclaimer() {
+export default function Link() {
   const dummyDate = new Date(2024, 9, 18);
   const formattedDate = dummyDate.toLocaleDateString('en-US', {
     year: 'numeric',
@@ -12,7 +12,7 @@ export default function Disclaimer() {
   });
   return (
     <div
-      className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
+      className="top_title mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
       style={{ marginTop: '80px', marginBottom: '120px' }}
     >
       <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
@@ -30,10 +30,10 @@ export default function Disclaimer() {
                   aria-hidden="true"
                 />
                 <a
-                  href="/disclaimer"
+                  href="/link"
                   className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                 >
-                  免責事項
+                  リンク
                 </a>
               </div>
             </li>
@@ -44,8 +44,8 @@ export default function Disclaimer() {
         {/* <p className="text-base font-semibold leading-7 text-indigo-600">Introducing</p> */}
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
-            <ShieldExclamationIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-            <div className="text-black">免責事項</div>
+            <LinkIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+            <div className="text-black">リンク</div>
           </div>
         </h1>
         <div className="space-y-5 lg:space-y-8">
@@ -54,16 +54,11 @@ export default function Disclaimer() {
           </div>
         </div>
         <div className="mt-10">
-          <h2 className="font-bold">免責事項について</h2>
+          <h2 className="font-bold">リンクについて</h2>
           <p className="mt-6">
-            鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）からのリンクやバナーなどで移動したサイトで提供される情報、サービス等について一切の責任を負いません。
+            鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）は完全リンクフリーです。リンクを行う場合の本サービスへの許可や連絡は不要です。
           </p>
-          <p className="mt-6">
-            また本サービスのコンテンツ・情報について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。情報が古くなっていることもございます。
-          </p>
-          <p className="mt-6">
-            本サービスに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。
-          </p>
+          <p className="mt-6">ただし、インラインフレームの使用や画像の直リンクはご遠慮ください。</p>
         </div>
       </div>
     </div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Article } from '@/libs/microcms';
 import styles from './index.module.css';
-import TagList from '../TagList';
-import PublishedDate from '../Date';
+import TagList from '../../TagLists/TagList';
+import PublishedDate from '../../Elements/Date';
 import { FolderIcon } from '@heroicons/react/24/solid';
 
 type Props = {

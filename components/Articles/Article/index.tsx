@@ -3,12 +3,12 @@
 // import { formatRichText } from '@/libs/utils';
 import { type Article } from '@/libs/microcms';
 import { useEffect, useState } from 'react';
-import PublishedDate from '../Date';
+import PublishedDate from '../../Elements/Date';
 import styles from './index.module.css';
 import './article.css';
-import TableOfContents from '../TableOfContent';
-import TagList from '../TagList';
-import WithArticleItem from '../WithArticleItem';
+import TableOfContents from '../Elements/TableOfContent';
+import TagList from '../../TagLists/TagList';
+import WithArticleItem from '../Elements/WithArticleItem';
 import {
   HomeIcon,
   ChevronRightIcon,
@@ -20,7 +20,7 @@ import {
   LinkIcon,
   ArrowPathIcon,
 } from '@heroicons/react/24/solid';
-import Sidebar from '../Sidebar';
+import Sidebar from '../../Sidebar';
 
 import {
   TwitterShareButton,

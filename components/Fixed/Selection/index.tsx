@@ -1,4 +1,4 @@
-import '../../app/globals.css';
+import '../../../app/globals.css';
 import { FlagIcon, ChevronRightIcon, HomeIcon, CheckIcon } from '@heroicons/react/24/solid';
 const firstSteps = [
   {

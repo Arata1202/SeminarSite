@@ -3,8 +3,8 @@
 import React from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import { useEffect } from 'react';
-import TableOfContents from '../TableOfContent';
-import SearchField from '../SearchField';
+import TableOfContents from '../Articles/Elements/TableOfContent';
+import SearchField from '../Elements/SearchField';
 import styles from './index.module.css';
 import { FolderIcon } from '@heroicons/react/24/solid';
 import { Listbox } from '@headlessui/react';

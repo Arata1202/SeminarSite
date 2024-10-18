@@ -1,6 +1,6 @@
 import { getList } from '@/libs/microcms';
-import ArticleList from '@/components/ArticleList';
-import Pagination from '@/components/Pagination';
+import ArticleList from '@/components/ArticleLists/ArticleList';
+import Pagination from '@/components/Elements/Pagination';
 import { HomeIcon, ChevronRightIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 
 type Props = {
