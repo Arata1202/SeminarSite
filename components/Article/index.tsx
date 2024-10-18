@@ -58,8 +58,8 @@ export default function ArticleComponent({ data }: Props) {
               </ol>
             </nav>
           </h1>
-          <h1 className={`${styles.title} mt-5`}>{data.title}</h1>
-          <div className="max-w-[87rem] mx-auto mt-10">
+          <h1 className={`${styles.title} mt-5 ArticleTitle`}>{data.title}</h1>
+          <div className="max-w-[87rem] mx-auto mt-10 ArticleThumbnail">
             <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
               <div className="lg:col-span-2">
                 <main className={styles.main}>
@@ -76,7 +76,7 @@ export default function ArticleComponent({ data }: Props) {
                     <img
                       src={data.thumbnail?.url}
                       alt=""
-                      className={styles.thumbnail}
+                      className={`${styles.thumbnail}`}
                       width={data.thumbnail?.width}
                       height={data.thumbnail?.height}
                     />

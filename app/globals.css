@@ -33,6 +33,12 @@
 
 /* タブレット以下 */
 @media (max-width: 1023px) {
+  .ArticleTitle {
+    margin-bottom: 0 !important;
+  }
+  .ArticleThumbnail {
+    margin-top: 0 !important;
+  }
   .u_tablet_teacher_p {
     margin-bottom: 30px !important;
     max-width: 100% !important;
