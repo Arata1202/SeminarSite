@@ -91,7 +91,7 @@ export default function ArticleComponent({ data }: Props) {
             <nav className="flex" aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-4">
                 <li>
-                  <a href="/" className="flex text-gray-500 hover:text-blue-500">
+                  <a href="/" className="flex text-gray-500 hover:text-green-500">
                     <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
                   </a>
                 </li>
@@ -103,7 +103,7 @@ export default function ArticleComponent({ data }: Props) {
                     />
                     <a
                       href={`/blog`}
-                      className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                      className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                       style={{ whiteSpace: 'nowrap' }}
                     >
                       ブログ
@@ -118,7 +118,7 @@ export default function ArticleComponent({ data }: Props) {
                     />
                     <a
                       href={`${data.id}`}
-                      className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                      className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                     >
                       {data.title}
                     </a>

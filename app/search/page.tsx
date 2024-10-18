@@ -27,7 +27,7 @@ export default async function Page({ searchParams }: Props) {
             <nav className="flex" aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-4">
                 <li>
-                  <a href="/" className="flex text-gray-500 hover:text-blue-500">
+                  <a href="/" className="flex text-gray-500 hover:text-green-500">
                     <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
                   </a>
                 </li>
