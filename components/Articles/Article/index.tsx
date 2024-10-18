@@ -19,7 +19,10 @@ import {
   InformationCircleIcon,
   LinkIcon,
   ArrowPathIcon,
+  RssIcon,
+  UserPlusIcon,
 } from '@heroicons/react/24/solid';
+import { SiFeedly } from 'react-icons/si';
 import Sidebar from '../../Sidebar';
 
 import {
@@ -466,6 +469,34 @@ export default function ArticleComponent({ data }: Props) {
                     >
                       <LinkedinIcon size={40} round={true} />
                     </LinkedinShareButton>
+                  </div>
+                  <div className="mt-2">
+                    <div className="pt-3">
+                      <h1 className={`text-2xl font-semibold flex justify-center mb-5`}>
+                        <UserPlusIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+                        フォローする
+                      </h1>
+                    </div>
+                    <div className="flex justify-center">
+                      <a
+                        aria-label="RSSフォローボタン"
+                        href="https://suzuki-seminar.com/rss.xml"
+                        className="bg-orange-500 rounded-full p-2 m-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <RssIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                      </a>
+                      <a
+                        aria-label="Feedlyフォローボタン"
+                        href="https://feedly.com/i/subscription/feed/https://suzuki-seminar.com/rss.xml"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-500 rounded-full p-2 m-1"
+                      >
+                        <SiFeedly className="h-6 w-6 text-white" aria-hidden="true" />
+                      </a>
+                    </div>
                   </div>
                 </main>
               </div>
