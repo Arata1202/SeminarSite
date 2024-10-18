@@ -63,6 +63,7 @@ export default async function RootLayout({ children }: Props) {
         <Header />
         <main className={styles.main}>{children}</main>
         <Footer />
+        <script async src="//www.instagram.com/embed.js" />
       </body>
     </html>
   );
