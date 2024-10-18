@@ -2,6 +2,7 @@
 import { type Article } from '@/libs/microcms';
 import PublishedDate from '../Date';
 import styles from './index.module.css';
+import './article.css';
 import TagList from '../TagList';
 import { HomeIcon, ChevronRightIcon, FolderIcon } from '@heroicons/react/24/solid';
 import Sidebar from '../Sidebar';
@@ -58,10 +59,10 @@ export default function ArticleComponent({ data }: Props) {
               </ol>
             </nav>
           </h1>
-          <h1 className={`${styles.title} mt-5 ArticleTitle`}>{data.title}</h1>
-          <div className="max-w-[87rem] mx-auto mt-10 ArticleThumbnail">
+          <div className="max-w-[87rem] mx-auto ArticleThumbnail">
             <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
               <div className="lg:col-span-2">
+                <h1 className={`${styles.title} mt-5 ArticleTitle`}>{data.title}</h1>
                 <main className={styles.main}>
                   <picture>
                     <source
@@ -97,7 +98,9 @@ export default function ArticleComponent({ data }: Props) {
                   />
                 </main>
               </div>
-              <Sidebar />
+              <div style={{ marginTop: '112px' }} className="ArticleSidebar">
+                <Sidebar />
+              </div>
             </div>
           </div>
         </div>
