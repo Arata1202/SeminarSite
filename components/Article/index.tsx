@@ -35,25 +35,45 @@ function useExtractHeadings(contentBlocks: { rich_text?: string }[]): Heading[] 
   const [headings, setHeadings] = useState<Heading[]>([]);
 
   useEffect(() => {
-    const extractedHeadings: Heading[] = [];
+    if (contentBlocks.length > 0) {
+      // 新しい Headings を抽出する
+      const extractedHeadings: Heading[] = [];
 
-    contentBlocks.forEach((block) => {
-      if (block.rich_text) {
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = block.rich_text;
-        const blockHeadings: Heading[] = Array.from(
-          tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6'),
-        ).map((el) => ({
-          id: el.id,
-          title: el.textContent || '',
-          level: parseInt(el.tagName[1], 10),
-        }));
-        extractedHeadings.push(...blockHeadings);
+      contentBlocks.forEach((block) => {
+        if (block.rich_text) {
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = block.rich_text;
+
+          const blockHeadings: Heading[] = Array.from(
+            tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6'),
+          ).map((el) => ({
+            id: el.id,
+            title: el.textContent || '',
+            level: parseInt(el.tagName[1], 10),
+          }));
+
+          extractedHeadings.push(...blockHeadings);
+        }
+      });
+
+      // 現在の Headings と新しい Headings が異なる場合のみ setHeadings を実行
+      const isEqual =
+        extractedHeadings.length === headings.length &&
+        extractedHeadings.every((heading, index) => {
+          const current = headings[index];
+          return (
+            current &&
+            current.id === heading.id &&
+            current.title === heading.title &&
+            current.level === heading.level
+          );
+        });
+
+      if (!isEqual) {
+        setHeadings(extractedHeadings);
       }
-    });
-
-    setHeadings(extractedHeadings);
-  }, [contentBlocks]);
+    }
+  }, [contentBlocks, headings]);
 
   return headings;
 }
