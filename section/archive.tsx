@@ -1,1 +1,1 @@
-export const archive = [{ year: '2024', month: '9', monthForPath: '09' }];
+export const archive = [{ year: '2024', month: '10', monthForPath: '10' }];
