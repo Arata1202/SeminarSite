@@ -19,12 +19,13 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   });
 
   return {
-    title: data.title,
+    title: data.title + ' - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
     description: data.description,
     openGraph: {
-      title: data.title,
+      title: data.title + ' - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
       description: data.description,
       images: [data?.thumbnail?.url || ''],
+      url: 'https://suzuki-seminar.com/articles/' + data.id,
     },
   };
 }

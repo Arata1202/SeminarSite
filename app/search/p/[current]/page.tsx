@@ -2,7 +2,7 @@ import { getList } from '@/libs/microcms';
 import { LIMIT } from '@/constants';
 import Pagination from '@/components/Pagination';
 import ArticleList from '@/components/ArticleList';
-import { HomeIcon, ChevronRightIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid';
+import { HomeIcon, ChevronRightIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 
 type Props = {
   params: {
