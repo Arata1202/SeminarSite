@@ -18,6 +18,7 @@ import {
   LightBulbIcon,
   InformationCircleIcon,
   LinkIcon,
+  ArrowPathIcon,
 } from '@heroicons/react/24/solid';
 import Sidebar from '../Sidebar';
 
@@ -356,9 +357,28 @@ export default function ArticleComponent({ data }: Props) {
                       </div>
                     ))}
                   </div>
+                  <div className="related-articles mt-10">
+                    <h1
+                      className={`${styles.profile} text-2xl font-semibold flex justify-center pt-10`}
+                    >
+                      <ArrowPathIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+                      関連記事
+                    </h1>
+                    <div className="mt-5">
+                      {data.related_articles?.map((block, index) => (
+                        <div key={index}>
+                          {block.articleLink && typeof block.articleLink !== 'string' && (
+                            <div>
+                              <WithArticleItem article={block.articleLink as Article} />
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </main>
               </div>
-              <div style={{ marginTop: '112px' }} className="ArticleSidebar">
+              <div style={{ marginTop: '30px' }} className="ArticleSidebar">
                 <Sidebar contentBlocks={data.content_blocks} />
               </div>
             </div>

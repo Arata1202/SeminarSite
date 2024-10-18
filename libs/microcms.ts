@@ -60,6 +60,11 @@ export type Blog = {
   thumbnail?: MicroCMSImage;
   tags?: Tag[];
   writer?: Writer;
+  related_articles?: RelatedArticle[];
+};
+
+export type RelatedArticle = {
+  articleLink?: string;
 };
 
 export type Article = Blog & MicroCMSContentId & MicroCMSDate;
