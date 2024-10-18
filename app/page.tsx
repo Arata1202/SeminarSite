@@ -15,7 +15,7 @@ export default function Page() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    arrows: true,
+    arrows: false,
     pauseOnHover: false,
   };
 
