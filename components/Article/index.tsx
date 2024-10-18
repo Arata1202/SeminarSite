@@ -235,7 +235,7 @@ export default function ArticleComponent({ data }: Props) {
                       </div>
                     ))}
                   </div>
-                  <div className="w-full">
+                  <div className="w-1/2 tableOfContent">
                     {headings.length > 0 && <TableOfContents headings={headings} />}
                   </div>
                   <div className={styles.content}>
@@ -339,7 +339,7 @@ export default function ArticleComponent({ data }: Props) {
                 </main>
               </div>
               <div style={{ marginTop: '112px' }} className="ArticleSidebar">
-                <Sidebar />
+                <Sidebar contentBlocks={data.content_blocks} />
               </div>
             </div>
           </div>

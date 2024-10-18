@@ -82,7 +82,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = React.memo(({ headings }
       <div className="flex justify-center">
         <nav
           aria-label="Table of contents"
-          className="tableOfContent w-1/2 border border-gray-300 p-4"
+          className="tableOfContent w-full border border-gray-300 p-4"
         >
           <h1 className="text-center font-bold text-lg">目次</h1>
           <ol className="mt-4 list-none pl-0 text-left">
@@ -91,14 +91,14 @@ const TableOfContents: React.FC<TableOfContentsProps> = React.memo(({ headings }
                 key={heading.id}
                 style={{
                   marginLeft: heading.marginLeft,
-                  backgroundColor: activeId === heading.id ? '#eaf4fc' : 'transparent',
+                  backgroundColor: activeId === heading.id ? '#ecffe9' : 'transparent',
                   transition: 'background-color 0.3s ease',
                 }}
               >
                 <a
                   href={`#${heading.id}`}
                   onClick={(e) => handleClick(e, heading.id)}
-                  className="hover:text-blue-500"
+                  className="hover:text-green-500"
                 >
                   {heading.number} {heading.title}
                 </a>
