@@ -35,6 +35,7 @@ export default function ArticleComponent({ data }: Props) {
                     <a
                       href={`/blog`}
                       className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                      style={{ whiteSpace: 'nowrap' }}
                     >
                       ブログ
                     </a>
