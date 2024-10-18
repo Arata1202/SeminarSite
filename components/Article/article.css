@@ -1,0 +1,83 @@
+/* 吹き出し */
+.speech-bubble {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.speech-bubble.left {
+  justify-content: flex-start;
+}
+
+.speech-bubble.right {
+  flex-direction: row-reverse;
+}
+
+.bubble-image {
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.bubble-content {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #ecffe9;
+  display: flex;
+  flex-direction: column;
+}
+
+.speech-bubble.left .bubble-content:after,
+.speech-bubble.right .bubble-content:after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.speech-bubble.left .bubble-content:after {
+  left: -20px;
+  border-right-color: #ecffe9;
+}
+
+.speech-bubble.right .bubble-content:after {
+  right: -20px;
+  border-left-color: #ecffe9;
+}
+
+.bubble-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bubble-text {
+  margin: 0;
+}
+
+.bubble-image-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.bubble-image-wrapper.left {
+  margin-right: 10px;
+}
+
+.bubble-image-wrapper.right {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .bubble-content {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #ecffe9;
+    display: flex;
+    flex-direction: column;
+  }
+}

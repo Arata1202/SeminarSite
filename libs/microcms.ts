@@ -21,11 +21,27 @@ export type Writer = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
+export type ContentBlock = {
+  adsense?: string;
+  rich_text?: string;
+  custom_html?: string;
+  articleLink?: string;
+  bubble_image?: MicroCMSImage;
+  bubble_name?: string;
+  bubble_text?: string;
+  bubble_isRight?: boolean;
+  box_merit?: string;
+  box_demerit?: string;
+  box_point?: string;
+  box_common?: string;
+};
+
 // ブログの型定義
 export type Blog = {
   title: string;
   description: string;
   content: string;
+  content_blocks: ContentBlock[];
   thumbnail?: MicroCMSImage;
   tags?: Tag[];
   writer?: Writer;
