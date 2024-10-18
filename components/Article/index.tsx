@@ -378,7 +378,7 @@ export default function ArticleComponent({ data }: Props) {
                   </div>
                 </main>
               </div>
-              <div style={{ marginTop: '30px' }} className="ArticleSidebar">
+              <div style={{ marginTop: '112px' }} className="ArticleSidebar">
                 <Sidebar contentBlocks={data.content_blocks} />
               </div>
             </div>
