@@ -3,7 +3,8 @@ import { type Article } from '@/libs/microcms';
 import PublishedDate from '../Date';
 import styles from './index.module.css';
 import TagList from '../TagList';
-import Profile from '../Profile';
+import { HomeIcon, ChevronRightIcon, FolderIcon } from '@heroicons/react/24/solid';
+import Sidebar from '../Sidebar';
 
 type Props = {
   data: Article;
@@ -11,56 +12,95 @@ type Props = {
 
 export default function ArticleComponent({ data }: Props) {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{data.title}</h1>
-      <TagList tags={data.tags} />
-      <p className={styles.description}>{data.description}</p>
-      <div className={styles.meta}>
-        {data.writer && (
-          <div className={styles.writer}>
-            <picture>
-              <source
-                type="image/webp"
-                srcSet={`${data.writer?.image?.url}?fm=webp&fit=crop&w=48&h=48 1x, ${data.writer?.image?.url}?fm=webp&fit=crop&w=48&h=48&dpr=2 2x`}
-              />
-              <img
-                src={data.writer?.image?.url}
-                alt=""
-                className={styles.writerIcon}
-                width={data.writer?.image?.width}
-                height={data.writer?.image?.height}
-              />
-            </picture>
-            <span className={styles.writerName}>{data.writer?.name}</span>
+    <>
+      <div className="">
+        <div
+          className="main_side top_title mx-auto max-w-7xl px-6 text-center lg:px-8"
+          style={{ marginTop: '80px', marginBottom: '120px' }}
+        >
+          <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
+            <nav className="flex" aria-label="Breadcrumb">
+              <ol role="list" className="flex items-center space-x-4">
+                <li>
+                  <a href="/" className="flex text-gray-500 hover:text-blue-500">
+                    <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <ChevronRightIcon
+                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      aria-hidden="true"
+                    />
+                    <a
+                      href={`/blog`}
+                      className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                    >
+                      ブログ
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <ChevronRightIcon
+                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      aria-hidden="true"
+                    />
+                    <a
+                      href={`${data.id}`}
+                      className="ml-4 text-sm font-medium text-gray-500 hover:text-blue-500"
+                    >
+                      {data.title}
+                    </a>
+                  </div>
+                </li>
+              </ol>
+            </nav>
+          </h1>
+          <h1 className={`${styles.title} mt-5`}>{data.title}</h1>
+          <div className="max-w-[87rem] mx-auto mt-10">
+            <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
+              <div className="lg:col-span-2">
+                <main className={styles.main}>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 640px)"
+                      srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
+                    />
+                    <source
+                      type="image/webp"
+                      srcSet={`${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504 1x, ${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504&dpr=2 2x`}
+                    />
+                    <img
+                      src={data.thumbnail?.url}
+                      alt=""
+                      className={styles.thumbnail}
+                      width={data.thumbnail?.width}
+                      height={data.thumbnail?.height}
+                    />
+                  </picture>
+                  <div style={{ marginLeft: 'auto' }}>
+                    <div className={styles.date}>
+                      <FolderIcon className="h-5 w-5 mr-2 mt-3" aria-hidden="true" />
+                      <TagList tags={data.tags} hasLink={true} />
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <PublishedDate date={data.publishedAt || data.createdAt} />
+                    </div>
+                  </div>
+                  <div
+                    className={styles.content}
+                    dangerouslySetInnerHTML={{
+                      __html: `${data.content}`,
+                    }}
+                  />
+                </main>
+              </div>
+              <Sidebar />
+            </div>
           </div>
-        )}
-        <PublishedDate date={data.publishedAt || data.createdAt} />
+        </div>
       </div>
-      <picture>
-        <source
-          type="image/webp"
-          media="(max-width: 640px)"
-          srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
-        />
-        <source
-          type="image/webp"
-          srcSet={`${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504 1x, ${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504&dpr=2 2x`}
-        />
-        <img
-          src={data.thumbnail?.url}
-          alt=""
-          className={styles.thumbnail}
-          width={data.thumbnail?.width}
-          height={data.thumbnail?.height}
-        />
-      </picture>
-      <div
-        className={styles.content}
-        dangerouslySetInnerHTML={{
-          __html: `${data.content}`,
-        }}
-      />
-      <Profile writer={data.writer} />
-    </main>
+    </>
   );
 }

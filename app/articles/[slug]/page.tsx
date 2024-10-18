@@ -34,5 +34,9 @@ export default async function Page({ params, searchParams }: Props) {
     draftKey: searchParams.dk,
   });
 
-  return <Article data={data} />;
+  return (
+    <div style={{ padding: '24px' }}>
+      <Article data={data} />
+    </div>
+  );
 }
