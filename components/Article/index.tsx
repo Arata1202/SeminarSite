@@ -136,7 +136,7 @@ export default function ArticleComponent({ data }: Props) {
                     />
                     <a
                       href={`${data.id}`}
-                      className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
+                      className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500 text-left"
                     >
                       {data.title}
                     </a>
