@@ -1,7 +1,16 @@
 import '../../app/globals.css';
+import './index.css';
+import PublishedDate from '@/components/Date';
 import { InformationCircleIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 export default function Privacy() {
+  const dummyDate = new Date(2024, 9, 18);
+  const formattedDate = dummyDate.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  });
+
   return (
     <div
       className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
@@ -38,24 +47,25 @@ export default function Privacy() {
           <div className="text-black">プライバシーポリシー</div>
         </div>
       </h1>
+      <div className="space-y-5 lg:space-y-8">
+        <div className="includeBanner flex justify-end gap-x-5">
+          <PublishedDate date={formattedDate} />
+        </div>
+      </div>
       <div className="mt-10">
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
-          個人情報取り扱いに関する基本方針
-        </h2>
+        <h2 className="mt-10 font-bold">個人情報取り扱いに関する基本方針</h2>
         <p className="mt-6">
           鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）では、ご利用頂くお客様の個人情報を適切に保護するため、個人情報の保護に関する法律、その他の関係法令を遵守すると共に、以下に定めるプライバシーポリシーに従って、個人情報を安全かつ適切に取り扱うことを宣言いたします。
         </p>
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">個人情報の定義</h2>
+        <h2 className="mt-10 font-bold">個人情報の定義</h2>
         <p className="mt-6">
           「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報及び容貌、指紋、声紋にかかるデータ、及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
         </p>
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
-          個人情報の取得方法
-        </h2>
+        <h2 className="mt-10 font-bold">個人情報の取得方法</h2>
         <p className="mt-6">
           本サービスはユーザーが利用登録をする際に氏名、住所、電話番号、メールアドレス、などの個人情報をお尋ねすることがあります。また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を、本サービスの提携先（情報提供元、広告主、広告配信先などを含みます。以下、｢提携先｣といいます。）などから収集することがあります。
         </p>
-        <h3 className="mt-10 text-xl font-bold tracking-tight text-gray-900">クッキー（Cookie）</h3>
+        <h3 className="mt-10 font-bold">クッキー（Cookie）</h3>
         <p className="mt-6">
           本サービスでは、アクセス解析サービス、各種アフィリエイトプログラム、広告配信サービスを利用しております。これらの広告配信業者は、ユーザーのご興味に応じた商品やサービスの広告を表示するため、ユーザーの本サービスおよび他サイトへのアクセスに関する情報Cookieを使用することがございます。
           <br />
@@ -73,10 +83,10 @@ export default function Privacy() {
             target="blank"
           >
             Googleポリシーと規約
-          </a>{' '}
+          </a>
           にてご確認いただけます。
         </p>
-        <h3 className="mt-10 text-xl font-bold tracking-tight text-gray-900">アクセス解析ツール</h3>
+        <h3 className="mt-10 font-bold">アクセス解析ツール</h3>
         <p className="mt-6">
           本サービスでは、Googleの提供するアクセス解析ツール『Google
           Analytics』を使用しています。Google
@@ -104,7 +114,7 @@ export default function Privacy() {
           </a>{' '}
           でご確認いただけます。
         </p>
-        <h3 className="mt-10 text-xl font-bold tracking-tight text-gray-900">コメントについて</h3>
+        <h3 className="mt-10 font-bold">コメントについて</h3>
         <p className="mt-6">
           当ブログへのコメントを残す際に、IP アドレスを収集しています。
           <br />
@@ -114,9 +124,7 @@ export default function Privacy() {
           <br />
           なお、全てのコメントは管理人が事前にその内容を確認し、承認した上での掲載となります。あらかじめご了承ください。
         </p>
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
-          個人情報の利用目的
-        </h2>
+        <h2 className="mt-10 font-bold">個人情報の利用目的</h2>
         <p className="mt-6">
           本サービスが個人情報を収集・利用する目的は、以下のとおりです。
           <br />
@@ -132,7 +140,7 @@ export default function Privacy() {
           <br />
           その他に、本サービスを不正・不当な目的で利用しようとするユーザーがいた場合、ユーザーの特定をし、ご利用をお断りするために利用します。
         </p>
-        {/* <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
+        {/* <h2 className="mt-10 font-bold">
             本サービスが利用している広告サービス
           </h2>
           <p className="mt-6">
@@ -145,13 +153,13 @@ export default function Privacy() {
           <p className="mt-6">
             これらのサービスにおいて取得・収集される情報については、各プログラムのプライバシーポリシーにてご確認ください。
           </p>
-          <h3 className="mt-10 text-xl font-bold tracking-tight text-gray-900">
+          <h3 className="mt-10 font-bold">
             Amazonアソシエイトプログラム
           </h3>
           <p className="mt-6">
             Amazonのアソシエイトとして、当メディアは適格販売により収入を得ています。
           </p>
-          <h3 className="mt-10 text-xl font-bold tracking-tight text-gray-900">
+          <h3 className="mt-10 font-bold">
             Googleの広告サービス
           </h3>
           <p className="mt-6">本サービスは、Googleの提供する以下の広告サービスを利用しています。</p>
@@ -175,9 +183,7 @@ export default function Privacy() {
               Googleポリシーと規約
             </a>
           </p> */}
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
-          個人情報の管理方法
-        </h2>
+        <h2 className="mt-10 font-bold">個人情報の管理方法</h2>
         <p className="mt-6">
           本サービスは第三者に皆さまの重要な情報を読み取られたり、改ざんされたりすることを防ぐために、SSLを使用しております。
           <br />
@@ -185,24 +191,18 @@ export default function Privacy() {
           SSL(SecureSocketLayer)とはデータを暗号化して通信するセキュリティ機能です。
           SSLで暗号化することによってお客さまの個人情報をハッカーやクラッカーから守り、安全に情報を送信することができます。
         </p>
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
-          個人情報の第三者提供
-        </h2>
+        <h2 className="mt-10 font-bold">個人情報の第三者提供</h2>
         <p className="mt-6">
           本サービスは次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく第三者に個人情報を提供することはありません。
           <br />
           <br />
           ただし、個人情報保護法その他の法令で認められる場合を除きます。
         </p>
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
-          個人情報の開示、訂正などの手続きについて
-        </h2>
+        <h2 className="mt-10 font-bold">個人情報の開示、訂正などの手続きについて</h2>
         <p className="mt-6">
           ご本人からの個人情報の開示、訂正、追加、削除、利用停止のご希望の場合には、ご本人であることを確認させて頂いた上、速やかに対応させていただきます。
         </p>
-        <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
-          個人情報の取扱いに関する相談や苦情の連絡先
-        </h2>
+        <h2 className="mt-10 font-bold">個人情報の取扱いに関する相談や苦情の連絡先</h2>
         <p className="mt-6">
           本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。
           <br />

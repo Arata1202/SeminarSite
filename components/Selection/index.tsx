@@ -56,7 +56,7 @@ export default function Selection() {
         </nav>
       </h1>
       <div className="mx-auto text-base leading-7">
-        {/* <p className="text-base font-semibold leading-7 text-indigo-600">Introducing</p> */}
+        {/* <p className="text-base font-semibold leading-7 text-green-700">Introducing</p> */}
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
             <FlagIcon className="h-8 w-8 mr-2" aria-hidden="true" />
@@ -74,7 +74,7 @@ export default function Selection() {
                 {step.status === 'complete' ? (
                   <div className="group flex w-full items-center">
                     <span className="flex items-center px-6 py-4 text-sm font-medium">
-                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600 group-hover:bg-indigo-800">
+                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-700 group-hover:bg-green-700">
                         <CheckIcon aria-hidden="true" className="h-6 w-6 text-white" />
                       </span>
                       <span className="ml-4 text-sm font-medium text-gray-900">{step.name}</span>
@@ -85,10 +85,10 @@ export default function Selection() {
                     aria-current="step"
                     className="flex items-center px-6 py-4 text-sm font-medium"
                   >
-                    <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-indigo-600">
-                      <span className="text-indigo-600">{step.id}</span>
+                    <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-green-700">
+                      <span className="text-green-700">{step.id}</span>
                     </span>
-                    <span className="ml-4 text-sm font-medium text-indigo-600">{step.name}</span>
+                    <span className="ml-4 text-sm font-medium text-green-700">{step.name}</span>
                   </div>
                 ) : (
                   <div className="group flex items-center">

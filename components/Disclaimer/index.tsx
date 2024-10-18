@@ -1,7 +1,15 @@
 import '../../app/globals.css';
+import './index.css';
+import PublishedDate from '../Date';
 import { ShieldExclamationIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 export default function Disclaimer() {
+  const dummyDate = new Date(2024, 9, 18);
+  const formattedDate = dummyDate.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  });
   return (
     <div
       className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
@@ -32,7 +40,7 @@ export default function Disclaimer() {
           </ol>
         </nav>
       </h1>
-      <div className="mx-auto text-base leading-7">
+      <div className="mx-auto">
         {/* <p className="text-base font-semibold leading-7 text-indigo-600">Introducing</p> */}
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
@@ -40,8 +48,13 @@ export default function Disclaimer() {
             <div className="text-black">免責事項</div>
           </div>
         </h1>
+        <div className="space-y-5 lg:space-y-8">
+          <div className="includeBanner flex justify-end gap-x-5">
+            <PublishedDate date={formattedDate} />
+          </div>
+        </div>
         <div className="mt-10">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">免責事項について</h2>
+          <h2 className="font-bold">免責事項について</h2>
           <p className="mt-6">
             鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）からのリンクやバナーなどで移動したサイトで提供される情報、サービス等について一切の責任を負いません。
           </p>

@@ -61,7 +61,9 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div className="footer_menu">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">鈴木ゼミについて</h3>
+                <div className="text-sm font-semibold leading-6 text-gray-900">
+                  鈴木ゼミについて
+                </div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
@@ -76,7 +78,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0 footer_menu">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">選考</h3>
+                <div className="text-sm font-semibold leading-6 text-gray-900">選考</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
@@ -93,7 +95,7 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div className="sm:text-left footer_menu">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">利用規約</h3>
+                <div className="text-sm font-semibold leading-6 text-gray-900">利用規約</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -108,7 +110,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0 footer_menu">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">お問い合わせ</h3>
+                <div className="text-sm font-semibold leading-6 text-gray-900">お問い合わせ</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
