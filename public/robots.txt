@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://suzuki-seminar.com
+Host: https://suzuki-seminar.com/
 
 # Sitemaps
 Sitemap: https://suzuki-seminar.com/sitemap.xml
