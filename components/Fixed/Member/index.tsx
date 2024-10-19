@@ -145,15 +145,16 @@ export default function Member() {
                 <br />
                 <br />
                 大学生活を通じて何か成し遂げたいとやる気のある方の参加を希望します。
-                <br />
-                <br />
-                【趣味・特徴】
-                <br />
-                <ul className="list-disc" style={{ marginLeft: '20px' }}>
-                  <li>マーケティング学科所属</li>
-                  <li>スタバ・ディズニー・海外旅行</li>
-                </ul>
               </p>
+              <br />
+              <p className="text-lg leading-8 text-gray-600 text-left">【趣味・特徴】</p>
+              <ul
+                className="list-disc text-lg leading-8 text-gray-600 text-left"
+                style={{ marginLeft: '20px' }}
+              >
+                <li>マーケティング学科所属</li>
+                <li>スタバ・ディズニー・海外旅行</li>
+              </ul>
             </div>
             <img
               alt=""
