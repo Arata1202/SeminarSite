@@ -44,6 +44,7 @@ export default async function RootLayout({ children }: Props) {
           }}
         />
         <meta name="format-detection" content="email=no,telephone=no,address=no" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
