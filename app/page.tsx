@@ -3,6 +3,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useA2HS } from '@/hooks/A2hs';
 
 export const revalidate = 60;
 
@@ -69,6 +70,15 @@ export default function Page() {
     },
   ];
 
+  const [, promptToInstall] = useA2HS({
+    onAccepted: () => {
+      console.log('ホーム画面に追加が受け入れられました');
+    },
+    onDismissed: () => {
+      console.log('ホーム画面に追加が拒否されました');
+    },
+  });
+
   return (
     <>
       <div style={{ marginTop: '80px' }}>
@@ -76,12 +86,12 @@ export default function Page() {
           <p className="text:sm sm:text-2xl font-bold leading-6 text-white">
             ようこそ、東洋大学 鈴木ゼミナールへ
           </p>
-          <a
-            href="https://suzuki-seminar.com/articles/xz3jxfrs6p"
+          <button
+            onClick={promptToInstall}
             className="flex-none rounded-full bg-white px-3.5 py-1 text-base font-semibold text-black shadow-sm hover:text-green-500"
           >
             プッシュ通知を受け取る <span aria-hidden="true">&rarr;</span>
-          </a>
+          </button>
         </div>
         <Slider {...settings}>
           {slides.map((slide, index) => (
