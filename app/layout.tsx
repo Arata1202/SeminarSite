@@ -4,6 +4,7 @@ import Footer from '@/components/Layouts/Footer';
 import './globals.css';
 import styles from './layout.module.css';
 import Script from 'next/script';
+import { OneSignalInitial } from '@/libs/OneSignalInitial';
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
@@ -64,6 +65,7 @@ export default async function RootLayout({ children }: Props) {
         <Header />
         <main className={styles.main}>{children}</main>
         <Footer />
+        <OneSignalInitial />
         <script async src="//www.instagram.com/embed.js" />
       </body>
     </html>
