@@ -42,7 +42,9 @@
   overflow-y: auto;
   max-height: 500px;
 }
-
+.PieChartContainerflex {
+  display: flex;
+}
 /* タブレット以下 */
 @media (max-width: 1023px) {
   .ArticleSidebar {
@@ -90,6 +92,11 @@
     color: white;
   }
 }
+@media (max-width: 900px) {
+  .PieChartContainerflex {
+    width: 100% !important;
+  }
+}
 /* モバイル以外 */
 @media (min-width: 640px) {
   .mobile {
@@ -100,6 +107,13 @@
 @media (max-width: 640px) {
   .pc {
     display: none !important;
+  }
+  .PieChartContainerflex {
+    display: block;
+    width: 100% !important;
+  }
+  .PieCahrt {
+    margin-top: 2.5rem;
   }
   .main_side {
     padding-left: 0 !important;

@@ -1,3 +1,5 @@
+'use client';
+
 import '../../../app/globals.css';
 import {
   CheckBadgeIcon,
@@ -6,13 +8,49 @@ import {
   ChevronRightIcon,
   HomeIcon,
 } from '@heroicons/react/24/solid';
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 export default function Member() {
-  const stats = [
-    { id: 1, name: '2年生', value: '14人' },
-    { id: 2, name: '3年生', value: '15人' },
-    { id: 3, name: '4年生', value: '13人' },
-  ];
+  const genderData = {
+    labels: ['男子', '女子'],
+    datasets: [
+      {
+        data: [20, 22],
+        backgroundColor: ['#36A2EB', '#FF6384'],
+        hoverBackgroundColor: ['#36A2EB', '#FF6384'],
+      },
+    ],
+  };
+
+  const data = {
+    labels: ['2年生', '3年生', '4年生'],
+    datasets: [
+      {
+        data: [14, 15, 13],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      },
+    ],
+  };
+
+  const options = {
+    plugins: {
+      datalabels: {
+        font: {
+          size: 25,
+          weight: 'bold' as 'bold',
+        },
+        formatter: (value: number) => {
+          return value + ' 人';
+        },
+      },
+    },
+  };
+
   const people = [
     {
       name: 'ゼミ長',
@@ -57,6 +95,7 @@ export default function Member() {
         '渉外係では、主にディベート大会の企画、運営を行います。年に２回開催されるディベート大会をスムーズに進行できるよう、事前に他大学と打ち合わせをします。ディベートを通じて、企業の経営戦略やビジネスモデルの有効性を学ぶ機会を渉外係が中心になって作ります。',
     },
   ];
+
   return (
     <>
       <div className="">
@@ -116,25 +155,22 @@ export default function Member() {
             <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
           </div>
 
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-bold mt-10">
             <div className="flex items-center pb-2 pt-2 mt-10">
               <UserGroupIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-              <div>人数</div>
+              <div>人数比</div>
             </div>
           </h1>
+          <div
+            className="PieChartContainerflex justify-between mt-10 mx-auto"
+            style={{ width: '70%' }}
+          >
+            <div className="PieCahrt flex justify-center items-center">
+              <Doughnut data={data} options={options} width={300} height={300} />
+            </div>
 
-          <div className="bg-white mt-10">
-            <div className="mx-auto max-w-7xl">
-              <dl className="grid grid-cols-3 gap-x-8 gap-y-16 text-center">
-                {stats.map((stat) => (
-                  <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
-                    <dt className="text-base leading-7 text-gray-600">{stat.name}</dt>
-                    <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                      {stat.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+            <div className="PieCahrt flex justify-center items-center">
+              <Doughnut data={genderData} options={options} width={300} height={300} />
             </div>
           </div>
 
