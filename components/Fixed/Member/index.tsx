@@ -145,6 +145,14 @@ export default function Member() {
                 <br />
                 <br />
                 大学生活を通じて何か成し遂げたいとやる気のある方の参加を希望します。
+                <br />
+                <br />
+                【趣味・特徴】
+                <br />
+                <ul className="list-disc" style={{ marginLeft: '20px' }}>
+                  <li>マーケティング学科所属</li>
+                  <li>スタバ・ディズニー・海外旅行</li>
+                </ul>
               </p>
             </div>
             <img
@@ -192,7 +200,7 @@ export default function Member() {
                   src={person.imageUrl}
                   className="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56"
                 />
-                <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-500">
+                <h3 className="mt-6 text-2xl font-semibold leading-7 tracking-tight text-gray-500">
                   {person.name}
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-left text-gray-400">
