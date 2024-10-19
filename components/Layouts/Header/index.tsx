@@ -219,11 +219,6 @@ export default function Header() {
                     <a
                       href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
                       target="_blank"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setMobileMenuOpen(false);
-                        window.location.href = '/contact';
-                      }}
                       className="flex block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
                       ▶︎ インスタグラム
