@@ -62,8 +62,8 @@ export default function Page() {
     },
     {
       id: 1,
-      name: 'お問い合わせ',
-      href: '/contact',
+      name: 'ブログ',
+      href: '/blog',
       imageSrc: '/images/top/square/2A3A4EC7-EE88-443A-8542-EFA5040521E5_1_201_a.jpeg',
       imageAlt: 'Hand stitched, orange leather long wallet.',
     },
