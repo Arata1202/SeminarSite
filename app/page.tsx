@@ -72,10 +72,16 @@ export default function Page() {
   return (
     <>
       <div style={{ marginTop: '80px' }}>
-        <div className="flex justify-center gap-x-6 bg-green-700 px-6 py-2.5 sm:px-3.5">
+        <div className="TopBanner flex justify-center gap-x-1 bg-green-700 px-6 py-2.5 sm:px-3.5">
           <p className="text:sm sm:text-2xl font-bold leading-6 text-white">
             ようこそ、東洋大学 鈴木ゼミナールへ
           </p>
+          <a
+            href="https://suzuki-seminar.com/articles/xz3jxfrs6p"
+            className="flex-none rounded-full bg-white px-3.5 py-1 text-base font-semibold text-black shadow-sm hover:text-green-500"
+          >
+            プッシュ通知を受け取る <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
         <Slider {...settings}>
           {slides.map((slide, index) => (

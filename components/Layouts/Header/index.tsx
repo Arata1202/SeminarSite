@@ -2,7 +2,7 @@
 
 import { useState, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import styles from './index.module.css';
 
 export default function Header() {
@@ -60,10 +60,12 @@ export default function Header() {
             ブログ
           </a>
           <a
-            href="/contact"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+            href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
+            target="_blank"
+            className="flex text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
           >
-            お問い合わせ
+            インスタグラム
+            <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-1" aria-hidden="true" />
           </a>
           {/* <Popover className="relative">
             {({ open, close }) => (
@@ -215,15 +217,21 @@ export default function Header() {
                   </li>
                   <li>
                     <a
-                      href="/contact"
+                      href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
+                      target="_blank"
                       onClick={(event) => {
                         event.preventDefault();
                         setMobileMenuOpen(false);
                         window.location.href = '/contact';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
+                      className="flex block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
-                      ▶︎ お問い合わせ
+                      ▶︎ インスタグラム
+                      <ArrowTopRightOnSquareIcon
+                        className="h-5 w-5 ml-1"
+                        style={{ marginTop: '2px' }}
+                        aria-hidden="true"
+                      />
                     </a>
                   </li>
                   {/* <li>

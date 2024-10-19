@@ -108,6 +108,13 @@
   .pc {
     display: none !important;
   }
+  .TopBanner {
+    display: block;
+    text-align: center;
+  }
+  .TopBanner p {
+    margin-bottom: 5px !important;
+  }
   .PieChartContainerflex {
     display: block;
     width: 100% !important;
