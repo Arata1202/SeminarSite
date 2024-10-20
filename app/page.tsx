@@ -3,10 +3,18 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useState } from 'react';
+import { useA2HS } from '@/hooks/A2hs';
+import { isAndroid, isIOS } from 'react-device-detect';
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
+import { XMarkIcon } from '@heroicons/react/24/solid';
+import { ArrowUpOnSquareIcon } from '@heroicons/react/24/outline';
 
 export const revalidate = 60;
 
 export default function Page() {
+  const [open, setOpen] = useState(false);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -69,6 +77,15 @@ export default function Page() {
     },
   ];
 
+  const [, promptToInstall] = useA2HS({
+    onAccepted: () => {
+      console.log('ホーム画面に追加が受け入れられました');
+    },
+    onDismissed: () => {
+      console.log('ホーム画面に追加が拒否されました');
+    },
+  });
+
   return (
     <>
       <div style={{ marginTop: '80px' }}>
@@ -76,12 +93,21 @@ export default function Page() {
           <p className="text:sm sm:text-2xl font-bold leading-6 text-white">
             ようこそ、東洋大学 鈴木ゼミナールへ
           </p>
-          <a
-            href="https://suzuki-seminar.com/articles/xz3jxfrs6p"
-            className="flex-none rounded-full bg-white px-3.5 py-1 text-base font-semibold text-black shadow-sm hover:text-green-500"
-          >
-            プッシュ通知を受け取る <span aria-hidden="true">&rarr;</span>
-          </a>
+          {isAndroid || !isIOS ? (
+            <button
+              onClick={promptToInstall}
+              className="flex-none rounded-full bg-white px-3.5 py-1 text-base font-semibold text-black shadow-sm hover:text-green-500"
+            >
+              アプリを追加する <span aria-hidden="true">&rarr;</span>
+            </button>
+          ) : isIOS ? (
+            <button
+              onClick={() => setOpen(true)}
+              className="flex-none rounded-full bg-white px-3.5 py-1 text-base font-semibold text-black shadow-sm hover:text-green-500"
+            >
+              アプリを追加する <span aria-hidden="true">&rarr;</span>
+            </button>
+          ) : null}
         </div>
         <Slider {...settings}>
           {slides.map((slide, index) => (
@@ -132,6 +158,43 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
+        <DialogBackdrop className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <DialogPanel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+              <div className="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                >
+                  <span className="sr-only">Close</span>
+                  <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                </button>
+              </div>
+              <div className="sm:flex sm:items-start">
+                <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                  <ArrowUpOnSquareIcon aria-hidden="true" className="h-6 w-6 text-green-700" />
+                </div>
+                <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                  <DialogTitle as="h3" className="text-base font-semibold leading-6 text-gray-900">
+                    アプリをホームに追加しよう
+                  </DialogTitle>
+                  <div className="mt-2">
+                    <p className="text-sm text-gray-500">
+                      アプリをホームに追加して、プッシュ通知を受け取りましょう。
+                      <br />
+                      画面下部の 「シェアアイコン」
+                      をタップして「ホーム画面に追加」を選択してください！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </DialogPanel>
+          </div>
+        </div>
+      </Dialog>
     </>
   );
 }
