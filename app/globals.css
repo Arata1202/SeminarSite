@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.margin-top-35 {
-  margin-top: 35px !important;
-}
-.margin-top-0 {
-  margin-top: 0 !important;
-}
 .TopSubTitle {
   font-size: 70px;
 }
