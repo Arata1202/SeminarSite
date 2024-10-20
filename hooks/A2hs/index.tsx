@@ -15,11 +15,11 @@ interface Config {
 }
 
 const isIOS = (): boolean => {
-  if (typeof window === 'undefined' || typeof navigator === 'undefined') {
-    return false;
-  }
-
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
+  return (
+    typeof navigator !== 'undefined' &&
+    (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))
+  );
 };
 
 /**
