@@ -67,8 +67,9 @@ export default async function RootLayout({ children }: Props) {
       <body>
         <Header />
         <main
-          className={styles.main}
-          style={{ marginTop: (isAndroid || isIOS) && !isPWA ? '35px' : '0' }}
+          className={`${styles.main} ${
+            (isAndroid || isIOS) && !isPWA ? 'margin-top-35' : 'margin-top-0'
+          }`}
         >
           {children}
         </main>
