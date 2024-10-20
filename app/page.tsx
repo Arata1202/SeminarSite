@@ -3,6 +3,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { isAndroid, isIOS } from 'react-device-detect';
 
 export const revalidate = 60;
 
@@ -69,9 +70,12 @@ export default function Page() {
     },
   ];
 
+  const isPWA =
+    typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches;
+
   return (
     <>
-      <div style={{ marginTop: '120px' }}>
+      <div style={{ marginTop: isPWA || !(isAndroid || isIOS) ? '80px' : '120px' }}>
         <div className="TopBanner flex justify-center gap-x-1 bg-green-700 px-6 py-2.5 sm:px-3.5">
           <p className="text:sm sm:text-2xl font-bold leading-6 text-white">
             ようこそ、東洋大学 鈴木ゼミナールへ

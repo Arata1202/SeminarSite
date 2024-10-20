@@ -1,7 +1,7 @@
 .main {
   /* width: 720px; */
   margin: 0 auto;
-  margin-top: 35px !important;
+  /* margin-top: 35px !important; */
 }
 
 @media (max-width: 640px) {

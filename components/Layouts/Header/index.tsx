@@ -26,37 +26,33 @@ export default function Header() {
     },
   });
 
+  const isPWA =
+    typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches;
+
   return (
     <header className={`${styles.header} fixed top-0 left-0 w-full bg-white z-30`}>
-      <div className="flex justify-between p-2" style={{ backgroundColor: '#a3a4a4' }}>
-        <div className="flex">
-          <img
-            src="/images/icons/apple-touch-icon.png"
-            className=""
-            style={{ width: '23px', height: '23px', borderRadius: '20%' }}
-            alt=""
-          />
+      {(isAndroid || isIOS) && !isPWA && (
+        <div className="flex justify-between p-2" style={{ backgroundColor: '#a3a4a4' }}>
           <p className="ml-2 text-white text-base">アプリをインストールできます</p>
+          {isAndroid ? (
+            <button
+              onClick={promptToInstall}
+              className="bg-blue-400 text-white text-base rounded-full px-3"
+              style={{ backgroundColor: '#3597e1' }}
+            >
+              インストール
+            </button>
+          ) : isIOS ? (
+            <button
+              onClick={() => setOpen(true)}
+              className="bg-blue-400 text-white text-base rounded-full px-3"
+              style={{ backgroundColor: '#3597e1' }}
+            >
+              インストール
+            </button>
+          ) : null}
         </div>
-        {isAndroid || !isIOS ? (
-          <button
-            onClick={promptToInstall}
-            // onClick={() => setOpen(true)}
-            className="bg-blue-400 text-white text-base rounded-full px-3"
-            style={{ backgroundColor: '#3597e1' }}
-          >
-            入手
-          </button>
-        ) : isIOS ? (
-          <button
-            onClick={() => setOpen(true)}
-            className="bg-blue-400 text-white text-base rounded-full px-3"
-            style={{ backgroundColor: '#3597e1' }}
-          >
-            入手
-          </button>
-        ) : null}
-      </div>
+      )}
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
