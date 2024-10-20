@@ -75,7 +75,7 @@ export default function Page() {
 
   return (
     <>
-      <div style={{ marginTop: isPWA || !(isAndroid || isIOS) ? '80px' : '120px' }}>
+      <div style={{ marginTop: (isAndroid || isIOS) && !isPWA ? '120px' : '80px' }}>
         <div className="TopBanner flex justify-center gap-x-1 bg-green-700 px-6 py-2.5 sm:px-3.5">
           <p className="text:sm sm:text-2xl font-bold leading-6 text-white">
             ようこそ、東洋大学 鈴木ゼミナールへ
