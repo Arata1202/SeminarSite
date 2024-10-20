@@ -2,10 +2,9 @@ import React from 'react';
 import Header from '@/components/Layouts/Header';
 import Footer from '@/components/Layouts/Footer';
 import './globals.css';
-import styles from './layout.module.css';
 import Script from 'next/script';
 import { OneSignalInitial } from '@/libs/OneSignalInitial';
-import { isAndroid, isIOS } from 'react-device-detect';
+import MainHeight from '@/hooks/MainHeight';
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
@@ -27,8 +26,6 @@ type Props = {
 };
 
 export default async function RootLayout({ children }: Props) {
-  const isPWA =
-    typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches;
   return (
     <html lang="ja">
       <head>
@@ -66,12 +63,7 @@ export default async function RootLayout({ children }: Props) {
       </head>
       <body>
         <Header />
-        <main
-          className={styles.main}
-          style={{ marginTop: (isAndroid || isIOS) && !isPWA ? '35px' : '0' }}
-        >
-          {children}
-        </main>
+        <MainHeight>{children}</MainHeight>
         <Footer />
         <OneSignalInitial />
         <script async src="//www.instagram.com/embed.js" />
