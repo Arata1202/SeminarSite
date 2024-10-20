@@ -7,6 +7,7 @@ import {
   XMarkIcon,
   ArrowTopRightOnSquareIcon,
   ArrowUpOnSquareIcon,
+  DevicePhoneMobileIcon,
 } from '@heroicons/react/24/outline';
 import styles from './index.module.css';
 import { useA2HS } from '@/hooks/A2hs';
@@ -32,6 +33,7 @@ export default function Header() {
         {isAndroid || !isIOS ? (
           <button
             onClick={promptToInstall}
+            // onClick={() => setOpen(true)}
             className="bg-blue-400 text-white text-base rounded-full px-3"
             style={{ backgroundColor: '#3597e1' }}
           >
@@ -354,7 +356,10 @@ export default function Header() {
                   </div>
                   <div className="sm:flex sm:items-start">
                     <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <ArrowUpOnSquareIcon aria-hidden="true" className="h-6 w-6 text-green-700" />
+                      <DevicePhoneMobileIcon
+                        aria-hidden="true"
+                        className="h-6 w-6 text-green-700"
+                      />
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <Dialog.Title
@@ -364,14 +369,19 @@ export default function Header() {
                         最新情報を逃すな！
                       </Dialog.Title>
                       <div className="mt-2">
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-gray-500 text-left">
                           アプリをインストールできます。
                           <br />
                           <br />
-                          <div className="text-left">
-                            画面下部の 「シェアアイコン」
-                            をタップして「ホーム画面に追加」を選択してください！
+                          <div className="text-left flex">
+                            画面下部の
+                            <div className="flex">
+                              「シェアアイコン
+                              <ArrowUpOnSquareIcon aria-hidden="true" className="h-4 w-" />
+                              」をタップして
+                            </div>
                           </div>
+                          「ホーム画面に追加」を選択してください。
                         </p>
                       </div>
                     </div>
