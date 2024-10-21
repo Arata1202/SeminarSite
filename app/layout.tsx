@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '@/components/Layouts/Header';
 import Footer from '@/components/Layouts/Footer';
+import BottomNavigation from '@/components/Layouts/BottomNavigation';
 import './globals.css';
 import Script from 'next/script';
 import { OneSignalInitial } from '@/libs/OneSignalInitial';
@@ -65,6 +66,7 @@ export default async function RootLayout({ children }: Props) {
         <Header />
         <MainHeight>{children}</MainHeight>
         <Footer />
+        <BottomNavigation />
         <OneSignalInitial />
         <script async src="//www.instagram.com/embed.js" />
       </body>
