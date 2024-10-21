@@ -30,6 +30,7 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
       <head>
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
         <Script async strategy="lazyOnload" src={process.env.GOOGLE_ANALYTICS_ID} />
         <Script
           id="google-analytics"
