@@ -32,12 +32,15 @@ export default function Header() {
   return (
     <header className={`${styles.header} fixed top-0 left-0 w-full bg-white z-30`}>
       {(isAndroid || isIOS) && !isPWA && (
-        <div className="flex justify-between p-2" style={{ backgroundColor: '#a3a4a4' }}>
-          <p className="ml-2 text-white text-base">アプリをインストールできます</p>
+        <div
+          className="flex justify-between"
+          style={{ backgroundColor: '#a3a4a4', padding: '10px 0.4rem 10px 0.4rem' }}
+        >
+          <p className="text-white text-sm">ホーム画面にインストールできます</p>
           {isAndroid ? (
             <button
               onClick={promptToInstall}
-              className="bg-blue-400 text-white text-base rounded-full px-3"
+              className="bg-blue-400 text-white text-sm rounded-full px-1"
               style={{ backgroundColor: '#3597e1' }}
             >
               インストール
@@ -45,7 +48,7 @@ export default function Header() {
           ) : isIOS ? (
             <button
               onClick={() => setOpen(true)}
-              className="bg-blue-400 text-white text-base rounded-full px-3"
+              className="bg-blue-400 text-white text-sm rounded-full px-1"
               style={{ backgroundColor: '#3597e1' }}
             >
               インストール
@@ -374,7 +377,7 @@ export default function Header() {
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500 text-left">
-                          アプリをインストールできます。
+                          ホーム画面にインストールできます。
                           <br />
                           <br />
                           <div className="text-left flex">
