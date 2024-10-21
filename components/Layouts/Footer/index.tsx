@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { isAndroid, isIOS } from 'react-device-detect';
 import styles from './index.module.css';
