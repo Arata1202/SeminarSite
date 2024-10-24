@@ -159,10 +159,10 @@ export default function Header() {
         <Dialog as="div" className="relative lg:hidden z-50" onClose={setMobileMenuOpen}>
           <Transition.Child
             as={Fragment}
-            enter="ease-in-out duration-100"
+            enter="ease-in-out duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in-out duration-100"
+            leave="ease-in-out duration-300"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
