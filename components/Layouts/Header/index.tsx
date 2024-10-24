@@ -2,60 +2,14 @@
 
 import { useState, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import {
-  Bars3Icon,
-  XMarkIcon,
-  ArrowTopRightOnSquareIcon,
-  ArrowUpOnSquareIcon,
-  DevicePhoneMobileIcon,
-} from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import styles from './index.module.css';
-import { useA2HS } from '@/hooks/A2hs';
-import { isAndroid, isIOS } from 'react-device-detect';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  const [, promptToInstall] = useA2HS({
-    onAccepted: () => {
-      console.log('ホーム画面に追加が受け入れられました');
-    },
-    onDismissed: () => {
-      console.log('ホーム画面に追加が拒否されました');
-    },
-  });
-
-  const isPWA =
-    typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches;
 
   return (
     <header className={`${styles.header} fixed top-0 left-0 w-full bg-white z-30`}>
-      {(isAndroid || isIOS) && !isPWA && (
-        <div
-          className="flex justify-between"
-          style={{ backgroundColor: '#a3a4a4', padding: '10px 0.4rem 10px 0.4rem' }}
-        >
-          <p className="text-white text-sm">ホーム画面にインストールできます</p>
-          {isAndroid ? (
-            <button
-              onClick={promptToInstall}
-              className="bg-blue-400 text-white text-sm rounded-full px-1"
-              style={{ backgroundColor: '#3597e1' }}
-            >
-              インストール
-            </button>
-          ) : isIOS ? (
-            <button
-              onClick={() => setOpen(true)}
-              className="bg-blue-400 text-white text-sm rounded-full px-1"
-              style={{ backgroundColor: '#3597e1' }}
-            >
-              インストール
-            </button>
-          ) : null}
-        </div>
-      )}
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -159,10 +113,10 @@ export default function Header() {
         <Dialog as="div" className="relative lg:hidden z-50" onClose={setMobileMenuOpen}>
           <Transition.Child
             as={Fragment}
-            enter="ease-in-out duration-100"
+            enter="ease-in-out duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in-out duration-100"
+            leave="ease-in-out duration-300"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
@@ -265,6 +219,11 @@ export default function Header() {
                     <a
                       href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
                       target="_blank"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setMobileMenuOpen(false);
+                        window.location.href = '/contact';
+                      }}
                       className="flex block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
                     >
                       ▶︎ インスタグラム
@@ -323,80 +282,6 @@ export default function Header() {
               </div>
             </Dialog.Panel>
           </Transition.Child>
-        </Dialog>
-      </Transition.Root>
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={setOpen}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-          </Transition.Child>
-
-          <div className="fixed inset-0 z-10 overflow-y-auto">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                enterTo="opacity-100 translate-y-0 sm:scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              >
-                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-                  <div className="absolute right-0 top-0 pr-4 pt-4 sm:block">
-                    <button
-                      type="button"
-                      onClick={() => setOpen(false)}
-                      className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-                    >
-                      <span className="sr-only">Close</span>
-                      <XMarkIcon aria-hidden="true" className="h-6 w-6" />
-                    </button>
-                  </div>
-                  <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <DevicePhoneMobileIcon
-                        aria-hidden="true"
-                        className="h-6 w-6 text-green-700"
-                      />
-                    </div>
-                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                      <Dialog.Title
-                        as="h3"
-                        className="text-base font-semibold leading-6 text-gray-900"
-                      >
-                        最新情報を逃すな！
-                      </Dialog.Title>
-                      <div className="mt-2">
-                        <p className="text-sm text-gray-500 text-left">
-                          ホーム画面にインストールできます。
-                          <br />
-                          <br />
-                          <div className="text-left flex">
-                            画面下部の
-                            <div className="flex">
-                              「シェアアイコン
-                              <ArrowUpOnSquareIcon aria-hidden="true" className="h-4 w-" />
-                              」をタップして
-                            </div>
-                          </div>
-                          「ホーム画面に追加」を選択してください。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </div>
         </Dialog>
       </Transition.Root>
     </header>
