@@ -5,8 +5,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { isAndroid, isIOS } from 'react-device-detect';
 
-export const revalidate = 60;
-
 export default function Page() {
   const settings = {
     dots: true,
