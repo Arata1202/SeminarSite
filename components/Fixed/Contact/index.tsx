@@ -73,14 +73,13 @@ export default function Example() {
   const handleConfirmSend = useCallback(() => {
     const verifyCaptcha = async () => {
       try {
-        const response = await fetch(
-          '/api/recaptcha',
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: `g-recaptcha-response=${captchaValue}`,
-          },
-        );
+        const response = await fetch('/api/recaptcha', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            'g-recaptcha-response': captchaValue,
+          }),
+        });
         const data = await response.json();
         if (data.success) {
           sendEmail();
@@ -235,7 +234,7 @@ export default function Example() {
         {/* スパム */}
         <ReCAPTCHA
           ref={recaptchaRef}
-          sitekey="6LcslaspAAAAAA15eqFJy4_vL856A7uu4ANjeqId"
+          sitekey="6Lek_4AqAAAAAFlUlXOO4qb5kTh2euEqnIwuLRgw"
           onChange={onChange}
           className="mt-3"
         />
@@ -282,8 +281,8 @@ export default function Example() {
               >
                 <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
                   <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <EnvelopeIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
+                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                      <EnvelopeIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <Dialog.Title
@@ -310,7 +309,7 @@ export default function Example() {
                     </button>
                     <button
                       type="button"
-                      className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto"
+                      className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto"
                       onClick={handleConfirmSend}
                     >
                       送信
@@ -355,7 +354,7 @@ export default function Example() {
                   <div className="ml-4 flex flex-shrink-0">
                     <button
                       type="button"
-                      className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                       onClick={() => {
                         setContactConfirmShow(false);
                       }}
