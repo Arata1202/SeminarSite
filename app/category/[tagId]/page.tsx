@@ -6,14 +6,15 @@ import ArticleList from '@/components/ArticleLists/ArticleList';
 import { HomeIcon, ChevronRightIcon, FolderOpenIcon } from '@heroicons/react/24/solid';
 
 type Props = {
-  params: {
+  params: Promise<{
     tagId: string;
-  };
+  }>;
 };
 
 export const revalidate = 60;
 
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const tag = await getTag(params.tagId);
   const { tagId } = params;
   const data = await getList({

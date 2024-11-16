@@ -4,15 +4,16 @@ import Pagination from '@/components/Elements/Pagination';
 import ArticleList from '@/components/ArticleLists/ArticleList';
 import { CalendarDaysIcon, HomeIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 type Props = {
-  params: {
+  params: Promise<{
     year: string;
     month: string;
-  };
+  }>;
 };
 
 export const revalidate = 60;
 
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const { year, month } = params;
 
   const startDate = `${year}-${month}-01T00:00:00Z`;

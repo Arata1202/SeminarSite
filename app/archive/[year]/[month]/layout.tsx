@@ -3,13 +3,14 @@ import { Metadata } from 'next';
 
 type Props = {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     year: string;
     month: string;
-  };
+  }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const { year, month } = params;
 
   return {

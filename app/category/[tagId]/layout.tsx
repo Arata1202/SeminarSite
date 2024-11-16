@@ -2,7 +2,8 @@ import React from 'react';
 import { getTag } from '@/libs/microcms';
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const tag = await getTag(params.tagId);
 
   return {
@@ -19,9 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 type Props = {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     tagId: string;
-  };
+  }>;
 };
 
 export default async function TagsLayout({ children }: Props) {

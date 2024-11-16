@@ -3,9 +3,6 @@ import { Metadata } from 'next';
 
 type Props = {
   children: React.ReactNode;
-  params: {
-    tagId: string;
-  };
 };
 
 export async function generateMetadata(): Promise<Metadata> {
