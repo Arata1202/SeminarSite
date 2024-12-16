@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { isAndroid, isIOS } from 'react-device-detect';
 import styles from './index.module.css';
 
 const navigation = {
@@ -36,13 +35,8 @@ const navigation = {
 };
 
 export default function Footer() {
-  const isPWA =
-    typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches;
   return (
-    <footer
-      className={`${styles.footer} w-full bg-white`}
-      style={{ marginTop: (isAndroid || isIOS) && isPWA ? '70px' : '0' }}
-    >
+    <footer className={`${styles.footer} w-full bg-white`} style={{ marginTop: '0' }}>
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
