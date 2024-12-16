@@ -42,7 +42,7 @@ export default function Member() {
       datalabels: {
         font: {
           size: 25,
-          weight: 'bold' as 'bold',
+          weight: 'bold' as const,
         },
         formatter: (value: number) => {
           return value + ' 人';

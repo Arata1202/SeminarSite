@@ -10,52 +10,13 @@ import {
   DevicePhoneMobileIcon,
 } from '@heroicons/react/24/outline';
 import styles from './index.module.css';
-import { useA2HS } from '@/hooks/A2hs';
-import { isAndroid, isIOS } from 'react-device-detect';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const [, promptToInstall] = useA2HS({
-    onAccepted: () => {
-      console.log('ホーム画面に追加が受け入れられました');
-    },
-    onDismissed: () => {
-      console.log('ホーム画面に追加が拒否されました');
-    },
-  });
-
-  const isPWA =
-    typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches;
-
   return (
     <header className={`${styles.header} fixed top-0 left-0 w-full bg-white z-30`}>
-      {(isAndroid || isIOS) && !isPWA && (
-        <div
-          className="flex justify-between"
-          style={{ backgroundColor: '#a3a4a4', padding: '10px 0.4rem 10px 0.4rem' }}
-        >
-          <p className="text-white text-sm">ホーム画面にインストールできます</p>
-          {isAndroid ? (
-            <button
-              onClick={promptToInstall}
-              className="bg-blue-400 text-white text-sm rounded-full px-1"
-              style={{ backgroundColor: '#3597e1' }}
-            >
-              インストール
-            </button>
-          ) : isIOS ? (
-            <button
-              onClick={() => setOpen(true)}
-              className="bg-blue-400 text-white text-sm rounded-full px-1"
-              style={{ backgroundColor: '#3597e1' }}
-            >
-              インストール
-            </button>
-          ) : null}
-        </div>
-      )}
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
