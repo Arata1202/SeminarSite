@@ -141,6 +141,7 @@ BASE_URL=
 GOOGLE_ANALYTICS_ID=
 RECAPTCHA_SECRET_KEY=
 EMAIL_TO=
+EMAIL_TO2=
 EMAIL_FROM=
 SMTP_USER=
 SMTP_PASS=
@@ -176,17 +177,18 @@ docker compose down
 
 ### 環境変数一覧
 
-| 変数名                  | 役割                                     |
-| ----------------------- | ---------------------------------------- |
-| MICROCMS_API_KEY        | MicroCMSのAPIキー                        |
-| MICROCMS_SERVICE_DOMAIN | MicroCMSのサービスドメイン（サービスID） |
-| BASE_URL                | 本番環境のベースURL                      |
-| GOOGLE_ANALYTICS_ID     | Google AnalyticsのスクリプトID           |
-| RECAPTCHA_SECRET_KEY    | Google reCAPTCHAのシークレットキー       |
-| EMAIL_TO                | お問い合わせの送信先メールアドレス       |
-| EMAIL_FROM              | お問い合わせの送信元メールアドレス       |
-| SMTP_USER               | Googleアカウントのメールアドレス         |
-| SMTP_PASS               | Googleアカウントのアプリパスワード       |
+| 変数名                  | 役割                                      |
+| ----------------------- | ----------------------------------------- |
+| MICROCMS_API_KEY        | MicroCMSのAPIキー                         |
+| MICROCMS_SERVICE_DOMAIN | MicroCMSのサービスドメイン（サービスID）  |
+| BASE_URL                | 本番環境のベースURL                       |
+| GOOGLE_ANALYTICS_ID     | Google AnalyticsのスクリプトID            |
+| RECAPTCHA_SECRET_KEY    | Google reCAPTCHAのシークレットキー        |
+| EMAIL_TO                | お問い合わせの送信先メールアドレス        |
+| EMAIL_TO2               | 2つ目のお問い合わせの送信先メールアドレス |
+| EMAIL_FROM              | お問い合わせの送信元メールアドレス        |
+| SMTP_USER               | Googleアカウントのメールアドレス          |
+| SMTP_PASS               | Googleアカウントのアプリパスワード        |
 
 ### コマンド一覧
 

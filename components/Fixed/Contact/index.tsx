@@ -24,11 +24,8 @@ export default function Example() {
   } = useForm<FormData>();
 
   interface FormData {
-    sei: string;
-    mei: string;
+    title: string;
     email: string;
-    company: string;
-    tel: string;
     message: string;
   }
 
@@ -151,38 +148,6 @@ export default function Example() {
       <form onSubmit={handleSubmit(onSubmit)} method="POST">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2 mt-6">
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6">
-              氏名
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register('sei', { required: '※ 氏名を入力してください' })}
-                type="text"
-                name="sei"
-                id="sei"
-                autoComplete="given-name"
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
-              />
-              {errors.sei && <p className="text-red-500">{errors.sei.message}</p>}
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6">
-              題名
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register('mei', { required: '※ 題名を入力してください' })}
-                type="text"
-                name="mei"
-                id="mei"
-                autoComplete="family-name"
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
-              />
-              {errors.mei && <p className="text-red-500">{errors.mei.message}</p>}
-            </div>
-          </div>
-          <div className="sm:col-span-2">
             <label htmlFor="email" className="block text-sm font-semibold leading-6">
               メールアドレス
             </label>
@@ -202,6 +167,22 @@ export default function Example() {
                 className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
               />
               {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+            </div>
+          </div>
+          <div className="sm:col-span-2">
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6">
+              件名
+            </label>
+            <div className="mt-2.5">
+              <input
+                {...register('title', { required: '※ 題名を入力してください' })}
+                type="text"
+                name="title"
+                id="title"
+                autoComplete="family-name"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
+              />
+              {errors.title && <p className="text-red-500">{errors.title.message}</p>}
             </div>
           </div>
           <div className="sm:col-span-2">
