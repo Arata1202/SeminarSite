@@ -53,8 +53,8 @@ export default function Link() {
             <PublishedDate date={formattedDate} />
           </div>
         </div>
-        <div className="mt-10">
-          <h2 className="font-bold">リンクについて</h2>
+        <div className="">
+          <h2 className="font-bold mt-2">リンクについて</h2>
           <p className="mt-6">
             鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）は完全リンクフリーです。リンクを行う場合の本サービスへの許可や連絡は不要です。
           </p>

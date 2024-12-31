@@ -53,8 +53,8 @@ export default function Copyright() {
             <PublishedDate date={formattedDate} />
           </div>
         </div>
-        <div className="mt-10">
-          <h2 className="font-bold">著作権について</h2>
+        <div className="">
+          <h2 className="font-bold mt-2">著作権について</h2>
           <p className="mt-6">
             鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）のコンテンツ（写真や画像、文章など）の著作権につきましては、
             原則として本サービスに帰属しており、無断転載することを禁止します。

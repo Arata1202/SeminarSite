@@ -7,7 +7,7 @@ export default function SearchField({ defaultQuery = '' }) {
       <input
         type="search"
         name="q"
-        className={`${styles.search} border border-gray-300 focus:border-2 focus:border-green-500 focus:outline-none cursor-pointer`}
+        className={`${styles.search} border border-gray-300 bg-white focus:border-2 focus:border-green-500 focus:outline-none cursor-pointer`}
         placeholder="検索"
         defaultValue={defaultQuery}
         style={{ width: '100%', borderRadius: '0' }}

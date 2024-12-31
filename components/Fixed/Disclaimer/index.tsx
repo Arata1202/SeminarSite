@@ -53,8 +53,8 @@ export default function Disclaimer() {
             <PublishedDate date={formattedDate} />
           </div>
         </div>
-        <div className="mt-10">
-          <h2 className="font-bold">免責事項について</h2>
+        <div className="">
+          <h2 className="font-bold mt-2">免責事項について</h2>
           <p className="mt-6">
             鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）からのリンクやバナーなどで移動したサイトで提供される情報、サービス等について一切の責任を負いません。
           </p>

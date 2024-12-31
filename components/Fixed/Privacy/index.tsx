@@ -52,8 +52,8 @@ export default function Privacy() {
           <PublishedDate date={formattedDate} />
         </div>
       </div>
-      <div className="mt-10">
-        <h2 className="mt-10 font-bold">個人情報取り扱いに関する基本方針</h2>
+      <div className="">
+        <h2 className="mt-2 font-bold">個人情報取り扱いに関する基本方針</h2>
         <p className="mt-6">
           鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール（以下、「本サービス」と言います。）では、ご利用頂くお客様の個人情報を適切に保護するため、個人情報の保護に関する法律、その他の関係法令を遵守すると共に、以下に定めるプライバシーポリシーに従って、個人情報を安全かつ適切に取り扱うことを宣言いたします。
         </p>
