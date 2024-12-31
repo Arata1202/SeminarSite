@@ -23,7 +23,7 @@
 2. [環境](#2-環境)
 3. [ディレクトリ構成](#3-ディレクトリ構成)
 4. [開発環境構築](#4-開発環境構築)
-4. [プレフィックス](#5-プレフィックス)
+5. [プレフィックス](#5-プレフィックス)
 
 ## 1. プロジェクトについて
 
@@ -41,18 +41,18 @@
 
 <!-- 言語、フレームワーク、ミドルウェア、インフラの一覧とバージョンを記載 -->
 
-| 主要なパッケージ  | バージョン |
-| --------------------- | ---------- |
-| next               | 15.0.3     |
-| react               | 18.3.1     |
-| typescript               | 5.6.3     |
-| tailwindcss               | 3.4.15     |
-| microcms-js-sdk               | 3.1.2     |
-| husky               | 9.1.6     |
-| eslint               | 9.15.0     |
-| prettier               | 3.3.3     |
+| 主要なパッケージ | バージョン |
+| ---------------- | ---------- |
+| next             | 15.0.3     |
+| react            | 18.3.1     |
+| typescript       | 5.6.3      |
+| tailwindcss      | 3.4.15     |
+| microcms-js-sdk  | 3.1.2      |
+| husky            | 9.1.6      |
+| eslint           | 9.15.0     |
+| prettier         | 3.3.3      |
 
-その他のパッケージのバージョンは package.json を参照
+その他のパッケージのバージョンは`package.json`を参照
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
@@ -80,10 +80,7 @@
 ├── app
 │   ├── activity
 │   ├── api
-│   ├── archive
-│   ├── articles
 │   ├── blog
-│   ├── category
 │   ├── contact
 │   ├── copyright
 │   ├── disclaimer
@@ -95,10 +92,8 @@
 │   ├── member
 │   ├── not-found.module.css
 │   ├── not-found.tsx
-│   ├── p
 │   ├── page.tsx
 │   ├── privacy
-│   ├── search
 │   └── selection
 ├── components
 │   ├── ArticleLists
@@ -137,7 +132,7 @@
 
 ### 開発環境の構築と起動
 
-.env ファイルを[環境変数一覧](#環境変数一覧)を元に作成
+`.env`ファイルを[環境変数一覧](#環境変数一覧)を元に作成
 
 ```
 MICROCMS_API_KEY=
@@ -151,7 +146,7 @@ SMTP_USER=
 SMTP_PASS=
 ```
 
-.env ファイルを作成後、以下の方法で開発環境を起動
+`.env`ファイルを作成後、以下の方法で開発環境を起動
 
 #### pnpmを使用する場合
 
@@ -181,28 +176,28 @@ docker compose down
 
 ### 環境変数一覧
 
-| 変数名                 | 役割                                      |
-| ---------------------- | ----------------------------------------- |
-| MICROCMS_API_KEY    | MicroCMSのAPIキー |
-| MICROCMS_SERVICE_DOMAIN         | MicroCMSのサービスドメイン（サービスID）   |
-| BASE_URL             | 本番環境のベースURL         |
-| GOOGLE_ANALYTICS_ID         | Google AnalyticsのスクリプトID       |
-| RECAPTCHA_SECRET_KEY             | Google reCAPTCHAのシークレットキー                 |
-| EMAIL_TO          | お問い合わせの送信先メールアドレス              |
-| EMAIL_FROM                  | お問い合わせの送信元メールアドレス                  |
-| SMTP_USER        | Googleアカウントのメールアドレス                  |
-| SMTP_PASS | Googleアカウントのアプリパスワード   |
+| 変数名                  | 役割                                     |
+| ----------------------- | ---------------------------------------- |
+| MICROCMS_API_KEY        | MicroCMSのAPIキー                        |
+| MICROCMS_SERVICE_DOMAIN | MicroCMSのサービスドメイン（サービスID） |
+| BASE_URL                | 本番環境のベースURL                      |
+| GOOGLE_ANALYTICS_ID     | Google AnalyticsのスクリプトID           |
+| RECAPTCHA_SECRET_KEY    | Google reCAPTCHAのシークレットキー       |
+| EMAIL_TO                | お問い合わせの送信先メールアドレス       |
+| EMAIL_FROM              | お問い合わせの送信元メールアドレス       |
+| SMTP_USER               | Googleアカウントのメールアドレス         |
+| SMTP_PASS               | Googleアカウントのアプリパスワード       |
 
 ### コマンド一覧
 
-| 主要なコマンド               | 実行する処理                                                            |
-| ------------------- | ----------------------------------------------------------------------- |
-| pnpm install        | `node_modules`のインストール |
-| pnpm run dev             | 開発環境の起動                                                          |
-| pnpm run build          | Next.jsのビルド、サイトマップとRSSフィードの生成                                                     |
-| pnpm run start           | ビルド済みNext.jsの起動                                                          |
-| docker compose up -d --build       | コンテナのビルドと起動                                                      |
-| docker compose down | コンテナの停止                                          |
+| 主要なコマンド               | 実行する処理                                     |
+| ---------------------------- | ------------------------------------------------ |
+| pnpm install                 | `node_modules`のインストール                     |
+| pnpm run dev                 | 開発環境の起動                                   |
+| pnpm run build               | Next.jsのビルド、サイトマップとRSSフィードの生成 |
+| pnpm run start               | ビルド済みNext.jsの起動                          |
+| docker compose up -d --build | コンテナのビルドと起動                           |
+| docker compose down          | コンテナの停止                                   |
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
