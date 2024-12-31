@@ -145,8 +145,7 @@ export default function Example() {
           </div>
         </h1>
         <p className="mt-6 text-lg leading-8">
-          当サービスに関するご質問やお気づきの点がございましたら、お気軽にお問い合わせください。
-          お問い合わせから2～3日中にはご返信させていただきます。
+          本サービスや鈴木ゼミに関するご質問やお気づきの点がございましたら、お気軽にお問い合わせください。
         </p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} method="POST">
@@ -281,7 +280,7 @@ export default function Example() {
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm">
-                          お問い合わせの内容は、サービスの運営者に送信されます。
+                          送信ボタンは一度だけ押してください。送信完了まで数秒かかることがあります。
                         </p>
                       </div>
                     </div>
@@ -333,9 +332,7 @@ export default function Example() {
                   </div>
                   <div className="ml-3 w-0 flex-1 pt-0.5">
                     <p className="text-sm font-medium">お問い合わせありがとうございます</p>
-                    <p className="mt-1 text-sm">
-                      数日以内にご連絡いたしますので、しばらくお待ちください。
-                    </p>
+                    <p className="mt-1 text-sm">正常に処理が完了しました。</p>
                   </div>
                   <div className="ml-4 flex flex-shrink-0">
                     <button
