@@ -176,7 +176,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/blog';
                       }}
-                      className="block font-semibold hover:text-green-500"
+                      className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ ブログ
                     </a>
