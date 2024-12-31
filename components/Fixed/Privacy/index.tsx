@@ -27,7 +27,7 @@ export default function Privacy() {
             <li>
               <div className="flex items-center">
                 <ChevronRightIcon
-                  className="h-4 w-4 flex-shrink-0 text-gray-400"
+                  className="h-4 w-4 flex-shrink-0 text-gray-500"
                   aria-hidden="true"
                 />
                 <a
@@ -44,7 +44,7 @@ export default function Privacy() {
       <h1 className="text-3xl font-bold">
         <div className="flex items-center pb-2 pt-2 mt-5">
           <InformationCircleIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-          <div className="text-black">プライバシーポリシー</div>
+          <div>プライバシーポリシー</div>
         </div>
       </h1>
       <div className="space-y-5 lg:space-y-8">

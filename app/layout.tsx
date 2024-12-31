@@ -59,7 +59,7 @@ export default async function RootLayout({ children }: Props) {
         />
         <meta property="og:locale" content="ja_JP" />
       </head>
-      <body>
+      <body className="text-gray-700">
         <Header />
         {children}
         <Footer />

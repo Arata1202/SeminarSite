@@ -170,7 +170,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
               >
                 <span className="flex">
                   <span className="grow">
-                    <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800">
+                    <span className="block text-lg font-semibold hs-tab-active:text-blue-600">
                       <ul>
                         <li>
                           <div className="flex justify-center">
@@ -201,7 +201,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
             <div className="relative mt-5">
               <Listbox.Button
                 style={{ height: '40px' }}
-                className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-500 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
               >
                 <span style={{ fontSize: '18px' }} className="block truncate">
                   {selectedMonth
@@ -211,7 +211,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
                     : 'アーカイブを選択'}
                 </span>
                 <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                  <ChevronUpDownIcon className="h-7 w-7 text-gray-400" aria-hidden="true" />
+                  <ChevronUpDownIcon className="h-7 w-7 text-gray-500" aria-hidden="true" />
                 </span>
               </Listbox.Button>
 
@@ -224,8 +224,8 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
                     key={index}
                     value={`${item.year}/${item.monthForPath}`}
                     className={({ active }) =>
-                      `relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 ${
-                        active ? 'bg-[#eaf4fc]' : 'text-gray-900'
+                      `relative cursor-default select-none py-2 pl-3 pr-9 ${
+                        active ? 'bg-[#eaf4fc]' : ''
                       }`
                     }
                   >

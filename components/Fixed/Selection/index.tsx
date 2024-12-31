@@ -41,7 +41,7 @@ export default function Selection() {
             <li>
               <div className="flex items-center">
                 <ChevronRightIcon
-                  className="h-4 w-4 flex-shrink-0 text-gray-400"
+                  className="h-4 w-4 flex-shrink-0 text-gray-500"
                   aria-hidden="true"
                 />
                 <a
@@ -60,7 +60,7 @@ export default function Selection() {
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
             <FlagIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-            <div className="text-black">選考</div>
+            <div>選考</div>
           </div>
         </h1>
 
@@ -77,7 +77,7 @@ export default function Selection() {
                       <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-700 group-hover:bg-green-700">
                         <CheckIcon aria-hidden="true" className="h-6 w-6 text-white" />
                       </span>
-                      <span className="ml-4 text-sm font-medium text-gray-900">{step.name}</span>
+                      <span className="ml-4 text-sm font-medium">{step.name}</span>
                     </span>
                   </div>
                 ) : step.status === 'current' ? (
@@ -94,11 +94,9 @@ export default function Selection() {
                   <div className="group flex items-center">
                     <span className="flex items-center px-6 py-4 text-sm font-medium">
                       <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300 group-hover:border-gray-400">
-                        <span className="text-gray-500 group-hover:text-gray-900">{step.id}</span>
+                        <span className="">{step.id}</span>
                       </span>
-                      <span className="ml-4 text-sm font-medium text-gray-500 group-hover:text-gray-900">
-                        {step.name}
-                      </span>
+                      <span className="ml-4 text-sm font-medium">{step.name}</span>
                     </span>
                   </div>
                 )}
@@ -136,9 +134,7 @@ export default function Selection() {
             まず、エントリーシートとレポートを提出していただきます。その上で面接を行います。
             最終的に、春学期の成績も考慮した上で決定します（成績は提出不要）。
           </p>
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-10">
-            エントリーシート
-          </h2>
+          <h2 className="text-2xl font-bold tracking-tight mt-10">エントリーシート</h2>
           <p className="mt-6">
             以下のURLから必要事項を記入し、提出してください。
             <br />
@@ -152,7 +148,7 @@ export default function Selection() {
             皆さんの人となりを知る上で重要なため、できる限り詳しく書いてください。
             <br />
           </p>
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-10">レポート</h2>
+          <h2 className="text-2xl font-bold tracking-tight mt-10">レポート</h2>
           <p className="mt-6">
             レポートは「マーケティングが優れていると思う企業（or 製品 or サービス or
             ブランド）について」というテーマで提出していただきます。
@@ -174,9 +170,9 @@ export default function Selection() {
             <li>セブンイレブン</li>
           </ul>
           （事例がありふれており、皆さん自身の考えを知ることができないため）
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-10">面接</h2>
+          <h2 className="text-2xl font-bold tracking-tight mt-10">面接</h2>
           <p className="mt-6">11月21日（木）の3〜5限を予定しています。</p>
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-10">応募期限</h2>
+          <h2 className="text-2xl font-bold tracking-tight mt-10">応募期限</h2>
           <p className="mt-6">
             10月30日（水）の23:59までに、
             <a

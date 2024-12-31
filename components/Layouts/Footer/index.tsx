@@ -48,12 +48,7 @@ export default function Footer() {
             </div>
             <div className="flex space-x-6 footer_icon">
               {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="blank"
-                  className="text-gray-400 hover:text-green-500"
-                >
+                <a key={item.name} href={item.href} target="blank" className="hover:text-green-500">
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="h-6 w-6" />
                 </a>
@@ -63,16 +58,11 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div className="footer_menu">
-                <div className="text-sm font-semibold leading-6 text-gray-900">
-                  鈴木ゼミについて
-                </div>
+                <div className="text-sm font-semibold leading-6">鈴木ゼミについて</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
-                      >
+                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
                       </a>
                     </li>
@@ -80,14 +70,11 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0 footer_menu">
-                <div className="text-sm font-semibold leading-6 text-gray-900">選考</div>
+                <div className="text-sm font-semibold leading-6">選考</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
-                      >
+                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
                       </a>
                     </li>
@@ -97,14 +84,11 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div className="sm:text-left footer_menu">
-                <div className="text-sm font-semibold leading-6 text-gray-900">利用規約</div>
+                <div className="text-sm font-semibold leading-6">利用規約</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
-                      >
+                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
                       </a>
                     </li>
@@ -112,14 +96,11 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0 footer_menu">
-                <div className="text-sm font-semibold leading-6 text-gray-900">お問い合わせ</div>
+                <div className="text-sm font-semibold leading-6">お問い合わせ</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-600 hover:text-green-500"
-                      >
+                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
                       </a>
                     </li>
@@ -129,8 +110,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500">
+        <div className="mt-16 border-t border-gray-300 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5">
             Copyright © 2024 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール All Rights
             Reserved.
           </p>
