@@ -31,7 +31,7 @@ const ArticleListItem = ({ article }: Props) => {
   return (
     <li className={styles.list}>
       <a
-        onClick={(event) => handleNavigation(event, `/articles/${article.id}`)}
+        onClick={(event) => handleNavigation(event, `/blog/articles/${article.id}`)}
         href={`/blog/articles/${article.id}`}
         className={`${styles.link} p-2 border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-200 transform hover:-translate-y-1 cursor-pointer`}
       >

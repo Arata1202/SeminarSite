@@ -93,7 +93,7 @@ export default function Selection() {
                 ) : (
                   <div className="group flex items-center">
                     <span className="flex items-center px-6 py-4 text-sm font-medium">
-                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300 group-hover:border-gray-400">
+                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300">
                         <span className="">{step.id}</span>
                       </span>
                       <span className="ml-4 text-sm font-medium">{step.name}</span>

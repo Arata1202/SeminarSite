@@ -162,7 +162,7 @@ export default function Example() {
                 name="sei"
                 id="sei"
                 autoComplete="given-name"
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
               />
               {errors.sei && <p className="text-red-500">{errors.sei.message}</p>}
             </div>
@@ -178,7 +178,7 @@ export default function Example() {
                 name="mei"
                 id="mei"
                 autoComplete="family-name"
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
               />
               {errors.mei && <p className="text-red-500">{errors.mei.message}</p>}
             </div>
@@ -200,7 +200,7 @@ export default function Example() {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
               />
               {errors.email && <p className="text-red-500">{errors.email.message}</p>}
             </div>
@@ -215,7 +215,7 @@ export default function Example() {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
                 defaultValue={''}
               />
               {errors.message && <p className="text-red-500">{errors.message.message}</p>}

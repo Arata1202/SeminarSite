@@ -44,7 +44,11 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <div className="footer_icon">
-              <img alt="Company name" src="/images/icons/kan_logo.jpeg" className="h-7" />
+              <img
+                alt="Company name"
+                src="/images/icons/kan_logo.jpeg"
+                className="h-7 hover:scale-110 transition-transform"
+              />
             </div>
             <div className="flex space-x-6 footer_icon">
               {navigation.social.map((item) => (
