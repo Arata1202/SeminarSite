@@ -14,7 +14,7 @@ export default function ArticleListItem({ article }: Props) {
   return (
     <li className={styles.list}>
       <Link
-        href={`/articles/${article.id}`}
+        href={`/blog/articles/${article.id}`}
         className={`${styles.link} p-2 border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-200 transform hover:-translate-y-1`}
       >
         {article.thumbnail ? (

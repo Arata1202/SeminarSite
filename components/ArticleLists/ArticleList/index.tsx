@@ -19,7 +19,7 @@ export default function ArticleList({ articles }: Props) {
             <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
               <div className="lg:col-span-2">
                 <div className="text-center pt-7">
-                  <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                  <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
                     記事はまだありません
                   </h1>
                 </div>

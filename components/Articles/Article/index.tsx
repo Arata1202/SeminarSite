@@ -119,7 +119,7 @@ export default function ArticleComponent({ data }: Props) {
                 <li>
                   <div className="flex items-center">
                     <ChevronRightIcon
-                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
                     <a
@@ -134,7 +134,7 @@ export default function ArticleComponent({ data }: Props) {
                 <li>
                   <div className="flex items-center">
                     <ChevronRightIcon
-                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
                     <a
@@ -407,7 +407,7 @@ export default function ArticleComponent({ data }: Props) {
                   <div className="flex justify-center">
                     <TwitterShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/articles/${data.id}`}
+                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
                       className="m-1"
                     >
@@ -416,7 +416,7 @@ export default function ArticleComponent({ data }: Props) {
 
                     <FacebookShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/articles/${data.id}`}
+                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
                       className="m-1"
                     >
@@ -425,7 +425,7 @@ export default function ArticleComponent({ data }: Props) {
 
                     <LineShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/articles/${data.id}`}
+                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
                       className="m-1"
                     >
@@ -434,7 +434,7 @@ export default function ArticleComponent({ data }: Props) {
 
                     <HatenaShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/articles/${data.id}`}
+                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
                       className="m-1"
                     >
@@ -443,7 +443,7 @@ export default function ArticleComponent({ data }: Props) {
 
                     <PinterestShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/articles/${data.id}`}
+                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       media={data.thumbnail?.url || ''}
                       description={data.title}
                       className="m-1"
@@ -453,7 +453,7 @@ export default function ArticleComponent({ data }: Props) {
 
                     <RedditShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/articles/${data.id}`}
+                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
                       className="m-1"
                     >
@@ -462,7 +462,7 @@ export default function ArticleComponent({ data }: Props) {
 
                     <LinkedinShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/articles/${data.id}`}
+                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
                       summary={data.description}
                       className="m-1"

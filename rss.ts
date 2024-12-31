@@ -64,7 +64,7 @@ const generateRSSFeed = async () => {
       feed.item({
         title: article.title,
         description: article.description,
-        url: `https://suzuki-seminar.com/articles/${article.id}`,
+        url: `https://suzuki-seminar.com/blog/articles/${article.id}`,
         // author: '鈴木ゼミ',
         date: article.publishedAt,
         categories: article.tags ? article.tags.map((tag) => tag.name) : [],

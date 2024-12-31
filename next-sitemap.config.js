@@ -38,7 +38,7 @@ module.exports = {
     const articles = await getAllContents('blog');
     articles.forEach((article) => {
       paths.push({
-        loc: `${config.siteUrl}/articles/${article.id}`,
+        loc: `${config.siteUrl}/blog/articles/${article.id}`,
         lastmod: new Date(article.updatedAt).toISOString(),
         changefreq: 'daily',
         priority: 0.7,
@@ -48,7 +48,7 @@ module.exports = {
     const tags = await getAllContents('tags');
     tags.forEach((tag) => {
       paths.push({
-        loc: `${config.siteUrl}/category/${tag.id}`,
+        loc: `${config.siteUrl}/blog/category/${tag.id}`,
         lastmod: new Date(tag.updatedAt).toISOString(),
         changefreq: 'daily',
         priority: 0.7,

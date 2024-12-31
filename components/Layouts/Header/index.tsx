@@ -32,7 +32,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close main menu</span>
-              <XMarkIcon className="h-6 w-6 text-gray-700" aria-hidden="true" />
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           ) : (
             <div className="flex">
@@ -42,47 +42,32 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
-                <Bars3Icon className="h-6 w-6 text-gray-700" aria-hidden="true" />
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
           )}
         </div>
 
         <div className="hidden lg:flex lg:gap-x-12 font-bold">
-          <a
-            href="/"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
-          >
+          <a href="/" className="text-sm font-semibold leading-6 hover:text-green-500">
             ホーム
           </a>
-          <a
-            href="/activity"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
-          >
+          <a href="/activity" className="text-sm font-semibold leading-6 hover:text-green-500">
             活動内容
           </a>
-          <a
-            href="/member"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
-          >
+          <a href="/member" className="text-sm font-semibold leading-6 hover:text-green-500">
             組織
           </a>
-          <a
-            href="/selection"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
-          >
+          <a href="/selection" className="text-sm font-semibold leading-6 hover:text-green-500">
             選考
           </a>
-          <a
-            href="/blog"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
-          >
+          <a href="/blog" className="text-sm font-semibold leading-6 hover:text-green-500">
             ブログ
           </a>
           <a
             href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
             target="_blank"
-            className="flex text-sm font-semibold leading-6 text-gray-900 hover:text-green-500"
+            className="flex text-sm font-semibold leading-6 hover:text-green-500"
           >
             インスタグラム
             <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-1" aria-hidden="true" />
@@ -121,7 +106,7 @@ export default function Header() {
                   className="-ml-2 flex items-center justify-end p-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <XMarkIcon className={`h-6 w-6" aria-hidden="true text-gray-700`} />
+                  <XMarkIcon className={`h-6 w-6" aria-hidden="true`} />
                   <span className="sr-only">Close menu</span>
                 </button>
                 <div
@@ -139,7 +124,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
+                      className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ ホーム
                     </a>
@@ -152,7 +137,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/activity';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
+                      className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 活動内容
                     </a>
@@ -165,7 +150,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/member';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
+                      className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 組織
                     </a>
@@ -178,7 +163,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/selection';
                       }}
-                      className="block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
+                      className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 選考
                     </a>
@@ -191,7 +176,7 @@ export default function Header() {
                         setMobileMenuOpen(false);
                         window.location.href = '/blog';
                       }}
-                      className="block text-base font-semibold text-gray-900 hover:text-green-500"
+                      className="block font-semibold hover:text-green-500"
                     >
                       ▶︎ ブログ
                     </a>
@@ -200,7 +185,7 @@ export default function Header() {
                     <a
                       href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
                       target="_blank"
-                      className="flex block text-base font-semibold text-gray-900 text-lg hover:text-green-500"
+                      className="flex font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ インスタグラム
                       <ArrowTopRightOnSquareIcon

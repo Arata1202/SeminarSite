@@ -114,7 +114,7 @@ export default function Member() {
                 <li>
                   <div className="flex items-center">
                     <ChevronRightIcon
-                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
                     <a
@@ -135,23 +135,20 @@ export default function Member() {
             </div>
           </h1>
           <div className="mt-10 mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
-            <h1 className="flex max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto text-left items-end">
+            <h1 className="flex max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:col-span-2 xl:col-auto text-left items-end">
               鈴木 寛<div className="ml-5 text-xl sm:text-3xl">Kan Suzuki</div>
             </h1>
 
             <div className="u_tablet_teacher_p mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-              <p className="text-lg leading-8 text-gray-600 text-left">
+              <p className="text-lg leading-8 text-left">
                 ゼミではテキストの輪読、ディベート(大会)、論文執筆等への取り組みを通じて大学生としてのスキルを高められるように先輩方と教員でフォローしていきます。
                 <br />
                 <br />
                 大学生活を通じて何か成し遂げたいとやる気のある方の参加を希望します。
               </p>
               <br />
-              <p className="text-lg leading-8 text-gray-600 text-left">【趣味・特徴】</p>
-              <ul
-                className="list-disc text-lg leading-8 text-gray-600 text-left"
-                style={{ marginLeft: '20px' }}
-              >
+              <p className="text-lg leading-8 text-left">【趣味・特徴】</p>
+              <ul className="list-disc text-lg leading-8 text-left" style={{ marginLeft: '20px' }}>
                 <li>マーケティング学科所属</li>
                 <li>スタバ・ディズニー・海外旅行</li>
               </ul>
@@ -201,12 +198,10 @@ export default function Member() {
                   src={person.imageUrl}
                   className="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56"
                 />
-                <h3 className="mt-6 text-2xl font-semibold leading-7 tracking-tight text-gray-500">
+                <h3 className="mt-6 text-2xl font-semibold leading-7 tracking-tight">
                   {person.name}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-left text-gray-400">
-                  {person.description}
-                </p>
+                <p className="mt-2 text-sm leading-6 text-left">{person.description}</p>
               </li>
             ))}
           </ul>

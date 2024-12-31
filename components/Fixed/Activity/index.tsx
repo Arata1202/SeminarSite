@@ -91,7 +91,7 @@ export default function Activity() {
                 <li>
                   <div className="flex items-center">
                     <ChevronRightIcon
-                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
                     <a
@@ -108,7 +108,7 @@ export default function Activity() {
           <h1 className="text-3xl font-bold">
             <div className="flex items-center pb-2 pt-2 mt-5">
               <FireIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-              <div className="text-black">活動内容</div>
+              <div>活動内容</div>
             </div>
           </h1>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl relative">
@@ -136,13 +136,13 @@ export default function Activity() {
                       {item.date}
                       <div
                         aria-hidden="true"
-                        className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                        className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-300 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
                       />
                     </time>
-                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight">
                       {item.name}
                     </p>
-                    <p className="mt-1 text-base leading-7 text-gray-600">{item.description}</p>
+                    <p className="mt-1 text-base leading-7">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -173,13 +173,13 @@ export default function Activity() {
                       {item.date}
                       <div
                         aria-hidden="true"
-                        className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                        className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-300 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
                       />
                     </time>
-                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight">
                       {item.name}
                     </p>
-                    <p className="mt-1 text-base leading-7 text-gray-600">{item.description}</p>
+                    <p className="mt-1 text-base leading-7">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -210,13 +210,13 @@ export default function Activity() {
                       {item.date}
                       <div
                         aria-hidden="true"
-                        className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                        className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-300 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
                       />
                     </time>
-                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight">
                       {item.name}
                     </p>
-                    <p className="mt-1 text-base leading-7 text-gray-600">{item.description}</p>
+                    <p className="mt-1 text-base leading-7">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -227,7 +227,7 @@ export default function Activity() {
               <h1 className="text-3xl font-bold">
                 <div className="flex items-center pb-2 pt-2 mt-10">
                   <CalendarDaysIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-                  <div className="text-black">スケジュール</div>
+                  <div>スケジュール</div>
                 </div>
               </h1>
               <img className="pc mt-10" src="/images/activity/pc.png" alt="" />

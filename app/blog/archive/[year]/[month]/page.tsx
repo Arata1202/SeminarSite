@@ -42,7 +42,7 @@ export default async function Page(props: Props) {
                 <li>
                   <div className="flex items-center">
                     <ChevronRightIcon
-                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
                     <a
@@ -56,11 +56,11 @@ export default async function Page(props: Props) {
                 <li>
                   <div className="flex items-center">
                     <ChevronRightIcon
-                      className="h-4 w-4 flex-shrink-0 text-gray-400"
+                      className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
                     <a
-                      href={`/archive/${year}/${month}`}
+                      href={`/blog/archive/${year}/${month}`}
                       className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                     >
                       {year}月{parseInt(month)}月
@@ -78,7 +78,7 @@ export default async function Page(props: Props) {
           </h1>
         </div>
         <ArticleList articles={data.contents} />
-        <Pagination totalCount={data.totalCount} basePath={`/archive/${year}/${month}`} />
+        <Pagination totalCount={data.totalCount} basePath={`/blog/archive/${year}/${month}`} />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { formatDate } from '@/libs/utils';
 import styles from './index.module.css';
+import { ClockIcon } from '@heroicons/react/24/outline';
 
 type Props = {
   date: string;
@@ -9,7 +9,7 @@ type Props = {
 export default function PublishedDate({ date }: Props) {
   return (
     <span className={styles.date}>
-      <Image src="/clock.svg" alt="" width={16} height={16} priority />
+      <ClockIcon className="h-5 w-5" aria-hidden="true" />
       {formatDate(date)}
     </span>
   );

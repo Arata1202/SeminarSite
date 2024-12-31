@@ -123,7 +123,7 @@ export default function Example() {
             <li>
               <div className="flex items-center">
                 <ChevronRightIcon
-                  className="h-4 w-4 flex-shrink-0 text-gray-400"
+                  className="h-4 w-4 flex-shrink-0 text-gray-500"
                   aria-hidden="true"
                 />
                 <a
@@ -141,10 +141,10 @@ export default function Example() {
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
             <EnvelopeIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-            <div className="text-black">お問い合わせ</div>
+            <div>お問い合わせ</div>
           </div>
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+        <p className="mt-6 text-lg leading-8">
           当サービスに関するご質問やお気づきの点がございましたら、お気軽にお問い合わせください。
           お問い合わせから2～3日中にはご返信させていただきます。
         </p>
@@ -152,10 +152,7 @@ export default function Example() {
       <form onSubmit={handleSubmit(onSubmit)} method="POST">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2 mt-6">
-            <label
-              htmlFor="first-name"
-              className="block text-sm font-semibold leading-6 text-gray-800"
-            >
+            <label htmlFor="first-name" className="block text-sm font-semibold leading-6">
               氏名
             </label>
             <div className="mt-2.5">
@@ -165,16 +162,13 @@ export default function Example() {
                 name="sei"
                 id="sei"
                 autoComplete="given-name"
-                className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-3 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
               />
               {errors.sei && <p className="text-red-500">{errors.sei.message}</p>}
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label
-              htmlFor="last-name"
-              className="block text-sm font-semibold leading-6 text-gray-800"
-            >
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6">
               題名
             </label>
             <div className="mt-2.5">
@@ -184,13 +178,13 @@ export default function Example() {
                 name="mei"
                 id="mei"
                 autoComplete="family-name"
-                className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-3 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
               />
               {errors.mei && <p className="text-red-500">{errors.mei.message}</p>}
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-800">
+            <label htmlFor="email" className="block text-sm font-semibold leading-6">
               メールアドレス
             </label>
             <div className="mt-2.5">
@@ -206,16 +200,13 @@ export default function Example() {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-3 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
               />
               {errors.email && <p className="text-red-500">{errors.email.message}</p>}
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label
-              htmlFor="message"
-              className="block text-sm font-semibold leading-6 text-gray-800"
-            >
+            <label htmlFor="message" className="block text-sm font-semibold leading-6">
               内容
             </label>
             <div className="mt-2.5">
@@ -224,7 +215,7 @@ export default function Example() {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-3 text-gray-800 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
                 defaultValue={''}
               />
               {errors.message && <p className="text-red-500">{errors.message.message}</p>}
@@ -242,7 +233,7 @@ export default function Example() {
           <button
             type="submit"
             disabled={!captchaValue}
-            className="block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold text-gray-800 shadow-s border border-gray-300 hover:text-green-500"
+            className="block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold shadow-s border border-gray-300 hover:text-green-500 hover:border-green-500"
           >
             送信
           </button>
@@ -285,14 +276,11 @@ export default function Example() {
                       <EnvelopeIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                      <Dialog.Title
-                        as="h1"
-                        className="text-base font-semibold leading-6 text-gray-900"
-                      >
+                      <Dialog.Title as="h1" className="text-base font-semibold leading-6">
                         お問い合わせを送信しますか？
                       </Dialog.Title>
                       <div className="mt-2">
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm">
                           お問い合わせの内容は、サービスの運営者に送信されます。
                         </p>
                       </div>
@@ -301,7 +289,7 @@ export default function Example() {
                   <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
                     <button
                       type="button"
-                      className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+                      className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
                       onClick={handleCancel}
                       ref={cancelButtonRef}
                     >
@@ -344,17 +332,15 @@ export default function Example() {
                     <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
                   </div>
                   <div className="ml-3 w-0 flex-1 pt-0.5">
-                    <p className="text-sm font-medium text-gray-900">
-                      お問い合わせありがとうございます
-                    </p>
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="text-sm font-medium">お問い合わせありがとうございます</p>
+                    <p className="mt-1 text-sm">
                       数日以内にご連絡いたしますので、しばらくお待ちください。
                     </p>
                   </div>
                   <div className="ml-4 flex flex-shrink-0">
                     <button
                       type="button"
-                      className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                      className="inline-flex rounded-md bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                       onClick={() => {
                         setContactConfirmShow(false);
                       }}

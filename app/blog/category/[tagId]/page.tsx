@@ -8,7 +8,6 @@ import { HomeIcon, ChevronRightIcon, FolderOpenIcon } from '@heroicons/react/24/
 type Props = {
   params: Promise<{
     tagId: string;
-    current: string;
   }>;
 };
 
@@ -18,10 +17,8 @@ export default async function Page(props: Props) {
   const params = await props.params;
   const tag = await getTag(params.tagId);
   const { tagId } = params;
-  const current = parseInt(params.current as string, 10);
   const data = await getList({
     limit: LIMIT,
-    offset: LIMIT * (current - 1),
     filters: `tags[contains]${tagId}`,
   });
   return (
@@ -41,7 +38,7 @@ export default async function Page(props: Props) {
               <li>
                 <div className="flex items-center">
                   <ChevronRightIcon
-                    className="h-4 w-4 flex-shrink-0 text-gray-400"
+                    className="h-4 w-4 flex-shrink-0 text-gray-500"
                     aria-hidden="true"
                   />
                   <a
@@ -55,7 +52,7 @@ export default async function Page(props: Props) {
               <li>
                 <div className="flex items-center">
                   <ChevronRightIcon
-                    className="h-4 w-4 flex-shrink-0 text-gray-400"
+                    className="h-4 w-4 flex-shrink-0 text-gray-500"
                     aria-hidden="true"
                   />
                   <a
@@ -75,7 +72,7 @@ export default async function Page(props: Props) {
         </h1>
       </div>
       <ArticleList articles={data.contents} />
-      <Pagination totalCount={data.totalCount} current={current} basePath={`/tags/${tagId}`} />
+      <Pagination totalCount={data.totalCount} basePath={`/tags/${tagId}`} />
     </>
   );
 }

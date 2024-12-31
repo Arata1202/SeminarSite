@@ -27,7 +27,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: data.title + ' - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
       description: data.description,
       images: [data?.thumbnail?.url || ''],
-      url: 'https://suzuki-seminar.com/articles/' + data.id,
+      url: 'https://suzuki-seminar.com/blog/articles/' + data.id,
     },
   };
 }
