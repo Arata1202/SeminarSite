@@ -21,24 +21,24 @@ import {
 const CategoryList = [
   {
     name: '全学年',
-    href: '/category/allgrades',
+    href: '/blog/category/allgrades',
     icon: UserGroupIcon,
   },
   {
     name: '2年生',
-    href: '/category/grade2',
+    href: '/blog/category/grade2',
     icon: BookOpenIcon,
   },
 ];
 const CategoryList2 = [
   {
     name: '３年生',
-    href: '/category/grade3',
+    href: '/blog/category/grade3',
     icon: ChartPieIcon,
   },
   {
     name: '４年生',
-    href: '/category/grade4',
+    href: '/blog/category/grade4',
     icon: DocumentTextIcon,
   },
 ];
@@ -105,7 +105,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
 
   const handleArchiveChange = (value: string) => {
     if (value) {
-      window.location.href = `/archive/${value}`;
+      window.location.href = `/blog/archive/${value}`;
       setSelectedMonth('');
     }
   };

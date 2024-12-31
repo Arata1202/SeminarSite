@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 export default function SearchField({ defaultQuery = '' }) {
   return (
-    <form action="/search" method="GET">
+    <form action="/blog/search" method="GET">
       <input
         type="search"
         name="q"

@@ -3,19 +3,11 @@ import { LIMIT } from '@/constants';
 import Pagination from '@/components/Elements/Pagination';
 import ArticleList from '@/components/ArticleLists/ArticleList';
 import { CalendarDaysIcon, HomeIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
-
 type Props = {
   params: Promise<{
-    current: string;
     year: string;
     month: string;
   }>;
-};
-
-export const metadata = {
-  robots: {
-    index: false,
-  },
 };
 
 export const revalidate = 60;
@@ -23,14 +15,15 @@ export const revalidate = 60;
 export default async function Page(props: Props) {
   const params = await props.params;
   const { year, month } = params;
+
   const startDate = `${year}-${month}-01T00:00:00Z`;
   const endDate = new Date(Number(year), Number(month), 0).toISOString();
-  const current = parseInt(params.current as string, 10);
+
   const data = await getList({
     limit: LIMIT,
-    offset: LIMIT * (current - 1),
     filters: `publishedAt[greater_than]${startDate}[and]publishedAt[less_than]${endDate}`,
   });
+
   return (
     <>
       <div style={{ padding: '24px' }}>
@@ -67,7 +60,7 @@ export default async function Page(props: Props) {
                       aria-hidden="true"
                     />
                     <a
-                      href={`/archive/${year}/${month}`}
+                      href={`/blog/archive/${year}/${month}`}
                       className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                     >
                       {year}月{parseInt(month)}月
@@ -85,11 +78,7 @@ export default async function Page(props: Props) {
           </h1>
         </div>
         <ArticleList articles={data.contents} />
-        <Pagination
-          totalCount={data.totalCount}
-          current={current}
-          basePath={`/archive/${year}/${month}`}
-        />
+        <Pagination totalCount={data.totalCount} basePath={`/blog/archive/${year}/${month}`} />
       </div>
     </>
   );

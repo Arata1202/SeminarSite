@@ -24,7 +24,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       )}月 - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール`,
       description: `${year}年${parseInt(month)}月の記事一覧です。`,
       images: `/images/icons/1200logo.jpg`,
-      url: `https://suzuki-seminar.com/archive/${year}/${month}`,
+      url: `https://suzuki-seminar.com/blog/archive/${year}/${month}`,
     },
     robots: {
       index: false,
