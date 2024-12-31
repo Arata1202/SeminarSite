@@ -141,6 +141,7 @@ export default function Selection() {
             <a
               className="text-green-700 hover:text-green-500"
               href="https://forms.gle/uVEL8K9113wd9EnC9"
+              target="_blank"
             >
               応募フォーム
             </a>
@@ -178,6 +179,7 @@ export default function Selection() {
             <a
               className="text-green-700 hover:text-green-500"
               href="https://forms.gle/uVEL8K9113wd9EnC9"
+              target="_blank"
             >
               応募フォーム
             </a>

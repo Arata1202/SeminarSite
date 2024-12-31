@@ -201,7 +201,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
             <div className="relative mt-5">
               <Listbox.Button
                 style={{ height: '40px' }}
-                className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-500 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none sm:text-sm sm:leading-6"
+                className="relative w-full cursor-pointer rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-500 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none sm:text-sm sm:leading-6"
               >
                 <span style={{ fontSize: '18px' }} className="block truncate">
                   {selectedMonth
@@ -224,7 +224,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
                     key={index}
                     value={`${item.year}/${item.monthForPath}`}
                     className={() =>
-                      `relative cursor-default select-none py-2 pl-3 pr-9 hover:text-green-500 text-sm`
+                      `relative cursor-pointer select-none py-2 pl-3 pr-9 hover:text-green-500 text-sm`
                     }
                   >
                     <span
