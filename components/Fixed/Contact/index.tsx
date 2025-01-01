@@ -175,7 +175,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <input
-                {...register('title', { required: '※ 題名を入力してください' })}
+                {...register('title', { required: '※ 件名を入力してください' })}
                 type="text"
                 name="title"
                 id="title"
@@ -213,7 +213,7 @@ export default function Example() {
           <button
             type="submit"
             disabled={!captchaValue}
-            className="block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold shadow-s border border-gray-300 hover:text-green-500 hover:border-green-500"
+            className="cursor-pointer block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold shadow-s border border-gray-300 hover:border-2 hover:text-green-500 hover:border-green-500"
           >
             送信
           </button>

@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     const { title, email, message } = postData;
 
     const mailOptions = {
-      from: `"${EMAIL_FROM}" <${EMAIL_FROM}>`,
+      from: `"鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール" <${EMAIL_FROM}>`,
       to: `${email},${EMAIL_TO},${EMAIL_TO2}`,
       subject: 'お問い合わせありがとうございます',
       html: `

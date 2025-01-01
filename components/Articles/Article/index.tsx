@@ -409,7 +409,7 @@ export default function ArticleComponent({ data }: Props) {
                       aria-label="シェアボタン"
                       url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
-                      className="m-1"
+                      className="m-1 hover:opacity-60"
                     >
                       <TwitterIcon size={40} round={true} />
                     </TwitterShareButton>
@@ -418,7 +418,7 @@ export default function ArticleComponent({ data }: Props) {
                       aria-label="シェアボタン"
                       url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
-                      className="m-1"
+                      className="m-1 hover:opacity-60"
                     >
                       <FacebookIcon size={40} round={true} />
                     </FacebookShareButton>
@@ -427,7 +427,7 @@ export default function ArticleComponent({ data }: Props) {
                       aria-label="シェアボタン"
                       url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
-                      className="m-1"
+                      className="m-1 hover:opacity-60"
                     >
                       <LineIcon size={40} round={true} />
                     </LineShareButton>
@@ -436,7 +436,7 @@ export default function ArticleComponent({ data }: Props) {
                       aria-label="シェアボタン"
                       url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
-                      className="m-1"
+                      className="m-1 hover:opacity-60"
                     >
                       <HatenaIcon size={40} round={true} />
                     </HatenaShareButton>
@@ -446,7 +446,7 @@ export default function ArticleComponent({ data }: Props) {
                       url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       media={data.thumbnail?.url || ''}
                       description={data.title}
-                      className="m-1"
+                      className="m-1 hover:opacity-60"
                     >
                       <PinterestIcon size={40} round={true} />
                     </PinterestShareButton>
@@ -455,7 +455,7 @@ export default function ArticleComponent({ data }: Props) {
                       aria-label="シェアボタン"
                       url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
-                      className="m-1"
+                      className="m-1 hover:opacity-60"
                     >
                       <RedditIcon size={40} round={true} />
                     </RedditShareButton>
@@ -465,7 +465,7 @@ export default function ArticleComponent({ data }: Props) {
                       url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
                       title={data.title}
                       summary={data.description}
-                      className="m-1"
+                      className="m-1 hover:opacity-60"
                     >
                       <LinkedinIcon size={40} round={true} />
                     </LinkedinShareButton>
@@ -481,7 +481,7 @@ export default function ArticleComponent({ data }: Props) {
                       <a
                         aria-label="RSSフォローボタン"
                         href="https://suzuki-seminar.com/rss.xml"
-                        className="bg-orange-500 rounded-full p-2 m-1"
+                        className="bg-orange-500 rounded-full p-2 m-1 hover:opacity-60"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -492,7 +492,7 @@ export default function ArticleComponent({ data }: Props) {
                         href="https://feedly.com/i/subscription/feed/https://suzuki-seminar.com/rss.xml"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-green-500 rounded-full p-2 m-1"
+                        className="bg-green-500 rounded-full p-2 m-1 hover:opacity-60"
                       >
                         <SiFeedly className="h-6 w-6 text-white" aria-hidden="true" />
                       </a>
