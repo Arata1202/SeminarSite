@@ -85,7 +85,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = React.memo(({ headings }
           className="tableOfContent w-full border border-gray-300 p-4"
         >
           <h1 className="text-center font-bold text-lg">目次</h1>
-          <ol className="mt-4 list-none pl-0 text-left">
+          <ol className="mt-4 list-none pl-0 text-left" style={{ fontSize: '18px' }}>
             {formattedHeadings.map((heading) => (
               <li
                 key={heading.id}

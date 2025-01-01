@@ -198,10 +198,13 @@ export default function Member() {
                   src={person.imageUrl}
                   className="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56"
                 />
-                <h3 className="mt-6 text-2xl font-semibold leading-7 tracking-tight">
+                <h3
+                  className="mt-6 font-semibold leading-7 tracking-tight"
+                  style={{ fontSize: '20.8px' }}
+                >
                   {person.name}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-left">{person.description}</p>
+                <p className="mt-2 leading-6 text-left">{person.description}</p>
               </li>
             ))}
           </ul>

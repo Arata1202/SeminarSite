@@ -55,7 +55,7 @@ export default function Selection() {
           </ol>
         </nav>
       </h1>
-      <div className="mx-auto text-base leading-7">
+      <div className="mx-auto leading-7">
         {/* <p className="text-base font-semibold leading-7 text-green-700">Introducing</p> */}
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
@@ -129,7 +129,7 @@ export default function Selection() {
           </ol>
         </nav>
 
-        <div className="mx-auto text-base leading-7">
+        <div className="mx-auto leading-7">
           <p className="mt-6">
             まず、エントリーシートとレポートを提出していただきます。その上で面接を行います。
             最終的に、春学期の成績も考慮した上で決定します（成績は提出不要）。
