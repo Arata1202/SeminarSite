@@ -213,7 +213,7 @@ export default function Example() {
           <button
             type="submit"
             disabled={!captchaValue}
-            className="block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold shadow-s border border-gray-300 hover:text-green-500 hover:border-green-500"
+            className="cursor-pointer block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold shadow-s border border-gray-300 hover:border-2 hover:text-green-500 hover:border-green-500"
           >
             送信
           </button>
