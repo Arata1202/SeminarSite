@@ -175,7 +175,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <input
-                {...register('title', { required: '※ 題名を入力してください' })}
+                {...register('title', { required: '※ 件名を入力してください' })}
                 type="text"
                 name="title"
                 id="title"
