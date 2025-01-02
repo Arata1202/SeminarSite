@@ -260,7 +260,7 @@ export default function Example() {
                         お問い合わせを送信しますか？
                       </Dialog.Title>
                       <div className="mt-2">
-                        <p className="text-sm">
+                        <p className="text-sm text-gray-500">
                           送信ボタンは一度だけ押してください。送信完了まで数秒かかることがあります。
                         </p>
                       </div>
@@ -315,7 +315,7 @@ export default function Example() {
                     <p className="font-semibold" style={{ fontSize: '16px' }}>
                       お問い合わせありがとうございます
                     </p>
-                    <p className="mt-1 text-sm">正常に処理が完了しました。</p>
+                    <p className="mt-1 text-sm text-gray-500">正常に処理が完了しました。</p>
                   </div>
                   <div className="ml-4 flex flex-shrink-0">
                     <button
