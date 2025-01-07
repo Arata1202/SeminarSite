@@ -19,6 +19,7 @@ export default async function Page(props: Props) {
   const searchParams = await props.searchParams;
   const params = await props.params;
   const current = parseInt(params.current as string, 10);
+  const keyword = searchParams.q;
   const data = await getList({
     limit: LIMIT,
     offset: LIMIT * (current - 1),
@@ -51,7 +52,7 @@ export default async function Page(props: Props) {
           </nav>
           <div className="flex items-center pb-2 pt-2 mt-5">
             <MagnifyingGlassIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-            <div>キーワードで探す</div>
+            <div className="whitespace-nowrap overflow-hidden">{`「${keyword}」の検索結果`}</div>
           </div>
         </h1>
       </div>

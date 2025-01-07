@@ -13,6 +13,7 @@ export const revalidate = 60;
 
 export default async function Page(props: Props) {
   const searchParams = await props.searchParams;
+  const keyword = searchParams.q;
   const data = await getList({
     q: searchParams.q,
   });
@@ -45,7 +46,7 @@ export default async function Page(props: Props) {
             </nav>
             <div className="flex items-center pb-2 pt-2 mt-5">
               <MagnifyingGlassIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-              <div>キーワードで探す</div>
+              <div className="whitespace-nowrap overflow-hidden">{`「${keyword}」の検索結果`}</div>
             </div>
           </h1>
         </div>
