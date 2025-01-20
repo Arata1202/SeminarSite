@@ -1,15 +1,16 @@
 <div id="top"></div>
 
 <div align="right">
-  
+
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Arata1202/SeminarSite/vercel_deploy.yml)
 ![GitHub License](https://img.shields.io/github/license/Arata1202/SeminarSite)
 
 </div>
 
-![title](/public/images/readme/title.png)
+![title](/.docs/readme/images/title.png)
 
 ## 目次
+
 - [鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール](#top)
   - [目次](#目次)
   - [リンク一覧](#リンク一覧)
@@ -27,44 +28,46 @@
     - [コミットメッセージの記法](#コミットメッセージの記法)
 
 ## リンク一覧
+
 <ul><li><a href="https://suzuki-seminar.com/">鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール</a></li></ul>
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## 主な機能一覧
-| 最新記事ページ |　カテゴリーページ |
-| ---- | ---- |
-| ![23](/public/images/readme/23.png) | ![24](/public/images/readme/24.png) |
-| 最新記事を一覧表示するページです。 | 特定のカテゴリーの記事を一覧表示するページです。  |
 
-| 検索ページ |　アーカイブページ	 |
-| ---- | ---- |
-| ![25](/public/images/readme/25.png) | ![26](/public/images/readme/26.png) |
+| 最新記事ページ                     | 　カテゴリーページ                               |
+| ---------------------------------- | ------------------------------------------------ |
+| ![23](/.docs/readme/images/23.png) | ![24](/.docs/readme/images/24.png)               |
+| 最新記事を一覧表示するページです。 | 特定のカテゴリーの記事を一覧表示するページです。 |
+
+| 検索ページ                                         | 　アーカイブページ                         |
+| -------------------------------------------------- | ------------------------------------------ |
+| ![25](/.docs/readme/images/25.png)                 | ![26](/.docs/readme/images/26.png)         |
 | 検索したキーワードの記事を一覧表示するページです。 | 特定の年月の記事を一覧表示するページです。 |
 
-| 記事ページ |　お問い合わせページ |
-| ---- | ---- |
-| ![27](/public/images/readme/27.png) | ![28](/public/images/readme/28.png) |
-| 記事を表示するページです。 | 管理者にお問い合わせするページです。 |
+| 記事ページ                         | 　お問い合わせページ                 |
+| ---------------------------------- | ------------------------------------ |
+| ![27](/.docs/readme/images/27.png) | ![28](/.docs/readme/images/28.png)   |
+| 記事を表示するページです。         | 管理者にお問い合わせするページです。 |
 
-| サイトマップ |　RSS |
-| ---- | ---- |
-| ![29](/public/images/readme/29.png) | ![30](/public/images/readme/30.png) |
-| XML形式のサイトマップを公開しています。 | XML形式のRSSを公開しています。 |
+| サイトマップ                            | 　RSS                              |
+| --------------------------------------- | ---------------------------------- |
+| ![29](/.docs/readme/images/29.png)      | ![30](/.docs/readme/images/30.png) |
+| XML形式のサイトマップを公開しています。 | XML形式のRSSを公開しています。     |
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## 使用技術
 
-| Category          | Technology Stack                              |
-| ----------------- | --------------------------------------------- |
-| Frontend          | Next.js, TypeScript, Tailwind CSS             |
-| Backend           | MicroCMS                                      |
-| Infrastructure    | Vercel                                        |
-| Environment setup | Docker, Nginx                                 |
-| CI/CD             | GitHub Actions                                |
-| Design            | Canva                                         |
-| Google            | Analytics, Search Console, reCAPTCHA          |
+| Category          | Technology Stack                     |
+| ----------------- | ------------------------------------ |
+| Frontend          | Next.js, TypeScript, Tailwind CSS    |
+| Backend           | MicroCMS                             |
+| Infrastructure    | Vercel                               |
+| Environment setup | Docker, Nginx                        |
+| CI/CD             | GitHub Actions                       |
+| Design            | Canva                                |
+| Google            | Analytics, Search Console, reCAPTCHA |
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
@@ -211,8 +214,8 @@ masterとfeatureブランチで運用する。
 
 | ブランチ名 |   役割   | 派生元 | マージ先 |
 | :--------: | :------: | :----: | :------: |
-|    master    | 本番環境 |   -    |    -     |
-| feature/\* | 機能開発 |  master  |   master   |
+|   master   | 本番環境 |   -    |    -     |
+| feature/\* | 機能開発 | master |  master  |
 
 ### コミットメッセージの記法
 
