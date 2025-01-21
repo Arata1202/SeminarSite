@@ -1,7 +1,7 @@
 import '../../../app/globals.css';
 import './index.css';
 import PublishedDate from '@/components/Elements/Date';
-import { InformationCircleIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
+import { LockClosedIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 export default function Privacy() {
   const dummyDate = new Date(2024, 9, 18);
@@ -43,7 +43,7 @@ export default function Privacy() {
       </h1>
       <h1 className="text-3xl font-bold">
         <div className="flex items-center pb-2 pt-2 mt-5">
-          <InformationCircleIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+          <LockClosedIcon className="h-8 w-8 mr-2" aria-hidden="true" />
           <div>プライバシーポリシー</div>
         </div>
       </h1>

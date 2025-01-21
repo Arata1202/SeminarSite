@@ -1,7 +1,7 @@
 import '../../../app/globals.css';
 import './index.css';
 import PublishedDate from '../../Elements/Date';
-import { ShieldExclamationIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
+import { ExclamationCircleIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 export default function Disclaimer() {
   const dummyDate = new Date(2024, 9, 18);
@@ -44,7 +44,7 @@ export default function Disclaimer() {
         {/* <p className="text-base font-semibold leading-7 text-indigo-600">Introducing</p> */}
         <h1 className="text-3xl font-bold">
           <div className="flex items-center pb-2 pt-2 mt-5">
-            <ShieldExclamationIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+            <ExclamationCircleIcon className="h-8 w-8 mr-2" aria-hidden="true" />
             <div>免責事項</div>
           </div>
         </h1>
