@@ -4,7 +4,6 @@ import Footer from '@/components/Layouts/Footer';
 import './globals.css';
 import Script from 'next/script';
 import ScrollTopButton from '@/components/Layouts/ScrollToTop';
-import { OneSignalInitial } from '@/libs/OneSignalInitial';
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
@@ -26,6 +25,7 @@ type Props = {
 };
 
 export default async function RootLayout({ children }: Props) {
+  const onesignalAppId = process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID;
   return (
     <html lang="ja">
       <head>
@@ -45,6 +45,20 @@ export default async function RootLayout({ children }: Props) {
           `,
           }}
         />
+        <Script
+          src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"
+          strategy="afterInteractive"
+        />
+        <Script id="onesignal-init" strategy="afterInteractive">
+          {`
+          window.OneSignalDeferred = window.OneSignalDeferred || [];
+          OneSignalDeferred.push(async function(OneSignal) {
+            await OneSignal.init({
+              appId: "${onesignalAppId}",
+            });
+          });
+        `}
+        </Script>
         <meta name="format-detection" content="email=no,telephone=no,address=no" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
@@ -66,7 +80,6 @@ export default async function RootLayout({ children }: Props) {
         {children}
         <Footer />
         <ScrollTopButton />
-        <OneSignalInitial />
         <script async src="//www.instagram.com/embed.js" />
       </body>
     </html>
