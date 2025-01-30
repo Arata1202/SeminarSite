@@ -36,7 +36,10 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className={`${styles.footer} w-full bg-white`} style={{ marginTop: '0' }}>
+    <footer
+      className={`${styles.footer} w-full bg-white`}
+      style={{ marginTop: '0', paddingBottom: `calc(40px + env(safe-area-inset-bottom))` }}
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
