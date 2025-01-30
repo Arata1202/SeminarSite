@@ -4,6 +4,13 @@ import Footer from '@/components/Layouts/Footer';
 import './globals.css';
 import Script from 'next/script';
 import ScrollTopButton from '@/components/Layouts/ScrollToTop';
+import type { Viewport } from 'next';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
