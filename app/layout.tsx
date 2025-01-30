@@ -4,6 +4,7 @@ import Footer from '@/components/Layouts/Footer';
 import './globals.css';
 import Script from 'next/script';
 import ScrollTopButton from '@/components/Layouts/ScrollToTop';
+import { OneSignalInitial } from '@/libs/OneSignalInitial';
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
@@ -65,6 +66,7 @@ export default async function RootLayout({ children }: Props) {
         {children}
         <Footer />
         <ScrollTopButton />
+        <OneSignalInitial />
         <script async src="//www.instagram.com/embed.js" />
       </body>
     </html>
