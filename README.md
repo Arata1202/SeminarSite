@@ -142,6 +142,7 @@ docker compose down
 ├── .docker
 │   ├── js
 │   └── nginx
+├── .dockerignore
 ├── .env
 ├── .env.example
 ├── .github
