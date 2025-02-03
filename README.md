@@ -68,7 +68,7 @@
 | CI/CD             | GitHub Actions                       |
 | Design            | Canva                                |
 | Google            | Analytics, Search Console, reCAPTCHA |
-| etc.              | PWA, OneSignal, Pipedream            |
+| etc.              | PWA, OneSignal, Pipedream, Sentry    |
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
@@ -165,6 +165,7 @@ docker compose down
 │   ├── copyright
 │   ├── disclaimer
 │   ├── favicon.ico
+│   ├── global-error.tsx
 │   ├── globals.css
 │   ├── layout.module.css
 │   ├── layout.tsx
@@ -187,6 +188,7 @@ docker compose down
 │   └── index.ts
 ├── docker-compose.yml
 ├── eslint.config.mjs
+├── instrumentation.ts
 ├── libs
 │   ├── microcms.ts
 │   └── utils.ts
@@ -203,6 +205,9 @@ docker compose down
 ├── rss.ts
 ├── section
 │   └── archive.tsx
+├── sentry.client.config.ts
+├── sentry.edge.config.ts
+├── sentry.server.config.ts
 ├── tailwind.config.ts
 └── tsconfig.json
 ```
