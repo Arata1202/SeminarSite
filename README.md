@@ -62,13 +62,13 @@
 | Category          | Technology Stack                     |
 | ----------------- | ------------------------------------ |
 | Frontend          | Next.js, TypeScript, Tailwind CSS    |
-| Backend           | MicroCMS                             |
+| CMS               | MicroCMS                             |
 | Infrastructure    | Vercel                               |
 | Environment setup | Docker, Nginx                        |
 | CI/CD             | GitHub Actions                       |
 | Design            | Canva                                |
 | Google            | Analytics, Search Console, reCAPTCHA |
-| etc.              | PWA, OneSignal, Pipedream, Sentry    |
+| etc.              | PWA, OneSignal, Pipedream, Sentry, Slack    |
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
