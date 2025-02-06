@@ -13,7 +13,7 @@ export default function Disclaimer() {
   return (
     <div
       className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
-      style={{ marginTop: '80px', marginBottom: '120px' }}
+      style={{ marginTop: '80px' }}
     >
       <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
         <nav className="flex" aria-label="Breadcrumb">

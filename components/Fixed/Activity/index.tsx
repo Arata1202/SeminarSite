@@ -76,10 +76,7 @@ export default function Activity() {
   return (
     <>
       <div className="">
-        <div
-          className="mx-auto max-w-7xl px-6 text-center lg:px-8 main_side top_title"
-          style={{ marginBottom: '120px' }}
-        >
+        <div className="mx-auto max-w-7xl px-6 text-center lg:px-8 main_side top_title">
           <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
             <nav className="flex" aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-4">

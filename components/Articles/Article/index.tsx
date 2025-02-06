@@ -9,6 +9,7 @@ import './article.css';
 import TableOfContents from '../Elements/TableOfContent';
 import TagList from '../../TagLists/TagList';
 import WithArticleItem from '../Elements/WithArticleItem';
+import ExternalLinkItem from '../Elements/ExternalLinkItem';
 import {
   HomeIcon,
   ChevronRightIcon,
@@ -18,6 +19,7 @@ import {
   LightBulbIcon,
   InformationCircleIcon,
   LinkIcon,
+  ArrowTopRightOnSquareIcon,
   ArrowPathIcon,
   RssIcon,
   UserPlusIcon,
@@ -106,7 +108,7 @@ export default function ArticleComponent({ data }: Props) {
       <div className="">
         <div
           className="main_side top_title mx-auto max-w-7xl px-6 text-center lg:px-8"
-          style={{ marginTop: '80px', marginBottom: '120px' }}
+          style={{ marginTop: '80px' }}
         >
           <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
             <nav className="flex" aria-label="Breadcrumb">
@@ -237,6 +239,18 @@ export default function ArticleComponent({ data }: Props) {
                             <WithArticleItem article={block.articleLink as Article} />
                           </div>
                         )}
+                        {block.external_link && (
+                          <div>
+                            <div className="flex mt-10">
+                              <ArrowTopRightOnSquareIcon
+                                className="h-8 w-8 mr-2"
+                                aria-hidden="true"
+                              />
+                              <h1 className="text-2xl font-semibold mb-5">外部リンク</h1>
+                            </div>
+                            <ExternalLinkItem url={block.external_link} />
+                          </div>
+                        )}
                         {block.box_merit && (
                           <div className={`${styles.tab_merit_box} flex items-center`}>
                             <HandThumbUpIcon
@@ -338,6 +352,18 @@ export default function ArticleComponent({ data }: Props) {
                             <WithArticleItem article={block.articleLink as Article} />
                           </div>
                         )}
+                        {block.external_link && (
+                          <div>
+                            <div className="flex mt-10">
+                              <ArrowTopRightOnSquareIcon
+                                className="h-8 w-8 mr-2"
+                                aria-hidden="true"
+                              />
+                              <h1 className="text-2xl font-semibold mb-5">外部リンク</h1>
+                            </div>
+                            <ExternalLinkItem url={block.external_link} />
+                          </div>
+                        )}
                         {block.box_merit && (
                           <div className={`${styles.tab_merit_box} flex items-center`}>
                             <HandThumbUpIcon
@@ -377,25 +403,27 @@ export default function ArticleComponent({ data }: Props) {
                       </div>
                     ))}
                   </div>
-                  <div className="related-articles mt-10">
-                    <h1
-                      className={`${styles.profile} text-2xl font-semibold flex justify-center pt-10`}
-                    >
-                      <ArrowPathIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-                      関連記事
-                    </h1>
-                    <div className="mt-5">
-                      {data.related_articles?.map((block, index) => (
-                        <div key={index}>
-                          {block.articleLink && typeof block.articleLink !== 'string' && (
-                            <div>
-                              <WithArticleItem article={block.articleLink as Article} />
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                  {data.related_articles && data.related_articles.length > 0 && (
+                    <div className="related-articles mt-10">
+                      <h1
+                        className={`${styles.profile} text-2xl font-semibold flex justify-center pt-10`}
+                      >
+                        <ArrowPathIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+                        関連記事
+                      </h1>
+                      <div className="mt-5">
+                        {data.related_articles?.map((block, index) => (
+                          <div key={index}>
+                            {block.articleLink && typeof block.articleLink !== 'string' && (
+                              <div>
+                                <WithArticleItem article={block.articleLink as Article} />
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div style={{ paddingTop: '12px' }}>
                     <h1
                       className={`${styles.profile} text-2xl font-semibold flex justify-center mb-5`}
@@ -500,7 +528,7 @@ export default function ArticleComponent({ data }: Props) {
                   </div>
                 </main>
               </div>
-              <div style={{ marginTop: '112px' }} className="ArticleSidebar">
+              <div style={{ marginTop: '72px' }} className="ArticleSidebar">
                 <Sidebar contentBlocks={data.content_blocks} />
               </div>
             </div>

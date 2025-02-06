@@ -241,7 +241,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
           </Listbox>
         </div>
       </div>
-      <div className="SidebarTableOfContens pc">
+      <div className="SidebarTableOfContens sideTOC">
         {headings.length > 0 && <TableOfContents headings={headings} />}
       </div>
     </div>

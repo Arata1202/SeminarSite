@@ -58,13 +58,12 @@
 .content {
   text-align: left;
   width: 100%;
-  margin-top: 2.8em;
   font-size: 18px;
 }
 
-.content *:first-child {
+/* .content *:first-child {
   margin-top: 0;
-}
+} */
 
 .content > h1 {
   font-size: 2rem;

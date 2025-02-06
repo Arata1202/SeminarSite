@@ -20,7 +20,7 @@ export default async function Page(props: Props) {
 
   return (
     <>
-      <div style={{ padding: '24px' }}>
+      <div className="MainLayout">
         <div
           className="mx-auto max-w-7xl px-6 text-center lg:px-8 main_side"
           style={{ marginTop: '50px' }}
@@ -39,7 +39,7 @@ export default async function Page(props: Props) {
                       className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
-                    <div className="ml-4 text-sm font-medium text-gray-500">キーワードで探す</div>
+                    <div className="ml-4 text-sm font-medium text-gray-500">{`「${keyword}」の検索結果`}</div>
                   </div>
                 </li>
               </ol>
