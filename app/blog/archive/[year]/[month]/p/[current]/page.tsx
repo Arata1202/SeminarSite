@@ -33,7 +33,7 @@ export default async function Page(props: Props) {
   });
   return (
     <>
-      <div style={{ padding: '24px' }}>
+      <div className="MainLayout">
         <div
           className="mx-auto max-w-7xl px-6 text-center lg:px-8 main_side"
           style={{ marginTop: '50px' }}

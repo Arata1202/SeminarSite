@@ -12,7 +12,7 @@ export default function ArticleList({ articles }: Props) {
   }
   if (articles.length === 0) {
     return (
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 main_side mt-10">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 main_side">
         <div className="mx-auto text-base leading-7">
           {/* <p className="text-base font-semibold leading-7 text-indigo-600">Introducing</p> */}
           <div className="max-w-[87rem] mx-auto">
@@ -33,7 +33,7 @@ export default function ArticleList({ articles }: Props) {
   }
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 main_side mt-10">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 main_side">
         <div className="mx-auto text-base leading-7">
           {/* <p className="text-base font-semibold leading-7 text-indigo-600">Introducing</p> */}
           <div className="max-w-[87rem] mx-auto">

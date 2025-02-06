@@ -28,7 +28,7 @@ type Props = {
 export default async function TagsLayout({ children }: Props) {
   return (
     <div>
-      <div style={{ padding: '24px' }}>
+      <div className="MainLayout">
         <div>{children}</div>
       </div>
     </div>
