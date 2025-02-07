@@ -9,7 +9,6 @@ import './article.css';
 import TableOfContents from '../Elements/TableOfContent';
 import TagList from '../../TagLists/TagList';
 import WithArticleItem from '../Elements/WithArticleItem';
-import ExternalLinkItem from '../Elements/ExternalLinkItem';
 import {
   HomeIcon,
   ChevronRightIcon,
@@ -19,7 +18,6 @@ import {
   LightBulbIcon,
   InformationCircleIcon,
   LinkIcon,
-  ArrowTopRightOnSquareIcon,
   ArrowPathIcon,
   RssIcon,
   UserPlusIcon,
@@ -239,18 +237,9 @@ export default function ArticleComponent({ data }: Props) {
                             <WithArticleItem article={block.articleLink as Article} />
                           </div>
                         )}
-                        {block.external_link && (
-                          <div>
-                            <div className="flex mt-10">
-                              <ArrowTopRightOnSquareIcon
-                                className="h-8 w-8 mr-2"
-                                aria-hidden="true"
-                              />
-                              <h1 className="text-2xl font-semibold mb-5">外部リンク</h1>
-                            </div>
-                            <ExternalLinkItem url={block.external_link} />
-                          </div>
-                        )}
+                        {/* 外部リンク */}
+                        {block.external_link && <div>{block.external_link}</div>}
+                        {/*  */}
                         {block.box_merit && (
                           <div className={`${styles.tab_merit_box} flex items-center`}>
                             <HandThumbUpIcon
@@ -352,18 +341,9 @@ export default function ArticleComponent({ data }: Props) {
                             <WithArticleItem article={block.articleLink as Article} />
                           </div>
                         )}
-                        {block.external_link && (
-                          <div>
-                            <div className="flex mt-10">
-                              <ArrowTopRightOnSquareIcon
-                                className="h-8 w-8 mr-2"
-                                aria-hidden="true"
-                              />
-                              <h1 className="text-2xl font-semibold mb-5">外部リンク</h1>
-                            </div>
-                            <ExternalLinkItem url={block.external_link} />
-                          </div>
-                        )}
+                        {/* 外部リンク */}
+                        {block.external_link && <div>{block.external_link}</div>}
+                        {/*  */}
                         {block.box_merit && (
                           <div className={`${styles.tab_merit_box} flex items-center`}>
                             <HandThumbUpIcon
