@@ -237,9 +237,6 @@ export default function ArticleComponent({ data }: Props) {
                             <WithArticleItem article={block.articleLink as Article} />
                           </div>
                         )}
-                        {/* 外部リンク */}
-                        {block.external_link && <div>{block.external_link}</div>}
-                        {/*  */}
                         {block.box_merit && (
                           <div className={`${styles.tab_merit_box} flex items-center`}>
                             <HandThumbUpIcon
@@ -341,9 +338,6 @@ export default function ArticleComponent({ data }: Props) {
                             <WithArticleItem article={block.articleLink as Article} />
                           </div>
                         )}
-                        {/* 外部リンク */}
-                        {block.external_link && <div>{block.external_link}</div>}
-                        {/*  */}
                         {block.box_merit && (
                           <div className={`${styles.tab_merit_box} flex items-center`}>
                             <HandThumbUpIcon
