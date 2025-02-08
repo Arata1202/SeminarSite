@@ -56,7 +56,6 @@ const ArticleListItem = ({ article }: Props) => {
           <div className={styles.title}>{article.title}</div>
           <div className={styles.description}>{article.description}</div>
           <div className={styles.date}>
-            &nbsp;&nbsp;&nbsp;&nbsp;
             <PublishedDate date={article.publishedAt || article.createdAt} />
           </div>
         </div>

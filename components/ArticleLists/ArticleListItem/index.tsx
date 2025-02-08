@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { Article } from '@/libs/microcms';
 import styles from './index.module.css';
-import TagList from '../../TagLists/TagList';
+// import TagList from '../../TagLists/TagList';
 import PublishedDate from '../../Elements/Date';
-import { FolderIcon } from '@heroicons/react/24/solid';
+// import { FolderIcon } from '@heroicons/react/24/solid';
 
 type Props = {
   article: Article;
@@ -48,9 +48,9 @@ export default function ArticleListItem({ article }: Props) {
           <div className={`${styles.title}`}>{article.title}</div>
           <div className={styles.description}>{article.description}</div>
           <div className={styles.date}>
-            <FolderIcon className="h-5 w-5 mr-2 mt-3" aria-hidden="true" />
+            {/* <FolderIcon className="h-5 w-5 mr-2 mt-3" aria-hidden="true" />
             <TagList tags={article.tags} hasLink={false} />
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp; */}
             <PublishedDate date={article.publishedAt || article.createdAt} />
           </div>
         </div>

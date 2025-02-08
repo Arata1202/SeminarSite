@@ -7,12 +7,12 @@ import PublishedDate from '../../Elements/Date';
 import styles from './index.module.css';
 import './article.css';
 import TableOfContents from '../Elements/TableOfContent';
-import TagList from '../../TagLists/TagList';
+// import TagList from '../../TagLists/TagList';
 import WithArticleItem from '../Elements/WithArticleItem';
 import {
   HomeIcon,
   ChevronRightIcon,
-  FolderIcon,
+  // FolderIcon,
   HandThumbUpIcon,
   HandThumbDownIcon,
   LightBulbIcon,
@@ -172,9 +172,9 @@ export default function ArticleComponent({ data }: Props) {
                   </picture>
                   <div style={{ marginLeft: 'auto' }}>
                     <div className={styles.date}>
-                      <FolderIcon className="h-5 w-5 mr-2 mt-3" aria-hidden="true" />
+                      {/* <FolderIcon className="h-5 w-5 mr-2 mt-3" aria-hidden="true" />
                       <TagList tags={data.tags} hasLink={true} />
-                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp; */}
                       <PublishedDate date={data.publishedAt || data.createdAt} />
                     </div>
                   </div>
