@@ -46,13 +46,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <div className="footer_icon">
+            <a href="/" className="footer_icon">
               <img
                 alt="Company name"
                 src="/images/icons/kan_logo.jpeg"
-                className="h-7 hover:scale-110 transition-transform"
+                className="h-7 hover:scale-110 transition-transform cursor-pointer"
               />
-            </div>
+            </a>
             <div className="flex space-x-6 footer_icon">
               {navigation.social.map((item) => (
                 <a key={item.name} href={item.href} target="blank" className="hover:text-green-500">
