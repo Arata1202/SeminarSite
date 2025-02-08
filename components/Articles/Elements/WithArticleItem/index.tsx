@@ -52,7 +52,7 @@ const ArticleListItem = ({ article }: Props) => {
             blurDataURL={imageSrc}
           />
         </picture>
-        <div className={styles.content}>
+        <div className={`${styles.content} text-gray-700`}>
           <div className={styles.title}>{article.title}</div>
           <div className={styles.description}>{article.description}</div>
           <div className={styles.date}>

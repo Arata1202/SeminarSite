@@ -18,7 +18,6 @@ import {
   LightBulbIcon,
   InformationCircleIcon,
   LinkIcon,
-  ArrowPathIcon,
   RssIcon,
   UserPlusIcon,
 } from '@heroicons/react/24/solid';
@@ -382,7 +381,7 @@ export default function ArticleComponent({ data }: Props) {
                       <h1
                         className={`${styles.profile} text-2xl font-semibold flex justify-center pt-10`}
                       >
-                        <ArrowPathIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+                        <LinkIcon className="h-8 w-8 mr-2" aria-hidden="true" />
                         関連記事
                       </h1>
                       <div className="mt-5">
