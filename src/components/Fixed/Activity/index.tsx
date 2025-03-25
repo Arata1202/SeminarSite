@@ -109,11 +109,7 @@ export default function Activity() {
             </div>
           </h1>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl relative">
-            <img
-              alt=""
-              src="/images/activity/B84EE05A-F8C7-4BF2-95A1-7D630BE17E57_1_201_a.jpeg"
-              className="w-full object-cover rounded-2xl"
-            />
+            <img alt="" src="/images/activity/2.jpeg" className="w-full object-cover rounded-2xl" />
             <div className="absolute ActivityGradeSection">
               <p className="ActivityGrade">2年生</p>
             </div>
@@ -149,11 +145,7 @@ export default function Activity() {
             </div>
           </div>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl relative">
-            <img
-              alt=""
-              src="/images/activity/6D9D88FF-01AC-4AF8-A43C-53C85CEFDA32_1_201_a.jpeg"
-              className="w-full object-cover rounded-2xl"
-            />
+            <img alt="" src="/images/activity/3.jpeg" className="w-full object-cover rounded-2xl" />
             <div className="absolute ActivityGradeSection">
               <p className="ActivityGrade">3年生</p>
             </div>
@@ -189,11 +181,7 @@ export default function Activity() {
             </div>
           </div>
           <div className="mt-10 xl:mx-auto xl:max-w-7xl relative">
-            <img
-              alt=""
-              src="/images/activity/4nen.png"
-              className="w-full object-cover rounded-2xl"
-            />
+            <img alt="" src="/images/activity/4.png" className="w-full object-cover rounded-2xl" />
             <div className="absolute ActivityGradeSection">
               <p className="ActivityGrade">4年生</p>
             </div>

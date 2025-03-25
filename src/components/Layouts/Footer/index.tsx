@@ -49,7 +49,7 @@ export default function Footer() {
             <a href="/" className="footer_icon">
               <img
                 alt="Company name"
-                src="/images/icons/kan_logo.jpeg"
+                src="/images/icons/logo.jpeg"
                 className="h-7 hover:scale-110 transition-transform cursor-pointer"
               />
             </a>

@@ -155,7 +155,7 @@ export default function Member() {
             </div>
             <img
               alt=""
-              src="/images/member/AD5B05E6-4456-4777-8A3C-8F92D50F9B0D_1_201_a.jpeg"
+              src="/images/member/teacher.jpeg"
               className="u_tablet_teacher_img aspect-[6/5] w-full max-w-lg rounded-2xl object-cover lg:max-w-none xl:row-span-2 xl:row-end-2"
             />
             <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />

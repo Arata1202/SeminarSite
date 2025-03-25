@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: '鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
     description: '東洋大学経営学部マーケティング学科鈴木ゼミナールの公式ホームページです。',
-    images: '/images/icons/1200logo.jpg',
+    images: '/images/icons/og.jpg',
     url: 'https://suzuki-seminar.com',
   },
   icons: {

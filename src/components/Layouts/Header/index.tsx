@@ -17,12 +17,7 @@ export default function Header() {
       >
         <a href="/" className="-m-1.5 p-1.5 hover:scale-110 transition-transform">
           <span className="sr-only">Your Company</span>
-          <img
-            alt=""
-            src="/images/icons/kan_logo.jpeg"
-            className="w-auto"
-            style={{ height: '30px' }}
-          />
+          <img alt="" src="/images/icons/logo.jpeg" className="w-auto" style={{ height: '30px' }} />
         </a>
         <div className="flex lg:hidden">
           {mobileMenuOpen ? (

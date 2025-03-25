@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: `ブログ - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール`,
       description: `ブログを公開しているページです。`,
-      images: `/images/icons/1200logo.jpg`,
+      images: `/images/icons/og.jpg`,
       url: `https://suzuki-seminar.com/blog`,
     },
   };
