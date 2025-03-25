@@ -1,7 +1,5 @@
 import Activity from '@/components/Fixed/Activity';
 
-export const revalidate = 60;
-
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
   title: '活動内容 - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',

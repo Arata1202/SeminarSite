@@ -1,24 +1,22 @@
 import { Metadata } from 'next';
-import { getDetail } from '@/libs/microcms';
+import { getDetail, getAllLists } from '@/libs/microcms';
 import Article from '@/components/Articles/Article';
 
 type Props = {
   params: Promise<{
     slug: string;
   }>;
-  searchParams: Promise<{
-    dk: string;
-  }>;
 };
 
-export const revalidate = 60;
+export const generateStaticParams = async () => {
+  const data = await getAllLists();
+
+  return data.map((slug) => ({ slug: slug.id }));
+};
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const searchParams = await props.searchParams;
   const params = await props.params;
-  const data = await getDetail(params.slug, {
-    draftKey: searchParams.dk,
-  });
+  const data = await getDetail(params.slug);
 
   return {
     title: data.title + ' - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
@@ -33,11 +31,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export default async function Page(props: Props) {
-  const searchParams = await props.searchParams;
   const params = await props.params;
-  const data = await getDetail(params.slug, {
-    draftKey: searchParams.dk,
-  });
+  const data = await getDetail(params.slug);
 
   return (
     <div className="MainLayout">

@@ -1,7 +1,7 @@
 'use client';
 
 // import { formatRichText } from '@/libs/utils';
-import { type Article } from '@/libs/microcms';
+import { Article } from '@/types/microcms';
 import { useEffect, useState } from 'react';
 import PublishedDate from '../../Elements/Date';
 import styles from './index.module.css';

@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { Article } from '@/libs/microcms';
+import { Article } from '@/types/microcms';
 import styles from './index.module.css';
 // import TagList from '../../TagLists/TagList';
 import PublishedDate from '../../Elements/Date';
@@ -36,7 +35,7 @@ export default function ArticleListItem({ article }: Props) {
             />
           </picture>
         ) : (
-          <Image
+          <img
             className={styles.image}
             src="/no-image.png"
             alt="No Image"

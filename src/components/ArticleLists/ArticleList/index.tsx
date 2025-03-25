@@ -1,4 +1,4 @@
-import { Article } from '@/libs/microcms';
+import { Article } from '@/types/microcms';
 import ArticleListItem from '../ArticleListItem';
 import Sidebar from '../../Sidebar';
 

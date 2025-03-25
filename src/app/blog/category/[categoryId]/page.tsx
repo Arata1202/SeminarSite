@@ -4,6 +4,7 @@ import { LIMIT } from '@/constants';
 import Pagination from '@/components/Elements/Pagination';
 import ArticleList from '@/components/ArticleLists/ArticleList';
 import { HomeIcon, ChevronRightIcon, FolderOpenIcon } from '@heroicons/react/24/solid';
+import { CATEGORY_ARR } from '@/constants/category';
 
 type Props = {
   params: Promise<{
@@ -11,7 +12,9 @@ type Props = {
   }>;
 };
 
-export const revalidate = 60;
+export const generateStaticParams = async () => {
+  return CATEGORY_ARR.map((category) => ({ categoryId: category.id }));
+};
 
 export default async function Page(props: Props) {
   const params = await props.params;

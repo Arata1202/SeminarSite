@@ -1,4 +1,4 @@
-import { Category } from '@/libs/microcms';
+import { Category } from '@/types/microcms';
 import TagListItem from '../TagListItem';
 import styles from './index.module.css';
 

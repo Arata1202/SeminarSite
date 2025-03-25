@@ -4,8 +4,6 @@ import Pagination from '@/components/Elements/Pagination';
 import ArticleList from '@/components/ArticleLists/ArticleList';
 import { HomeIcon, ChevronRightIcon, BellAlertIcon } from '@heroicons/react/24/solid';
 
-export const revalidate = 60;
-
 export default async function Page() {
   const data = await getList({
     limit: LIMIT,

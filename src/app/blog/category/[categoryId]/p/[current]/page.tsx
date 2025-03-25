@@ -4,6 +4,7 @@ import { LIMIT } from '@/constants';
 import Pagination from '@/components/Elements/Pagination';
 import ArticleList from '@/components/ArticleLists/ArticleList';
 import { HomeIcon, ChevronRightIcon, FolderOpenIcon } from '@heroicons/react/24/solid';
+import { CATEGORY_ARR } from '@/constants/category';
 
 type Props = {
   params: Promise<{
@@ -12,7 +13,29 @@ type Props = {
   }>;
 };
 
-export const revalidate = 60;
+export const generateStaticParams = async () => {
+  const results = await Promise.all(
+    CATEGORY_ARR.map(async (category) => {
+      const categoryId = category.id;
+
+      const data = await getList({
+        limit: 0,
+        fields: '',
+        filters: `categories[contains]${categoryId}`,
+      });
+
+      const totalCount = data.totalCount;
+      const currents = Array.from({ length: totalCount }, (_, i) => i + 1);
+
+      return currents.map((current) => ({
+        categoryId,
+        current: current.toString(),
+      }));
+    }),
+  );
+
+  return results.flat();
+};
 
 export default async function Page(props: Props) {
   const params = await props.params;

@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { memo } from 'react';
-import { Article } from '@/libs/microcms';
+import { Article } from '@/types/microcms';
 import styles from './index.module.css';
 import PublishedDate from '../../../Elements/Date';
 
@@ -42,15 +41,7 @@ const ArticleListItem = ({ article }: Props) => {
               <source type="image/webp" srcSet={desktopSrcSet} />
             </>
           )}
-          <Image
-            src={imageSrc}
-            alt="サムネイル"
-            className={styles.image}
-            width="600"
-            height="300"
-            placeholder="blur"
-            blurDataURL={imageSrc}
-          />
+          <img src={imageSrc} alt="サムネイル" className={styles.image} width="600" height="300" />
         </picture>
         <div className={`${styles.content} text-gray-700`}>
           <div className={styles.title}>{article.title}</div>
