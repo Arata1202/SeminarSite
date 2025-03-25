@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import { createClient } from 'microcms-js-sdk';
 import type {
   MicroCMSQueries,
@@ -5,26 +6,29 @@ import type {
   MicroCMSDate,
   MicroCMSContentId,
 } from 'microcms-js-sdk';
-import { notFound } from 'next/navigation';
 
-// タグの型定義
+export type Blog = {
+  title: string;
+  description: string;
+  content: string;
+  content_blocks: ContentBlock[];
+  introduction_blocks: IntroductionBlock[];
+  thumbnail: MicroCMSImage;
+  tags: Tag[];
+  related_articles?: RelatedArticle[];
+};
+
+export type Article = Blog & MicroCMSContentId & MicroCMSDate;
+
 export type Tag = {
   name: string;
-} & MicroCMSContentId &
-  MicroCMSDate;
-
-// ライターの型定義
-export type Writer = {
-  name: string;
-  profile: string;
-  image?: MicroCMSImage;
 } & MicroCMSContentId &
   MicroCMSDate;
 
 export type IntroductionBlock = {
   rich_text?: string;
   custom_html?: string;
-  articleLink?: string;
+  article_link?: string;
   bubble_image?: MicroCMSImage;
   bubble_name?: string;
   bubble_text?: string;
@@ -36,10 +40,9 @@ export type IntroductionBlock = {
 };
 
 export type ContentBlock = {
-  adsense?: string;
   rich_text?: string;
   custom_html?: string;
-  articleLink?: string;
+  article_link?: string;
   bubble_image?: MicroCMSImage;
   bubble_name?: string;
   bubble_text?: string;
@@ -50,24 +53,9 @@ export type ContentBlock = {
   box_common?: string;
 };
 
-// ブログの型定義
-export type Blog = {
-  title: string;
-  description: string;
-  content: string;
-  content_blocks: ContentBlock[];
-  introduction_blocks: IntroductionBlock[];
-  thumbnail?: MicroCMSImage;
-  tags?: Tag[];
-  writer?: Writer;
-  related_articles?: RelatedArticle[];
-};
-
 export type RelatedArticle = {
-  articleLink?: string;
+  article_link?: string;
 };
-
-export type Article = Blog & MicroCMSContentId & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');
@@ -77,13 +65,22 @@ if (!process.env.MICROCMS_API_KEY) {
   throw new Error('MICROCMS_API_KEY is required');
 }
 
-// Initialize Client SDK.
 export const client = createClient({
   serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
   apiKey: process.env.MICROCMS_API_KEY,
 });
 
-// ブログ一覧を取得
+export const getAllLists = async (queries?: MicroCMSQueries) => {
+  const listData = await client
+    .getAllContents<Blog>({
+      endpoint: 'blog',
+      queries,
+    })
+    .catch(notFound);
+
+  return listData;
+};
+
 export const getList = async (queries?: MicroCMSQueries) => {
   const listData = await client
     .getList<Blog>({
@@ -94,7 +91,6 @@ export const getList = async (queries?: MicroCMSQueries) => {
   return listData;
 };
 
-// ブログの詳細を取得
 export const getDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client
     .getListDetail<Blog>({
@@ -107,7 +103,17 @@ export const getDetail = async (contentId: string, queries?: MicroCMSQueries) =>
   return detailData;
 };
 
-// タグの一覧を取得
+export const getAllTagLists = async (queries?: MicroCMSQueries) => {
+  const listData = await client
+    .getAllContents<Tag>({
+      endpoint: 'tags',
+      queries,
+    })
+    .catch(notFound);
+
+  return listData;
+};
+
 export const getTagList = async (queries?: MicroCMSQueries) => {
   const listData = await client
     .getList<Tag>({
@@ -119,7 +125,6 @@ export const getTagList = async (queries?: MicroCMSQueries) => {
   return listData;
 };
 
-// タグの詳細を取得
 export const getTag = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client
     .getListDetail<Tag>({

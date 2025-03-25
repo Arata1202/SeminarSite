@@ -227,13 +227,13 @@ export default function ArticleComponent({ data }: Props) {
                             dangerouslySetInnerHTML={{ __html: block.custom_html }}
                           />
                         )}
-                        {block.articleLink && typeof block.articleLink !== 'string' && (
+                        {block.article_link && typeof block.article_link !== 'string' && (
                           <div>
                             <div className="flex mt-10">
                               <LinkIcon className="h-8 w-8 mr-2" aria-hidden="true" />
                               <h1 className="text-2xl font-semibold mb-5">あわせて読みたい</h1>
                             </div>
-                            <WithArticleItem article={block.articleLink as Article} />
+                            <WithArticleItem article={block.article_link as Article} />
                           </div>
                         )}
                         {block.box_merit && (
@@ -328,13 +328,13 @@ export default function ArticleComponent({ data }: Props) {
                             dangerouslySetInnerHTML={{ __html: block.custom_html }}
                           />
                         )}
-                        {block.articleLink && typeof block.articleLink !== 'string' && (
+                        {block.article_link && typeof block.article_link !== 'string' && (
                           <div>
                             <div className="flex mt-10">
                               <LinkIcon className="h-8 w-8 mr-2" aria-hidden="true" />
                               <h1 className="text-2xl font-semibold mb-5">あわせて読みたい</h1>
                             </div>
-                            <WithArticleItem article={block.articleLink as Article} />
+                            <WithArticleItem article={block.article_link as Article} />
                           </div>
                         )}
                         {block.box_merit && (
@@ -387,9 +387,9 @@ export default function ArticleComponent({ data }: Props) {
                       <div className="mt-5">
                         {data.related_articles?.map((block, index) => (
                           <div key={index}>
-                            {block.articleLink && typeof block.articleLink !== 'string' && (
+                            {block.article_link && typeof block.article_link !== 'string' && (
                               <div>
-                                <WithArticleItem article={block.articleLink as Article} />
+                                <WithArticleItem article={block.article_link as Article} />
                               </div>
                             )}
                           </div>
