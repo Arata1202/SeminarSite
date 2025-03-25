@@ -47,14 +47,14 @@ export default function Example() {
   const sendEmail = useCallback(() => {
     if (!formData) return;
 
-    fetch('/api/sendemail', {
+    fetch(`${process.env.NEXT_PUBLIC_API_SENDEMAIL_URL}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.status === 'success') {
+        if (data.success) {
           console.log('Email sent successfully');
           setContactConfirmShow(true);
           reset();
@@ -71,7 +71,7 @@ export default function Example() {
   const handleConfirmSend = useCallback(() => {
     const verifyCaptcha = async () => {
       try {
-        const response = await fetch('/api/recaptcha', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_RECAPTCHA_URL}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -206,7 +206,7 @@ export default function Example() {
         {/* スパム */}
         <ReCAPTCHA
           ref={recaptchaRef}
-          sitekey="6Lek_4AqAAAAAFlUlXOO4qb5kTh2euEqnIwuLRgw"
+          sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           onChange={onChange}
           className="mt-3"
         />
