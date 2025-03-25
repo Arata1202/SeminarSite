@@ -115,11 +115,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setMobileMenuOpen(false);
-                        window.location.href = '/';
-                      }}
+                      onClick={() => setMobileMenuOpen(false)}
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ ホーム
@@ -128,11 +124,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/activity"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setMobileMenuOpen(false);
-                        window.location.href = '/activity';
-                      }}
+                      onClick={() => setMobileMenuOpen(false)}
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 活動内容
@@ -141,11 +133,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/member"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setMobileMenuOpen(false);
-                        window.location.href = '/member';
-                      }}
+                      onClick={() => setMobileMenuOpen(false)}
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 組織
@@ -154,11 +142,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/selection"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setMobileMenuOpen(false);
-                        window.location.href = '/selection';
-                      }}
+                      onClick={() => setMobileMenuOpen(false)}
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 選考
@@ -167,11 +151,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/blog"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setMobileMenuOpen(false);
-                        window.location.href = '/blog';
-                      }}
+                      onClick={() => setMobileMenuOpen(false)}
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ ブログ
@@ -180,6 +160,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
+                      onClick={() => setMobileMenuOpen(false)}
                       target="_blank"
                       className="flex font-semibold text-lg hover:text-green-500"
                     >
