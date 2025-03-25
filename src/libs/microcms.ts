@@ -1,61 +1,7 @@
 import { notFound } from 'next/navigation';
 import { createClient } from 'microcms-js-sdk';
-import type {
-  MicroCMSQueries,
-  MicroCMSImage,
-  MicroCMSDate,
-  MicroCMSContentId,
-} from 'microcms-js-sdk';
-
-export type Blog = {
-  title: string;
-  description: string;
-  content: string;
-  content_blocks: ContentBlock[];
-  introduction_blocks: IntroductionBlock[];
-  thumbnail: MicroCMSImage;
-  tags: Tag[];
-  related_articles?: RelatedArticle[];
-};
-
-export type Article = Blog & MicroCMSContentId & MicroCMSDate;
-
-export type Tag = {
-  name: string;
-} & MicroCMSContentId &
-  MicroCMSDate;
-
-export type IntroductionBlock = {
-  rich_text?: string;
-  custom_html?: string;
-  article_link?: string;
-  bubble_image?: MicroCMSImage;
-  bubble_name?: string;
-  bubble_text?: string;
-  bubble_isRight?: boolean;
-  box_merit?: string;
-  box_demerit?: string;
-  box_point?: string;
-  box_common?: string;
-};
-
-export type ContentBlock = {
-  rich_text?: string;
-  custom_html?: string;
-  article_link?: string;
-  bubble_image?: MicroCMSImage;
-  bubble_name?: string;
-  bubble_text?: string;
-  bubble_isRight?: boolean;
-  box_merit?: string;
-  box_demerit?: string;
-  box_point?: string;
-  box_common?: string;
-};
-
-export type RelatedArticle = {
-  article_link?: string;
-};
+import type { MicroCMSQueries } from 'microcms-js-sdk';
+import { Blog, Category } from '@/types/microcms';
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');
@@ -103,10 +49,10 @@ export const getDetail = async (contentId: string, queries?: MicroCMSQueries) =>
   return detailData;
 };
 
-export const getAllTagLists = async (queries?: MicroCMSQueries) => {
+export const getAllCategoryLists = async (queries?: MicroCMSQueries) => {
   const listData = await client
-    .getAllContents<Tag>({
-      endpoint: 'tags',
+    .getAllContents<Category>({
+      endpoint: 'categories',
       queries,
     })
     .catch(notFound);
@@ -114,10 +60,10 @@ export const getAllTagLists = async (queries?: MicroCMSQueries) => {
   return listData;
 };
 
-export const getTagList = async (queries?: MicroCMSQueries) => {
+export const getCategoryList = async (queries?: MicroCMSQueries) => {
   const listData = await client
-    .getList<Tag>({
-      endpoint: 'tags',
+    .getList<Category>({
+      endpoint: 'categories',
       queries,
     })
     .catch(notFound);
@@ -125,10 +71,10 @@ export const getTagList = async (queries?: MicroCMSQueries) => {
   return listData;
 };
 
-export const getTag = async (contentId: string, queries?: MicroCMSQueries) => {
+export const getCategory = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client
-    .getListDetail<Tag>({
-      endpoint: 'tags',
+    .getListDetail<Category>({
+      endpoint: 'categories',
       contentId,
       queries,
     })

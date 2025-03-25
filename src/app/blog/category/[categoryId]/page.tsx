@@ -1,5 +1,5 @@
 import { getList } from '@/libs/microcms';
-import { getTag } from '@/libs/microcms';
+import { getCategory } from '@/libs/microcms';
 import { LIMIT } from '@/constants';
 import Pagination from '@/components/Elements/Pagination';
 import ArticleList from '@/components/ArticleLists/ArticleList';
@@ -7,8 +7,7 @@ import { HomeIcon, ChevronRightIcon, FolderOpenIcon } from '@heroicons/react/24/
 
 type Props = {
   params: Promise<{
-    tagId: string;
-    current: string;
+    categoryId: string;
   }>;
 };
 
@@ -16,13 +15,11 @@ export const revalidate = 60;
 
 export default async function Page(props: Props) {
   const params = await props.params;
-  const tag = await getTag(params.tagId);
-  const { tagId } = params;
-  const current = parseInt(params.current as string, 10);
+  const tag = await getCategory(params.categoryId);
+  const { categoryId } = params;
   const data = await getList({
     limit: LIMIT,
-    offset: LIMIT * (current - 1),
-    filters: `tags[contains]${tagId}`,
+    filters: `categories[contains]${categoryId}`,
   });
   return (
     <>
@@ -75,7 +72,7 @@ export default async function Page(props: Props) {
         </h1>
       </div>
       <ArticleList articles={data.contents} />
-      <Pagination totalCount={data.totalCount} current={current} basePath={`/tags/${tagId}`} />
+      <Pagination totalCount={data.totalCount} basePath={`/categories/${categoryId}`} />
     </>
   );
 }

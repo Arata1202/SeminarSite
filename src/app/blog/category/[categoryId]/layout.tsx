@@ -1,10 +1,10 @@
 import React from 'react';
-import { getTag } from '@/libs/microcms';
+import { getCategory } from '@/libs/microcms';
 import { Metadata } from 'next';
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
-  const tag = await getTag(params.tagId);
+  const tag = await getCategory(params.tagId);
 
   return {
     title: `${tag.name} - 鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール`,
