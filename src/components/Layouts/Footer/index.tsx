@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -46,19 +47,24 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <a href="/" className="footer_icon">
+            <Link href="/" className="footer_icon">
               <img
                 alt="Company name"
                 src="/images/icons/logo.jpeg"
                 className="h-7 hover:scale-110 transition-transform cursor-pointer"
               />
-            </a>
+            </Link>
             <div className="flex space-x-6 footer_icon">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} target="blank" className="hover:text-green-500">
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  target="blank"
+                  className="hover:text-green-500"
+                >
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="h-6 w-6" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -69,9 +75,9 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
+                      <Link href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -81,9 +87,9 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
+                      <Link href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -95,9 +101,9 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
+                      <Link href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -107,9 +113,9 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 hover:text-green-500">
+                      <Link href={item.href} className="text-sm leading-6 hover:text-green-500">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

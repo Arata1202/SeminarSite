@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getList } from '@/libs/microcms';
 import { getCategory } from '@/libs/microcms';
 import { LIMIT } from '@/constants';
@@ -34,9 +35,9 @@ export default async function Page(props: Props) {
           <nav className="flex" aria-label="Breadcrumb">
             <ol role="list" className="flex items-center space-x-4">
               <li>
-                <a href="/" className="flex text-gray-500 hover:text-green-500">
+                <Link href="/" className="flex text-gray-500 hover:text-green-500">
                   <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                </a>
+                </Link>
               </li>
               <li>
                 <div className="flex items-center">
@@ -44,12 +45,12 @@ export default async function Page(props: Props) {
                     className="h-4 w-4 flex-shrink-0 text-gray-500"
                     aria-hidden="true"
                   />
-                  <a
+                  <Link
                     href={`/blog`}
                     className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                   >
                     ブログ
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li>
@@ -58,12 +59,12 @@ export default async function Page(props: Props) {
                     className="h-4 w-4 flex-shrink-0 text-gray-500"
                     aria-hidden="true"
                   />
-                  <a
+                  <Link
                     href={`${tag.id}`}
                     className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                   >
                     {tag.name}
-                  </a>
+                  </Link>
                 </div>
               </li>
             </ol>

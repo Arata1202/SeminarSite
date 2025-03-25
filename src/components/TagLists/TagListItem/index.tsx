@@ -1,5 +1,6 @@
 import { Category } from '@/types/microcms';
 import styles from './index.module.css';
+import Link from 'next/link';
 
 type Props = {
   tag: Category;
@@ -9,9 +10,9 @@ type Props = {
 export default function TagListItem({ tag, hasLink = true }: Props) {
   if (hasLink) {
     return (
-      <a href={`/blog/category/${tag.id}`} className={styles.tag}>
+      <Link href={`/blog/category/${tag.id}`} className={styles.tag}>
         {tag.name}
-      </a>
+      </Link>
     );
   }
   return <span className={styles.tag}>{tag.name}</span>;

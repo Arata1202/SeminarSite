@@ -1,5 +1,6 @@
 import styles from './index.module.css';
 import { LIMIT } from '@/constants';
+import Link from 'next/link';
 
 type Props = {
   totalCount: number;
@@ -15,9 +16,9 @@ export default function Pagination({ totalCount, current = 1, basePath = '', q }
       {pages.map((p) => (
         <li className={styles.list} key={p}>
           {current !== p ? (
-            <a href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')} className={styles.item}>
+            <Link href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')} className={styles.item}>
               {p}
-            </a>
+            </Link>
           ) : (
             <span className={`${styles.item} ${styles.current}`}>{p}</span>
           )}

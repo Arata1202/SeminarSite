@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -107,13 +108,13 @@ export default function Page() {
               {products.map((product) => (
                 <div key={product.id} className="group relative">
                   <div className="h-full w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                    <a href={product.href}>
+                    <Link href={product.href}>
                       <img
                         alt={product.imageAlt}
                         src={product.imageSrc}
                         className="h-full w-full object-cover object-center"
                       />
-                    </a>
+                    </Link>
                     <div className="ActivityText absolute top-5 left-5 text-2xl font-bold text-white">
                       <p>{product.name}</p>
                     </div>

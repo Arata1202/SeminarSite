@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 import { useEffect } from 'react';
 import TableOfContents from '../Articles/Elements/TableOfContent';
@@ -109,7 +110,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
           </h1>
           <nav className="flex gap-4 mt-5 md:mt-5" role="tablist">
             {CategoryList.map((item) => (
-              <a
+              <Link
                 href={item.href}
                 className="sidebarCategory hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start p-4 md:p-3 border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-200 transform hover:-translate-y-1"
                 style={{ width: '100%' }}
@@ -133,12 +134,12 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
                     </span>
                   </span>
                 </span>
-              </a>
+              </Link>
             ))}
           </nav>
           <nav className="flex gap-4 mt-5 md:mt-5 w-100" role="tablist">
             {CategoryList2.map((item) => (
-              <a
+              <Link
                 href={item.href}
                 className="sidebarCategory hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start p-4 md:p-3 border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-200 transform hover:-translate-y-1"
                 style={{ width: '100%' }}
@@ -162,7 +163,7 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
                     </span>
                   </span>
                 </span>
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

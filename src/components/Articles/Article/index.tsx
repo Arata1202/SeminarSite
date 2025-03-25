@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 // import { formatRichText } from '@/libs/utils';
 import { Article } from '@/types/microcms';
 import { useEffect, useState } from 'react';
@@ -111,9 +112,9 @@ export default function ArticleComponent({ data }: Props) {
             <nav className="flex" aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-4">
                 <li>
-                  <a href="/" className="flex text-gray-500 hover:text-green-500">
+                  <Link href="/" className="flex text-gray-500 hover:text-green-500">
                     <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <div className="flex items-center">
@@ -121,13 +122,13 @@ export default function ArticleComponent({ data }: Props) {
                       className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
-                    <a
+                    <Link
                       href={`/blog`}
                       className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                       style={{ whiteSpace: 'nowrap' }}
                     >
                       ブログ
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -136,12 +137,12 @@ export default function ArticleComponent({ data }: Props) {
                       className="h-4 w-4 flex-shrink-0 text-gray-500"
                       aria-hidden="true"
                     />
-                    <a
+                    <Link
                       href={`${data.id}`}
                       className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500 text-left"
                     >
                       {data.title}
-                    </a>
+                    </Link>
                   </div>
                 </li>
               </ol>
@@ -479,7 +480,7 @@ export default function ArticleComponent({ data }: Props) {
                       </h1>
                     </div>
                     <div className="flex justify-center">
-                      <a
+                      <Link
                         aria-label="RSSフォローボタン"
                         href="https://suzuki-seminar.com/rss.xml"
                         className="bg-orange-500 rounded-full p-2 m-1 hover:opacity-60"
@@ -487,8 +488,8 @@ export default function ArticleComponent({ data }: Props) {
                         rel="noopener noreferrer"
                       >
                         <RssIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         aria-label="Feedlyフォローボタン"
                         href="https://feedly.com/i/subscription/feed/https://suzuki-seminar.com/rss.xml"
                         target="_blank"
@@ -496,7 +497,7 @@ export default function ArticleComponent({ data }: Props) {
                         className="bg-green-500 rounded-full p-2 m-1 hover:opacity-60"
                       >
                         <SiFeedly className="h-6 w-6 text-white" aria-hidden="true" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </main>

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Fragment, useState } from 'react';
 import styles from './index.module.css';
 import { Dialog, Transition } from '@headlessui/react';
@@ -15,10 +16,10 @@ export default function Header() {
         className="mx-auto flex max-w-7xl items-center justify-between py-6 px-6 lg:px-8"
         aria-label="Global"
       >
-        <a href="/" className="-m-1.5 p-1.5 hover:scale-110 transition-transform">
+        <Link href="/" className="-m-1.5 p-1.5 hover:scale-110 transition-transform">
           <span className="sr-only">Your Company</span>
           <img alt="" src="/images/icons/logo.jpeg" className="w-auto" style={{ height: '30px' }} />
-        </a>
+        </Link>
         <div className="flex lg:hidden">
           {mobileMenuOpen ? (
             <button
@@ -44,29 +45,29 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:gap-x-12 font-bold">
-          <a href="/" className="text-sm font-semibold leading-6 hover:text-green-500">
+          <Link href="/" className="text-sm font-semibold leading-6 hover:text-green-500">
             ホーム
-          </a>
-          <a href="/activity" className="text-sm font-semibold leading-6 hover:text-green-500">
+          </Link>
+          <Link href="/activity" className="text-sm font-semibold leading-6 hover:text-green-500">
             活動内容
-          </a>
-          <a href="/member" className="text-sm font-semibold leading-6 hover:text-green-500">
+          </Link>
+          <Link href="/member" className="text-sm font-semibold leading-6 hover:text-green-500">
             組織
-          </a>
-          <a href="/selection" className="text-sm font-semibold leading-6 hover:text-green-500">
+          </Link>
+          <Link href="/selection" className="text-sm font-semibold leading-6 hover:text-green-500">
             選考
-          </a>
-          <a href="/blog" className="text-sm font-semibold leading-6 hover:text-green-500">
+          </Link>
+          <Link href="/blog" className="text-sm font-semibold leading-6 hover:text-green-500">
             ブログ
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
             target="_blank"
             className="flex text-sm font-semibold leading-6 hover:text-green-500"
           >
             インスタグラム
             <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-1" aria-hidden="true" />
-          </a>
+          </Link>
         </div>
       </nav>
       <Transition.Root show={mobileMenuOpen} as={Fragment}>
@@ -112,7 +113,7 @@ export default function Header() {
                 </div>
                 <ul className="mt-5 space-y-6">
                   <li>
-                    <a
+                    <Link
                       href="/"
                       onClick={(event) => {
                         event.preventDefault();
@@ -122,10 +123,10 @@ export default function Header() {
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ ホーム
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/activity"
                       onClick={(event) => {
                         event.preventDefault();
@@ -135,10 +136,10 @@ export default function Header() {
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 活動内容
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/member"
                       onClick={(event) => {
                         event.preventDefault();
@@ -148,10 +149,10 @@ export default function Header() {
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 組織
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/selection"
                       onClick={(event) => {
                         event.preventDefault();
@@ -161,10 +162,10 @@ export default function Header() {
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ 選考
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/blog"
                       onClick={(event) => {
                         event.preventDefault();
@@ -174,10 +175,10 @@ export default function Header() {
                       className="block font-semibold text-lg hover:text-green-500"
                     >
                       ▶︎ ブログ
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
                       target="_blank"
                       className="flex font-semibold text-lg hover:text-green-500"
@@ -188,7 +189,7 @@ export default function Header() {
                         style={{ marginTop: '2px' }}
                         aria-hidden="true"
                       />
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

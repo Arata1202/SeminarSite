@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 interface Heading {
@@ -95,13 +96,13 @@ const TableOfContents: React.FC<TableOfContentsProps> = React.memo(({ headings }
                   transition: 'background-color 0.3s ease',
                 }}
               >
-                <a
+                <Link
                   href={`#${heading.id}`}
                   onClick={(e) => handleClick(e, heading.id)}
                   className="hover:text-green-500"
                 >
                   {heading.number} {heading.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ol>

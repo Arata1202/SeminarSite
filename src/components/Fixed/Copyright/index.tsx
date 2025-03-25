@@ -1,5 +1,6 @@
 import '../../../app/globals.css';
 import './index.css';
+import Link from 'next/link';
 import PublishedDate from '../../Elements/Date';
 import { DocumentTextIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
@@ -19,9 +20,9 @@ export default function Copyright() {
         <nav className="flex" aria-label="Breadcrumb">
           <ol role="list" className="flex items-center space-x-4">
             <li>
-              <a href="/" className="flex text-gray-500 hover:text-green-500">
+              <Link href="/" className="flex text-gray-500 hover:text-green-500">
                 <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              </a>
+              </Link>
             </li>
             <li>
               <div className="flex items-center">
@@ -29,12 +30,12 @@ export default function Copyright() {
                   className="h-4 w-4 flex-shrink-0 text-gray-500"
                   aria-hidden="true"
                 />
-                <a
+                <Link
                   href="/copyright"
                   className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                 >
                   著作権
-                </a>
+                </Link>
               </div>
             </li>
           </ol>
@@ -64,7 +65,7 @@ export default function Copyright() {
           </p>
           <p className="mt-6">
             本サービスは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、
-            <a href="/contact">お問い合わせ</a>
+            <Link href="/contact">お問い合わせ</Link>
             よりご連絡ください。迅速に対応いたします。
           </p>
         </div>

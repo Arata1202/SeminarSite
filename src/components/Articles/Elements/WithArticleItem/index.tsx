@@ -5,6 +5,7 @@ import { memo } from 'react';
 import { Article } from '@/types/microcms';
 import styles from './index.module.css';
 import PublishedDate from '../../../Elements/Date';
+import Link from 'next/link';
 
 type Props = {
   article: Article;
@@ -29,7 +30,7 @@ const ArticleListItem = ({ article }: Props) => {
 
   return (
     <li className={styles.list}>
-      <a
+      <Link
         onClick={(event) => handleNavigation(event, `/blog/articles/${article.id}`)}
         href={`/blog/articles/${article.id}`}
         className={`${styles.link} p-2 border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-200 transform hover:-translate-y-1 cursor-pointer`}
@@ -50,7 +51,7 @@ const ArticleListItem = ({ article }: Props) => {
             <PublishedDate date={article.publishedAt || article.createdAt} />
           </div>
         </div>
-      </a>
+      </Link>
     </li>
   );
 };

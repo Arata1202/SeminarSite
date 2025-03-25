@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Article } from '@/types/microcms';
 import styles from './index.module.css';
 // import TagList from '../../TagLists/TagList';
@@ -11,7 +12,7 @@ type Props = {
 export default function ArticleListItem({ article }: Props) {
   return (
     <li className={styles.list}>
-      <a
+      <Link
         href={`/blog/articles/${article.id}`}
         className={`${styles.link} p-2 border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-200 transform hover:-translate-y-1`}
       >
@@ -53,7 +54,7 @@ export default function ArticleListItem({ article }: Props) {
             <PublishedDate date={article.publishedAt || article.createdAt} />
           </div>
         </div>
-      </a>
+      </Link>
     </li>
   );
 }

@@ -1,4 +1,5 @@
 import '../../../app/globals.css';
+import Link from 'next/link';
 import { FlagIcon, ChevronRightIcon, HomeIcon, CheckIcon } from '@heroicons/react/24/solid';
 const firstSteps = [
   {
@@ -34,9 +35,9 @@ export default function Selection() {
         <nav className="flex" aria-label="Breadcrumb">
           <ol role="list" className="flex items-center space-x-4">
             <li>
-              <a href="/" className="flex text-gray-500 hover:text-green-500">
+              <Link href="/" className="flex text-gray-500 hover:text-green-500">
                 <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              </a>
+              </Link>
             </li>
             <li>
               <div className="flex items-center">
@@ -44,12 +45,12 @@ export default function Selection() {
                   className="h-4 w-4 flex-shrink-0 text-gray-500"
                   aria-hidden="true"
                 />
-                <a
+                <Link
                   href="/selection"
                   className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
                 >
                   選考
-                </a>
+                </Link>
               </div>
             </li>
           </ol>
@@ -138,13 +139,13 @@ export default function Selection() {
           <p className="mt-6">
             以下のURLから必要事項を記入し、提出してください。
             <br />
-            <a
+            <Link
               className="text-green-700 hover:text-green-500"
               href="https://forms.gle/uVEL8K9113wd9EnC9"
               target="_blank"
             >
               応募フォーム
-            </a>
+            </Link>
             <br />
             皆さんの人となりを知る上で重要なため、できる限り詳しく書いてください。
             <br />
@@ -176,13 +177,13 @@ export default function Selection() {
           <h2 className="text-2xl font-bold tracking-tight mt-10">応募期限</h2>
           <p className="mt-6">
             10月30日（水）の23:59までに、
-            <a
+            <Link
               className="text-green-700 hover:text-green-500"
               href="https://forms.gle/uVEL8K9113wd9EnC9"
               target="_blank"
             >
               応募フォーム
-            </a>
+            </Link>
             よりエントリーシートおよびレポートの提出に加え、Toyonet-ACEへの登録を済ませてください。
           </p>
         </div>
