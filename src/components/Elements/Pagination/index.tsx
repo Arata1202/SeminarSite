@@ -1,5 +1,5 @@
 import styles from './index.module.css';
-import { LIMIT } from '@/constants';
+import { LIMIT } from '@/constants/limit';
 import Link from 'next/link';
 
 type Props = {

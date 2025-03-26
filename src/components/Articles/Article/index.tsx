@@ -6,7 +6,7 @@ import { Article } from '@/types/microcms';
 import { useEffect, useState } from 'react';
 import PublishedDate from '../../Elements/Date';
 import styles from './index.module.css';
-import './article.css';
+import '../../../styles//plugin.css';
 import TableOfContents from '../Elements/TableOfContent';
 // import TagList from '../../TagLists/TagList';
 import WithArticleItem from '../Elements/WithArticleItem';

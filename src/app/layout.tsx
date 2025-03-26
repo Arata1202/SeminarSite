@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '@/components/Layouts/Header';
 import Footer from '@/components/Layouts/Footer';
-import './globals.css';
+import '../styles/globals.css';
 import Script from 'next/script';
 import ScrollTopButton from '@/components/Layouts/ScrollToTop';
 import type { Viewport } from 'next';

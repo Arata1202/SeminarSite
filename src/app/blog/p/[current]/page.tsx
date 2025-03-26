@@ -1,5 +1,5 @@
 import { getList } from '@/libs/microcms';
-import { LIMIT } from '@/constants';
+import { LIMIT } from '@/constants/limit';
 import Pagination from '@/components/Elements/Pagination';
 import ArticleList from '@/components/ArticleLists/ArticleList';
 

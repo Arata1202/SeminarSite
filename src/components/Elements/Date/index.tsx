@@ -1,4 +1,4 @@
-import { formatDate } from '@/libs/utils';
+import { formatDate } from '@/utils/formatDate';
 import styles from './index.module.css';
 import { ClockIcon } from '@heroicons/react/24/outline';
 
