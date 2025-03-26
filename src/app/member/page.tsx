@@ -1,11 +1,9 @@
-import Member from '@/components/Fixed/Member';
+import MemberPage from '@/components/Pages/Member';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Member />
-      </div>
+      <MemberPage />
     </>
   );
 }

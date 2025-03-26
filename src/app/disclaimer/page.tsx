@@ -1,11 +1,9 @@
-import Disclaimer from '@/components/Fixed/Disclaimer';
+import DisclaimerPage from '@/components/Pages/Disclaimer';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Disclaimer />
-      </div>
+      <DisclaimerPage />
     </>
   );
 }

@@ -1,11 +1,9 @@
-import Privacy from '@/components/Fixed/Privacy';
+import PrivacyPage from '@/components/Pages/Privacy';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Privacy />
-      </div>
+      <PrivacyPage />
     </>
   );
 }

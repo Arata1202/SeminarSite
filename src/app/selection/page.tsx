@@ -1,11 +1,9 @@
-import Selection from '@/components/Fixed/Selection';
+import SelectionPage from '@/components/Pages/Selection';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Selection />
-      </div>
+      <SelectionPage />
     </>
   );
 }

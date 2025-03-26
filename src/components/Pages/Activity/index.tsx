@@ -1,7 +1,7 @@
 import { FireIcon, ChevronRightIcon, HomeIcon, CalendarDaysIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
-export default function Activity() {
+export default function ActivityPage() {
   const timeline_second = [
     {
       name: '輪読',
@@ -75,7 +75,7 @@ export default function Activity() {
   ];
   return (
     <>
-      <div className="">
+      <div className="MainLayout">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8 main_side top_title">
           <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
             <nav className="flex" aria-label="Breadcrumb">

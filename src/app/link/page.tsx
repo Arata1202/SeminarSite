@@ -1,11 +1,9 @@
-import Link from '@/components/Fixed/Link';
+import LinkPage from '@/components/Pages/Link';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Link />
-      </div>
+      <LinkPage />
     </>
   );
 }

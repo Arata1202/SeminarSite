@@ -1,11 +1,9 @@
-import Activity from '@/components/Fixed/Activity';
+import ActivityPage from '@/components/Pages/Activity';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Activity />
-      </div>
+      <ActivityPage />
     </>
   );
 }

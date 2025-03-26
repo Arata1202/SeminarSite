@@ -1,11 +1,9 @@
-import Contact from '@/components/Fixed/Contact';
+import ContactPage from '@/components/Pages/Contact';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Contact />
-      </div>
+      <ContactPage />
     </>
   );
 }

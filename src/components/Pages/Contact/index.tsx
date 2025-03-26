@@ -8,7 +8,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
-export default function Example() {
+export default function ContactPage() {
   const [show, setContactConfirmShow] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const [formData, setContactFormData] = useState<FormData | null>(null);
@@ -106,120 +106,122 @@ export default function Example() {
   }, [show]);
 
   return (
-    <div
-      className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
-      style={{ marginTop: '80px' }}
-    >
-      <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
-        <nav className="flex" aria-label="Breadcrumb">
-          <ol role="list" className="flex items-center space-x-4">
-            <li>
-              <Link href="/" className="flex text-gray-500 hover:text-green-500">
-                <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              </Link>
-            </li>
-            <li>
-              <div className="flex items-center">
-                <ChevronRightIcon
-                  className="h-4 w-4 flex-shrink-0 text-gray-500"
-                  aria-hidden="true"
-                />
-                <Link
-                  href="/contact"
-                  className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
-                >
-                  お問い合わせ
+    <div className="MainLayout">
+      <div
+        className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
+        style={{ marginTop: '80px' }}
+      >
+        <h1 className="categoryTitle text-3xl font-bold pt-5 max-w-[85rem] mx-auto pb-2">
+          <nav className="flex" aria-label="Breadcrumb">
+            <ol role="list" className="flex items-center space-x-4">
+              <li>
+                <Link href="/" className="flex text-gray-500 hover:text-green-500">
+                  <HomeIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
                 </Link>
-              </div>
-            </li>
-          </ol>
-        </nav>
-      </h1>
-      <div className="">
-        <h1 className="text-3xl font-bold">
-          <div className="flex items-center pb-2 pt-2 mt-5">
-            <EnvelopeIcon className="h-8 w-8 mr-2" aria-hidden="true" />
-            <div>お問い合わせ</div>
-          </div>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <ChevronRightIcon
+                    className="h-4 w-4 flex-shrink-0 text-gray-500"
+                    aria-hidden="true"
+                  />
+                  <Link
+                    href="/contact"
+                    className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500"
+                  >
+                    お問い合わせ
+                  </Link>
+                </div>
+              </li>
+            </ol>
+          </nav>
         </h1>
-        <p className="mt-6 text-lg leading-8">
-          本サービスや鈴木ゼミに関するご質問やお気づきの点がございましたら、お気軽にお問い合わせください。
-        </p>
+        <div className="">
+          <h1 className="text-3xl font-bold">
+            <div className="flex items-center pb-2 pt-2 mt-5">
+              <EnvelopeIcon className="h-8 w-8 mr-2" aria-hidden="true" />
+              <div>お問い合わせ</div>
+            </div>
+          </h1>
+          <p className="mt-6 text-lg leading-8">
+            本サービスや鈴木ゼミに関するご質問やお気づきの点がございましたら、お気軽にお問い合わせください。
+          </p>
+        </div>
+        <form onSubmit={handleSubmit(onSubmit)} method="POST">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="sm:col-span-2 mt-6">
+              <label htmlFor="email" className="block text-sm font-semibold leading-6">
+                メールアドレス
+              </label>
+              <div className="mt-2.5">
+                <input
+                  {...register('email', {
+                    required: '※ メールアドレスを入力してください',
+                    pattern: {
+                      value: /^\S+@\S+$/i,
+                      message: '※ 有効なメールアドレスを入力してください',
+                    },
+                  })}
+                  type="text"
+                  name="email"
+                  id="email"
+                  autoComplete="email"
+                  className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
+                />
+                {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label htmlFor="last-name" className="block text-sm font-semibold leading-6">
+                件名
+              </label>
+              <div className="mt-2.5">
+                <input
+                  {...register('title', { required: '※ 件名を入力してください' })}
+                  type="text"
+                  name="title"
+                  id="title"
+                  autoComplete="family-name"
+                  className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
+                />
+                {errors.title && <p className="text-red-500">{errors.title.message}</p>}
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label htmlFor="message" className="block text-sm font-semibold leading-6">
+                内容
+              </label>
+              <div className="mt-2.5">
+                <textarea
+                  {...register('message', { required: '※ 内容を入力してください' })}
+                  name="message"
+                  id="message"
+                  rows={4}
+                  className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
+                  defaultValue={''}
+                />
+                {errors.message && <p className="text-red-500">{errors.message.message}</p>}
+              </div>
+            </div>
+          </div>
+          {/* スパム */}
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+            onChange={onChange}
+            className="mt-3"
+          />
+          <div className="mt-3">
+            <button
+              type="submit"
+              disabled={!captchaValue}
+              className="cursor-pointer block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold shadow-s border border-gray-300 hover:border-2 hover:text-green-500 hover:border-green-500"
+            >
+              送信
+            </button>
+          </div>
+        </form>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} method="POST">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="sm:col-span-2 mt-6">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6">
-              メールアドレス
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register('email', {
-                  required: '※ メールアドレスを入力してください',
-                  pattern: {
-                    value: /^\S+@\S+$/i,
-                    message: '※ 有効なメールアドレスを入力してください',
-                  },
-                })}
-                type="text"
-                name="email"
-                id="email"
-                autoComplete="email"
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
-              />
-              {errors.email && <p className="text-red-500">{errors.email.message}</p>}
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6">
-              件名
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register('title', { required: '※ 件名を入力してください' })}
-                type="text"
-                name="title"
-                id="title"
-                autoComplete="family-name"
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
-              />
-              {errors.title && <p className="text-red-500">{errors.title.message}</p>}
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6">
-              内容
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                {...register('message', { required: '※ 内容を入力してください' })}
-                name="message"
-                id="message"
-                rows={4}
-                className="block w-full rounded-md border border-gray-300 py-2 pl-3 pr-3 sm:text-sm sm:leading-6 focus:border-2 focus:border-green-500 focus:outline-none"
-                defaultValue={''}
-              />
-              {errors.message && <p className="text-red-500">{errors.message.message}</p>}
-            </div>
-          </div>
-        </div>
-        {/* スパム */}
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-          onChange={onChange}
-          className="mt-3"
-        />
-        <div className="mt-3">
-          <button
-            type="submit"
-            disabled={!captchaValue}
-            className="cursor-pointer block w-full rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold shadow-s border border-gray-300 hover:border-2 hover:text-green-500 hover:border-green-500"
-          >
-            送信
-          </button>
-        </div>
-      </form>
       {/* 送信確認モーダル */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog

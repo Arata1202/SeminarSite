@@ -1,11 +1,9 @@
-import Copyright from '@/components/Fixed/Copyright';
+import CopyrightPage from '@/components/Pages/Copyright';
 
 export default async function Page() {
   return (
     <>
-      <div className="MainLayout">
-        <Copyright />
-      </div>
+      <CopyrightPage />
     </>
   );
 }

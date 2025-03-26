@@ -14,7 +14,7 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
-export default function Member() {
+export default function MemberPage() {
   const genderData = {
     labels: ['男子', '女子'],
     datasets: [
@@ -98,7 +98,7 @@ export default function Member() {
 
   return (
     <>
-      <div className="">
+      <div className="MainLayout">
         <div
           className="main_side top_title mx-auto max-w-7xl px-6 text-center lg:px-8"
           style={{ marginTop: '80px' }}
