@@ -7,11 +7,12 @@ import { useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import { Form } from '@/types/form';
 
 export default function ContactPage() {
   const [show, setContactConfirmShow] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
-  const [formData, setContactFormData] = useState<FormData | null>(null);
+  const [formData, setContactFormData] = useState<Form | null>(null);
   const [open, setContactDialogOpen] = useState(false);
 
   const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -22,13 +23,7 @@ export default function ContactPage() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<FormData>();
-
-  interface FormData {
-    title: string;
-    email: string;
-    message: string;
-  }
+  } = useForm<Form>();
 
   const resetCaptcha = useCallback(() => {
     recaptchaRef.current?.reset();
@@ -39,7 +34,7 @@ export default function ContactPage() {
     setCaptchaValue(value);
   };
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (data: Form) => {
     setContactFormData(data);
     setContactDialogOpen(true);
   };
