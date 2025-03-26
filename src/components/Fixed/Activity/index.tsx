@@ -1,4 +1,3 @@
-import '../../../app/globals.css';
 import { FireIcon, ChevronRightIcon, HomeIcon, CalendarDaysIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 

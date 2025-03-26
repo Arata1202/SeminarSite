@@ -4,7 +4,7 @@ import React from 'react';
 import { memo } from 'react';
 import { Article } from '@/types/microcms';
 import styles from './index.module.css';
-import PublishedDate from '../../../Elements/Date';
+import PublishedDate from '../Date';
 import Link from 'next/link';
 
 type Props = {

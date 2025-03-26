@@ -1,7 +1,6 @@
-import '../../../app/globals.css';
 import './index.css';
 import Link from 'next/link';
-import PublishedDate from '@/components/Elements/Date';
+import PublishedDate from '@/components/Common/Date';
 import { LockClosedIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 export default function Privacy() {

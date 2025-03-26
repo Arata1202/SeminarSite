@@ -1,6 +1,6 @@
 import { Article } from '@/types/microcms';
 import ArticleListItem from '../ArticleListItem';
-import Sidebar from '../../Sidebar';
+import Sidebar from '../Layouts/Sidebar';
 
 type Props = {
   articles?: Article[];

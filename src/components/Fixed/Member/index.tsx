@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import '../../../app/globals.css';
 import {
   CheckBadgeIcon,
   AcademicCapIcon,

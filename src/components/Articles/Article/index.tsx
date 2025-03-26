@@ -4,12 +4,12 @@ import Link from 'next/link';
 // import { formatRichText } from '@/libs/utils';
 import { Article } from '@/types/microcms';
 import { useEffect, useState } from 'react';
-import PublishedDate from '../../Elements/Date';
+import PublishedDate from '../../Common/Date';
 import styles from './index.module.css';
 import '../../../styles//plugin.css';
-import TableOfContents from '../Elements/TableOfContent';
+import TableOfContents from '../../Common/TableOfContent';
 // import TagList from '../../TagLists/TagList';
-import WithArticleItem from '../Elements/WithArticleItem';
+import WithArticleItem from '../../Common/WithArticleItem';
 import {
   HomeIcon,
   ChevronRightIcon,
@@ -23,7 +23,7 @@ import {
   UserPlusIcon,
 } from '@heroicons/react/24/solid';
 import { SiFeedly } from 'react-icons/si';
-import Sidebar from '../../Sidebar';
+import Sidebar from '@/components/Common/Layouts/Sidebar';
 
 import {
   TwitterShareButton,

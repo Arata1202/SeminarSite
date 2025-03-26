@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { getList } from '@/libs/microcms';
 import { getCategory } from '@/libs/microcms';
 import { LIMIT } from '@/constants/limit';
-import Pagination from '@/components/Elements/Pagination';
-import ArticleList from '@/components/ArticleLists/ArticleList';
+import Pagination from '@/components/Common/Pagination';
+import ArticleList from '@/components/Common/ArticleList';
 import { HomeIcon, ChevronRightIcon, FolderOpenIcon } from '@heroicons/react/24/solid';
 import { CATEGORY_ARR } from '@/constants/category';
 

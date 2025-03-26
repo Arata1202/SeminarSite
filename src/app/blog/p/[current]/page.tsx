@@ -1,7 +1,7 @@
 import { getList } from '@/libs/microcms';
 import { LIMIT } from '@/constants/limit';
-import Pagination from '@/components/Elements/Pagination';
-import ArticleList from '@/components/ArticleLists/ArticleList';
+import Pagination from '@/components/Common/Pagination';
+import ArticleList from '@/components/Common/ArticleList';
 
 type Props = {
   params: Promise<{

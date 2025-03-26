@@ -1,7 +1,6 @@
-import '../../../app/globals.css';
 import './index.css';
 import Link from 'next/link';
-import PublishedDate from '../../Elements/Date';
+import PublishedDate from '../../Common/Date';
 import { DocumentTextIcon, ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 export default function Copyright() {

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Article } from '@/types/microcms';
 import styles from './index.module.css';
 // import TagList from '../../TagLists/TagList';
-import PublishedDate from '../../Elements/Date';
+import PublishedDate from '../Date';
 // import { FolderIcon } from '@heroicons/react/24/solid';
 
 type Props = {

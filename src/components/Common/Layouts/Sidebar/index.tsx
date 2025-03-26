@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { useEffect } from 'react';
-import TableOfContents from '../Articles/Elements/TableOfContent';
+import TableOfContents from '../../TableOfContent';
 import styles from './index.module.css';
 import { FolderIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';

@@ -3,9 +3,9 @@ import type { Viewport } from 'next';
 import Script from 'next/script';
 import '../styles/globals.css';
 import { DESCRIPTION } from '@/constants/data';
-import Header from '@/components/Layouts/Header';
-import Footer from '@/components/Layouts/Footer';
-import ScrollTopButton from '@/components/Layouts/ScrollToTop';
+import Header from '@/components/Common/Layouts/Header';
+import Footer from '@/components/Common/Layouts/Footer';
+import ScrollTopButton from '@/components/Common/Layouts/ScrollToTop';
 
 export const viewport: Viewport = {
   width: 'device-width',
