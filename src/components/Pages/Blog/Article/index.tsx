@@ -4,12 +4,12 @@ import Link from 'next/link';
 // import { formatRichText } from '@/libs/utils';
 import { Article } from '@/types/microcms';
 import { useEffect, useState } from 'react';
-import PublishedDate from '../../Common/Date';
+import PublishedDate from '../../../Common/Date';
 import styles from './index.module.css';
-import '../../../styles//plugin.css';
-import TableOfContents from '../../Common/TableOfContent';
+import '../../../../styles/plugin.css';
+import TableOfContents from '../../../Common/TableOfContent';
 // import TagList from '../../TagLists/TagList';
-import WithArticleItem from '../../Common/WithArticleItem';
+import WithArticleItem from '../../../Common/WithArticleItem';
 import {
   HomeIcon,
   ChevronRightIcon,
@@ -103,7 +103,7 @@ export default function ArticleComponent({ data }: Props) {
   const headings = useExtractHeadings(data.content_blocks);
   return (
     <>
-      <div className="">
+      <div className="MainLayout">
         <div
           className="main_side top_title mx-auto max-w-7xl px-6 text-center lg:px-8"
           style={{ marginTop: '80px' }}

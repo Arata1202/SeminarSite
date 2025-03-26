@@ -1,5 +1,5 @@
 import { getDetail, getAllLists } from '@/libs/microcms';
-import Article from '@/components/Pages/Article';
+import Article from '@/components/Pages/Blog/Article';
 
 type Props = {
   params: Promise<{
@@ -18,8 +18,8 @@ export default async function Page(props: Props) {
   const data = await getDetail(params.slug);
 
   return (
-    <div className="MainLayout">
+    <>
       <Article data={data} />
-    </div>
+    </>
   );
 }
