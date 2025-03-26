@@ -43,7 +43,7 @@ import {
 } from 'react-share';
 
 type Props = {
-  data: Article;
+  article: Article;
 };
 
 interface Heading {
@@ -99,8 +99,8 @@ function useExtractHeadings(contentBlocks: { rich_text?: string }[]): Heading[] 
   return headings;
 }
 
-export default function ArticleComponent({ data }: Props) {
-  const headings = useExtractHeadings(data.content_blocks);
+export default function ArticleComponent({ article }: Props) {
+  const headings = useExtractHeadings(article.content_blocks);
   return (
     <>
       <div className="MainLayout">
@@ -138,10 +138,10 @@ export default function ArticleComponent({ data }: Props) {
                       aria-hidden="true"
                     />
                     <Link
-                      href={`${data.id}`}
+                      href={`${article.id}`}
                       className="ml-4 text-sm font-medium text-gray-500 hover:text-green-500 text-left"
                     >
-                      {data.title}
+                      {article.title}
                     </Link>
                   </div>
                 </li>
@@ -151,36 +151,36 @@ export default function ArticleComponent({ data }: Props) {
           <div className="max-w-[87rem] mx-auto ArticleThumbnail">
             <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
               <div className="lg:col-span-2">
-                <h1 className={`${styles.title} mt-5 ArticleTitle`}>{data.title}</h1>
+                <h1 className={`${styles.title} mt-5 ArticleTitle`}>{article.title}</h1>
                 <main className={styles.main}>
                   <picture>
                     <source
                       type="image/webp"
                       media="(max-width: 640px)"
-                      srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
+                      srcSet={`${article.thumbnail?.url}?fm=webp&w=414 1x, ${article.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
                     />
                     <source
                       type="image/webp"
-                      srcSet={`${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504 1x, ${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504&dpr=2 2x`}
+                      srcSet={`${article.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504 1x, ${article.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504&dpr=2 2x`}
                     />
                     <img
-                      src={data.thumbnail?.url}
+                      src={article.thumbnail?.url}
                       alt=""
                       className={`${styles.thumbnail}`}
-                      width={data.thumbnail?.width}
-                      height={data.thumbnail?.height}
+                      width={article.thumbnail?.width}
+                      height={article.thumbnail?.height}
                     />
                   </picture>
                   <div style={{ marginLeft: 'auto' }}>
                     <div className={styles.date}>
                       {/* <FolderIcon className="h-5 w-5 mr-2 mt-3" aria-hidden="true" />
-                      <TagList tags={data.tags} hasLink={true} />
+                      <TagList tags={article.tags} hasLink={true} />
                       &nbsp;&nbsp;&nbsp;&nbsp; */}
-                      <PublishedDate date={data.publishedAt || data.createdAt} />
+                      <PublishedDate date={article.publishedAt || article.createdAt} />
                     </div>
                   </div>
                   <div className={styles.content}>
-                    {data.introduction_blocks.map((block, index) => (
+                    {article.introduction_blocks.map((block, index) => (
                       <div key={index}>
                         {(block.bubble_name || block.bubble_text || block.bubble_image) && (
                           <div className="my-10">
@@ -280,7 +280,7 @@ export default function ArticleComponent({ data }: Props) {
                     {headings.length > 0 && <TableOfContents headings={headings} />}
                   </div>
                   <div className={styles.content}>
-                    {data.content_blocks.map((block, index) => (
+                    {article.content_blocks.map((block, index) => (
                       <div key={index}>
                         {/* {block.adsense && <Display slot={block.adsense} />} */}
                         {(block.bubble_name || block.bubble_text || block.bubble_image) && (
@@ -377,7 +377,7 @@ export default function ArticleComponent({ data }: Props) {
                       </div>
                     ))}
                   </div>
-                  {data.related_articles && data.related_articles.length > 0 && (
+                  {article.related_articles && article.related_articles.length > 0 && (
                     <div className="related-articles mt-10">
                       <h1
                         className={`${styles.profile} text-2xl font-semibold flex justify-center pt-10`}
@@ -386,7 +386,7 @@ export default function ArticleComponent({ data }: Props) {
                         関連記事
                       </h1>
                       <div className="mt-5">
-                        {data.related_articles?.map((block, index) => (
+                        {article.related_articles?.map((block, index) => (
                           <div key={index}>
                             {block.article_link && typeof block.article_link !== 'string' && (
                               <div>
@@ -409,8 +409,8 @@ export default function ArticleComponent({ data }: Props) {
                   <div className="flex justify-center">
                     <TwitterShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
-                      title={data.title}
+                      url={`https://suzuki-seminar.com/blog/articles/${article.id}`}
+                      title={article.title}
                       className="m-1 hover:opacity-60"
                     >
                       <TwitterIcon size={40} round={true} />
@@ -418,8 +418,8 @@ export default function ArticleComponent({ data }: Props) {
 
                     <FacebookShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
-                      title={data.title}
+                      url={`https://suzuki-seminar.com/blog/articles/${article.id}`}
+                      title={article.title}
                       className="m-1 hover:opacity-60"
                     >
                       <FacebookIcon size={40} round={true} />
@@ -427,8 +427,8 @@ export default function ArticleComponent({ data }: Props) {
 
                     <LineShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
-                      title={data.title}
+                      url={`https://suzuki-seminar.com/blog/articles/${article.id}`}
+                      title={article.title}
                       className="m-1 hover:opacity-60"
                     >
                       <LineIcon size={40} round={true} />
@@ -436,8 +436,8 @@ export default function ArticleComponent({ data }: Props) {
 
                     <HatenaShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
-                      title={data.title}
+                      url={`https://suzuki-seminar.com/blog/articles/${article.id}`}
+                      title={article.title}
                       className="m-1 hover:opacity-60"
                     >
                       <HatenaIcon size={40} round={true} />
@@ -445,9 +445,9 @@ export default function ArticleComponent({ data }: Props) {
 
                     <PinterestShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
-                      media={data.thumbnail?.url || ''}
-                      description={data.title}
+                      url={`https://suzuki-seminar.com/blog/articles/${article.id}`}
+                      media={article.thumbnail?.url || ''}
+                      description={article.title}
                       className="m-1 hover:opacity-60"
                     >
                       <PinterestIcon size={40} round={true} />
@@ -455,8 +455,8 @@ export default function ArticleComponent({ data }: Props) {
 
                     <RedditShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
-                      title={data.title}
+                      url={`https://suzuki-seminar.com/blog/articles/${article.id}`}
+                      title={article.title}
                       className="m-1 hover:opacity-60"
                     >
                       <RedditIcon size={40} round={true} />
@@ -464,9 +464,9 @@ export default function ArticleComponent({ data }: Props) {
 
                     <LinkedinShareButton
                       aria-label="シェアボタン"
-                      url={`https://suzuki-seminar.com/blog/articles/${data.id}`}
-                      title={data.title}
-                      summary={data.description}
+                      url={`https://suzuki-seminar.com/blog/articles/${article.id}`}
+                      title={article.title}
+                      summary={article.description}
                       className="m-1 hover:opacity-60"
                     >
                       <LinkedinIcon size={40} round={true} />
@@ -503,7 +503,7 @@ export default function ArticleComponent({ data }: Props) {
                 </main>
               </div>
               <div style={{ marginTop: '72px' }} className="ArticleSidebar">
-                <Sidebar contentBlocks={data.content_blocks} />
+                <Sidebar contentBlocks={article.content_blocks} />
               </div>
             </div>
           </div>

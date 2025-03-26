@@ -19,7 +19,7 @@ export default async function Page(props: Props) {
 
   return (
     <>
-      <Article data={data} />
+      <Article article={data} />
     </>
   );
 }

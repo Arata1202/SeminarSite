@@ -1,12 +1,17 @@
 import { getList } from '@/libs/microcms';
 import { LIMIT } from '@/constants/limit';
-import Pagination from '@/components/Common/Pagination';
-import ArticleList from '@/components/Common/ArticleList';
+import BlogPage from '@/components/Pages/Blog';
 
 type Props = {
   params: Promise<{
     current: string;
   }>;
+};
+
+export const metadata = {
+  robots: {
+    index: false,
+  },
 };
 
 export const generateStaticParams = async () => {
@@ -24,14 +29,16 @@ export const generateStaticParams = async () => {
 export default async function Page(props: Props) {
   const params = await props.params;
   const current = parseInt(params.current as string, 10);
+
   const data = await getList({
     limit: LIMIT,
+    fields: 'id,title,description,thumbnail,publishedAt,updatedAt',
     offset: LIMIT * (current - 1),
   });
+
   return (
     <>
-      <ArticleList articles={data.contents} />
-      <Pagination totalCount={data.totalCount} current={current} />
+      <BlogPage articles={data.contents} totalCount={data.totalCount} current={current} />
     </>
   );
 }

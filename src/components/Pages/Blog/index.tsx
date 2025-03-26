@@ -6,10 +6,11 @@ import { Article } from '@/types/microcms';
 
 type Props = {
   articles: Article[];
+  current?: number;
   totalCount: number;
 };
 
-export default async function BlogPage({ articles, totalCount }: Props) {
+export default async function BlogPage({ articles, totalCount, current }: Props) {
   return (
     <>
       <div className="MainLayout">
@@ -48,7 +49,7 @@ export default async function BlogPage({ articles, totalCount }: Props) {
           </h1>
         </div>
         <ArticleList articles={articles} />
-        <Pagination totalCount={totalCount} />
+        <Pagination totalCount={totalCount} current={current} />
       </div>
     </>
   );

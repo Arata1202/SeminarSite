@@ -1,5 +1,5 @@
-import { getCategory } from '@/libs/microcms';
 import { Metadata } from 'next';
+import { getCategory } from '@/libs/microcms';
 
 type Props = {
   children: React.ReactNode;
@@ -35,9 +35,5 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export default async function CategoryLayout(props: Props) {
   const { children } = props;
 
-  return (
-    <div className="MainLayout">
-      <div>{children}</div>
-    </div>
-  );
+  return <>{children}</>;
 }
