@@ -1,5 +1,5 @@
 import { getDetail, getAllLists } from '@/libs/microcms';
-import Article from '@/components/Articles/Article';
+import Article from '@/components/Pages/Article';
 
 type Props = {
   params: Promise<{

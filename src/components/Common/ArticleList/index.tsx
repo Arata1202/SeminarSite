@@ -1,5 +1,5 @@
 import { Article } from '@/types/microcms';
-import ArticleListItem from '../ArticleListItem';
+import ArticleCard from '../ArticleCard';
 import Sidebar from '../Layouts/Sidebar';
 
 type Props = {
@@ -41,7 +41,7 @@ export default function ArticleList({ articles }: Props) {
               <div className="lg:col-span-2">
                 <ul>
                   {articles.map((article) => (
-                    <ArticleListItem key={article.id} article={article} />
+                    <ArticleCard key={article.id} article={article} />
                   ))}
                 </ul>
               </div>
