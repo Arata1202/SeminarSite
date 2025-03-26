@@ -1,10 +1,11 @@
-import React from 'react';
+import { Metadata } from 'next';
+import type { Viewport } from 'next';
+import Script from 'next/script';
+import '../styles/globals.css';
+import { DESCRIPTION } from '@/constants/data';
 import Header from '@/components/Layouts/Header';
 import Footer from '@/components/Layouts/Footer';
-import '../styles/globals.css';
-import Script from 'next/script';
 import ScrollTopButton from '@/components/Layouts/ScrollToTop';
-import type { Viewport } from 'next';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -12,24 +13,33 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
-export const metadata = {
-  metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-  title: '鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
-  description: '東洋大学経営学部マーケティング学科鈴木ゼミナールの公式ホームページです。',
-  openGraph: {
-    title: '鈴木ゼミ｜東洋大学経営学部マーケティング学科鈴木ゼミナール',
-    description: '東洋大学経営学部マーケティング学科鈴木ゼミナールの公式ホームページです。',
-    images: '/images/icons/og.jpg',
-    url: 'https://suzuki-seminar.com',
-  },
-  icons: {
-    icon: '/images/icons/favicon.ico',
-  },
-};
-
 type Props = {
   children: React.ReactNode;
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const defaultTitle = process.env.NEXT_PUBLIC_BASE_TITLE;
+
+  const title = `${defaultTitle}`;
+  const description = DESCRIPTION;
+  const images = `${defaultUrl}/images/icons/og.jpg`;
+  const url = `${defaultUrl}`;
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      images: images,
+      url: url,
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+}
 
 export default async function RootLayout({ children }: Props) {
   const onesignalAppId = process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID;
