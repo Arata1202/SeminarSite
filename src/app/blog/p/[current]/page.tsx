@@ -1,4 +1,5 @@
 import { getList } from '@/libs/microcms';
+import { generateRssFeed } from '@/libs/rss';
 import { LIMIT } from '@/constants/limit';
 import BlogPage from '@/components/Pages/Blog';
 
@@ -15,6 +16,8 @@ export const metadata = {
 };
 
 export const generateStaticParams = async () => {
+  generateRssFeed();
+
   const data = await getList({
     limit: 0,
     fields: '',
