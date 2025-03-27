@@ -1,4 +1,4 @@
-import PublishedDate from '@/components/Common/Date';
+import SingleDate from '@/components/Common/SingleDate';
 
 type Props = {
   date: string;
@@ -6,8 +6,8 @@ type Props = {
 
 export default function FixedDateContainer({ date }: Props) {
   return (
-    <div className="includeBanner flex justify-end gap-x-5">
-      <PublishedDate date={date} />
+    <div className="flex justify-end gap-x-5">
+      <SingleDate date={date} />
     </div>
   );
 }
