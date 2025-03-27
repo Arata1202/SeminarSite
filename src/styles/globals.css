@@ -5,39 +5,11 @@
 .MainLayout {
   padding: 24px 0 !important;
 }
-.TopSubTitle {
-  font-size: 70px;
-}
-.TopSubTitleText {
-  max-width: 80%;
-}
-.DialogButton {
-  margin-top: 0px;
-}
-.SlideText {
-  font-size: 50px;
-}
-.TopSubTitle {
-  text-shadow: 2px 4px 4px #808080;
-}
 .SidebarTableOfContens .tableOfContent {
   margin-top: 30px !important;
 }
 .tableOfContent {
   margin-top: 30px !important;
-}
-.ActivityText {
-  text-shadow: 3px 5px 5px #808080;
-}
-.ActivityGradeSection {
-  bottom: 0px;
-  left: 70px;
-}
-.ActivityGrade {
-  font-size: 130px;
-  text-shadow: 2px 4px 4px #808080;
-  font-weight: bold;
-  color: white;
 }
 .top_title {
   margin-top: 50px !important;
@@ -51,10 +23,6 @@
   overflow-y: auto;
   max-height: 500px;
 }
-.PieChartContainerflex {
-  display: flex;
-}
-/* タブレット以下 */
 @media (max-width: 1023px) {
   .sideTOC {
     display: none !important;
@@ -71,71 +39,24 @@
   .ArticleThumbnail {
     margin-top: 0 !important;
   }
-  .u_tablet_teacher_p {
-    margin-bottom: 30px !important;
-    max-width: 100% !important;
-  }
-  .u_tablet_teacher_img {
-    max-width: 100% !important;
-  }
-  .TopSubTitle {
-    font-size: 50px;
-  }
   .top_title {
     margin-top: 50px !important;
-  }
-  .SlideText {
-    font-size: 35px;
   }
   .main_side {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-  .ActivityText {
-    font-size: 20px;
-    top: 8px;
-    left: 8px;
-  }
-  .ActivityGradeSection {
-    bottom: 5px;
-    left: 10px;
-  }
-  .ActivityGrade {
-    font-size: 40px !important;
-    text-shadow: 2px 4px 4px #808080;
-    font-weight: bold;
-    color: white;
-  }
 }
-@media (max-width: 900px) {
-  .PieChartContainerflex {
-    width: 100% !important;
-  }
-}
-/* モバイル以外 */
+
 @media (min-width: 640px) {
   .mobile {
     display: none !important;
   }
 }
-/* モバイル以下 */
+
 @media (max-width: 640px) {
   .pc {
     display: none !important;
-  }
-  .TopBanner {
-    display: block;
-    text-align: center;
-  }
-  .TopBanner p {
-    margin-bottom: 5px !important;
-  }
-  .PieChartContainerflex {
-    display: block;
-    width: 100% !important;
-  }
-  .PieCahrt {
-    margin-top: 2.5rem;
   }
   .main_side {
     padding-left: 0 !important;
@@ -143,30 +64,6 @@
   }
   .top_title {
     margin-top: 50px !important;
-  }
-  .TopSubTitle {
-    font-size: 30px;
-  }
-  .TopSubTitleText {
-    max-width: 100%;
-  }
-  .SlideText {
-    font-size: 18px;
-  }
-  .ActivityText {
-    font-size: 18px;
-    top: 8px;
-    left: 8px;
-  }
-  .ActivityGradeSection {
-    bottom: 5px;
-    left: 20px;
-  }
-  .ActivityGrade {
-    font-size: 30px;
-    text-shadow: 2px 4px 4px #808080;
-    font-weight: bold;
-    color: white;
   }
 }
 
@@ -181,10 +78,6 @@
   .tableOfContent {
     width: 100%;
   }
-}
-
-.blog_layout {
-  width: 720px;
 }
 
 h2 {
