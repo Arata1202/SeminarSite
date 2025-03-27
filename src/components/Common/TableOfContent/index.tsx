@@ -1,46 +1,20 @@
-import React, { useMemo } from 'react';
+'use client';
+
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Heading } from '@/types/heading';
+import styles from './index.module.css';
+import { formatHeadings } from '@/utils/formatHeadings';
 
-interface Heading {
-  id: string;
-  title: string;
-  level: number;
-}
-
-interface TableOfContentsProps {
+type Props = {
   headings: Heading[];
-}
+  sidebar?: boolean;
+};
 
-const TableOfContents: React.FC<TableOfContentsProps> = React.memo(({ headings }) => {
-  const [activeId, setActiveId] = useState<string>('');
-  const formattedHeadings = useMemo(() => {
-    const headingNumbers: { [level: number]: number } = {};
-    return headings.map((heading) => {
-      if (!headingNumbers[heading.level]) {
-        headingNumbers[heading.level] = 1;
-      } else {
-        headingNumbers[heading.level]++;
-      }
+export default function TableOfContents({ headings, sidebar = false }: Props) {
+  const [activeId, setActiveId] = useState('');
 
-      const headingNumber = Object.keys(headingNumbers)
-        .filter((level) => parseInt(level) <= heading.level)
-        .map((level) => headingNumbers[parseInt(level)])
-        .join('.');
-
-      for (let i = heading.level + 1; i <= 5; i++) {
-        headingNumbers[i] = 0;
-      }
-
-      return {
-        id: heading.id,
-        title: heading.title,
-        level: heading.level,
-        number: headingNumber,
-        marginLeft: `${(heading.level - 1) * 20}px`,
-      };
-    });
-  }, [headings]);
+  const formattedHeadings = formatHeadings(headings);
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     event.preventDefault();
@@ -59,12 +33,19 @@ const TableOfContents: React.FC<TableOfContentsProps> = React.memo(({ headings }
         const element = document.getElementById(heading.id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom > 150) {
-            currentId = heading.id;
-          } else if (rect.top <= 150 && headings[index + 1]) {
-            const nextElement = document.getElementById(headings[index + 1].id);
-            if (nextElement && nextElement.getBoundingClientRect().top > 150) {
+          const isLastHeading = index === headings.length - 1;
+          if (isLastHeading) {
+            if (rect.top <= 110) {
               currentId = heading.id;
+            }
+          } else {
+            if (rect.top <= 110 && rect.bottom > 110) {
+              currentId = heading.id;
+            } else if (rect.top <= 110 && headings[index + 1]) {
+              const nextElement = document.getElementById(headings[index + 1].id);
+              if (nextElement && nextElement.getBoundingClientRect().top > 110) {
+                currentId = heading.id;
+              }
             }
           }
         }
@@ -76,42 +57,33 @@ const TableOfContents: React.FC<TableOfContentsProps> = React.memo(({ headings }
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [headings]);
+  });
 
   return (
-    <div>
-      <div className="flex justify-center">
-        <nav
-          aria-label="Table of contents"
-          className="tableOfContent w-full border border-gray-300 p-4"
-        >
-          <h1 className="text-center font-bold text-lg">目次</h1>
-          <ol className="mt-4 list-none pl-0 text-left" style={{ fontSize: '18px' }}>
-            {formattedHeadings.map((heading) => (
-              <li
-                key={heading.id}
-                style={{
-                  marginLeft: heading.marginLeft,
-                  backgroundColor: activeId === heading.id ? '#ecffe9' : 'transparent',
-                  transition: 'background-color 0.3s ease',
-                }}
+    <div className={`flex justify-center`}>
+      <div className={`${styles.toc} ${sidebar && styles.sidebarToc} w-1/2 border p-4`}>
+        <div className="text-center font-bold text-lg">目次</div>
+        <ol className="mt-4 list-none pl-0 text-left">
+          {formattedHeadings.map((heading) => (
+            <li
+              key={heading.id}
+              style={{
+                marginLeft: heading.marginLeft,
+                backgroundColor: activeId === heading.id ? '#ecffe9' : 'transparent',
+                transition: 'background-color 0.3s ease',
+              }}
+            >
+              <Link
+                href={`#${heading.id}`}
+                onClick={(e) => handleClick(e, heading.id)}
+                className="hover:text-green-500"
               >
-                <Link
-                  href={`#${heading.id}`}
-                  onClick={(e) => handleClick(e, heading.id)}
-                  className="hover:text-green-500"
-                >
-                  {heading.number} {heading.title}
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </nav>
+                {heading.number} {heading.title}
+              </Link>
+            </li>
+          ))}
+        </ol>
       </div>
     </div>
   );
-});
-
-TableOfContents.displayName = 'TableOfContents';
-
-export default TableOfContents;
+}

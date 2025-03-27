@@ -1,12 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
-import { useEffect } from 'react';
 import TableOfContents from '../../TableOfContent';
 import styles from './index.module.css';
 import { FolderIcon } from '@heroicons/react/24/solid';
-import { useState } from 'react';
+import { useExtractHeadings } from '@/hooks/useExtractHeadings';
 import {
   UserGroupIcon,
   ChartPieIcon,
@@ -41,65 +39,14 @@ const CategoryList2 = [
 
 type Props = {
   contentBlocks?: { rich_text?: string }[];
+  sidebar?: boolean;
 };
 
-interface Heading {
-  id: string;
-  title: string;
-  level: number;
-}
-
-function useExtractHeadings(contentBlocks: { rich_text?: string }[]): Heading[] {
-  const [headings, setHeadings] = useState<Heading[]>([]);
-
-  useEffect(() => {
-    if (contentBlocks.length > 0) {
-      const extractedHeadings: Heading[] = [];
-
-      contentBlocks.forEach((block) => {
-        if (block.rich_text) {
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = block.rich_text;
-
-          const blockHeadings: Heading[] = Array.from(
-            tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6'),
-          ).map((el) => ({
-            id: el.id,
-            title: el.textContent || '',
-            level: parseInt(el.tagName[1], 10),
-          }));
-
-          extractedHeadings.push(...blockHeadings);
-        }
-      });
-
-      // 現在の Headings と新しい Headings が異なる場合のみ setHeadings を実行
-      const isEqual =
-        extractedHeadings.length === headings.length &&
-        extractedHeadings.every((heading, index) => {
-          const current = headings[index];
-          return (
-            current &&
-            current.id === heading.id &&
-            current.title === heading.title &&
-            current.level === heading.level
-          );
-        });
-
-      if (!isEqual) {
-        setHeadings(extractedHeadings);
-      }
-    }
-  }, [contentBlocks, headings]);
-
-  return headings;
-}
-
-export default function Sidebar({ contentBlocks = [] }: Props) {
+export default function Sidebar({ contentBlocks = [], sidebar = false }: Props) {
   const headings = useExtractHeadings(contentBlocks);
 
   return (
-    <div className="lg:col-span-1 lg:w-full lg:h-full">
+    <div className={`${sidebar && styles.container} lg:col-span-1 lg:w-full`}>
       <div className="sidebar">
         <div className="bg-white pt-8 px-4 border border-gray-300 py-5">
           <h1
@@ -168,9 +115,11 @@ export default function Sidebar({ contentBlocks = [] }: Props) {
           </nav>
         </div>
       </div>
-      <div className="SidebarTableOfContens sideTOC">
-        {headings.length > 0 && <TableOfContents headings={headings} />}
-      </div>
+      {headings.length > 0 && (
+        <div className={`${styles.pc} ${styles.sidebar}`}>
+          <TableOfContents headings={headings} sidebar={true} />
+        </div>
+      )}
     </div>
   );
 }

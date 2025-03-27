@@ -193,6 +193,25 @@
   padding: 1rem;
 }
 
+.container {
+  margin-top: 72px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 60px;
+}
+
+@media (max-width: 1023px) {
+  .pc {
+    display: none;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .title {
     font-size: 2rem;
