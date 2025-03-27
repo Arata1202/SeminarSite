@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    display: block;
+    width: 100% !important;
+  }
+
+  .chart {
+    margin-top: 2.5rem;
+  }
+}

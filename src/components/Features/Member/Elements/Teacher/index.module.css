@@ -1,0 +1,14 @@
+.list {
+  margin-left: 20px;
+}
+
+@media (max-width: 1023px) {
+  .description {
+    margin-bottom: 30px !important;
+    max-width: 100% !important;
+  }
+
+  .image {
+    max-width: 100% !important;
+  }
+}
