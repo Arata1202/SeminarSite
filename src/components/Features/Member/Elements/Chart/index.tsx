@@ -1,8 +1,12 @@
 import { UserGroupIcon } from '@heroicons/react/24/solid';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Doughnut } from 'react-chartjs-2';
 import styles from './index.module.css';
 import PageTitle from '@/components/Common/PageTitle';
 import { GENDER, GRADE } from '@/constants/member';
+
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 export default function Chart() {
   const options = {
