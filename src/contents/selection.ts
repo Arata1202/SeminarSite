@@ -6,6 +6,7 @@ export const SELECTION_CONTENT = `
 ## エントリーシート
 
 以下のURLから必要事項を記入し、提出してください。
+
 [応募フォーム](https://forms.gle/uVEL8K9113wd9EnC9)
 
 皆さんの人となりを知る上で重要なため、できる限り詳しく書いてください。
