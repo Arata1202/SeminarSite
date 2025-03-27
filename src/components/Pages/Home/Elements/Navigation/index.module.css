@@ -1,0 +1,19 @@
+.title {
+  text-shadow: 3px 5px 5px #808080;
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: 20px;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 18px;
+    top: 8px;
+    left: 8px;
+  }
+}

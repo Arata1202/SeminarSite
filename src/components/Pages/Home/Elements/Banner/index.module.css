@@ -1,0 +1,10 @@
+@media (max-width: 640px) {
+  .container {
+    display: block;
+    text-align: center;
+  }
+
+  .container p {
+    margin-bottom: 5px !important;
+  }
+}
