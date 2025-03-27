@@ -9,7 +9,7 @@ type Props = {
 export default function ArticleList({ articles }: Props) {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 main_side">
+      <div className="mx-auto max-w-7xl main_side">
         <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
           <div className="lg:col-span-2">
             {articles.length === 0 && (
