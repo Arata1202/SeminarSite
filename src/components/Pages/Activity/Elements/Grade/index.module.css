@@ -1,0 +1,43 @@
+.description {
+  font-size: 20.8px;
+}
+
+.title {
+  font-size: 130px;
+  text-shadow: 2px 4px 4px #808080;
+  font-weight: bold;
+  color: white;
+}
+
+.titleContainer {
+  bottom: 0px;
+  left: 70px;
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: 40px !important;
+    text-shadow: 2px 4px 4px #808080;
+    font-weight: bold;
+    color: white;
+  }
+
+  .titleContainer {
+    bottom: 5px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 30px;
+    text-shadow: 2px 4px 4px #808080;
+    font-weight: bold;
+    color: white;
+  }
+
+  .titleContainer {
+    bottom: 5px;
+    left: 20px;
+  }
+}
