@@ -2,52 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.MainLayout {
-  padding: 24px 0 !important;
-}
-.SidebarTableOfContens .tableOfContent {
-  margin-top: 30px !important;
-}
-.tableOfContent {
-  margin-top: 30px !important;
-}
-.top_title {
-  margin-top: 50px !important;
-}
-.SidebarTableOfContens {
-  position: sticky;
-  top: 60px;
-}
-.SidebarTableOfContens nav {
-  width: 100%;
-  overflow-y: auto;
-  max-height: 500px;
-}
-@media (max-width: 1023px) {
-  .sideTOC {
-    display: none !important;
-  }
-  .MainLayout {
-    padding: 24px !important;
-  }
-  .ArticleSidebar {
-    margin-top: 0 !important;
-  }
-  .ArticleTitle {
-    margin-bottom: 0 !important;
-  }
-  .ArticleThumbnail {
-    margin-top: 0 !important;
-  }
-  .top_title {
-    margin-top: 50px !important;
-  }
-  .main_side {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
 @media (min-width: 640px) {
   .mobile {
     display: none !important;
@@ -58,25 +12,16 @@
   .pc {
     display: none !important;
   }
-  .main_side {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .top_title {
-    margin-top: 50px !important;
-  }
 }
 
 @media (max-width: 767px) {
   .footer_menu {
     text-align: center !important;
   }
+
   .footer_icon {
     display: flex;
     justify-content: center;
-  }
-  .tableOfContent {
-    width: 100%;
   }
 }
 

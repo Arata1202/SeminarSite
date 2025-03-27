@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Common/BreadCrumb';
 import PageTitle from '@/components/Common/PageTitle';
 import FixedDateContainer from '@/components/Common/Layouts/Container/FixedDateContainer';
 import Markdown from '@/components/Common/Markdown';
+import MainContainer from '@/components/Common/Layouts/Container/MainContainer';
 
 export default function DisclaimerPage() {
   const dummyDate = new Date(2024, 9, 18);
@@ -14,16 +15,11 @@ export default function DisclaimerPage() {
   });
 
   return (
-    <div className="MainLayout">
-      <div
-        className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
-        style={{ marginTop: '80px' }}
-      >
-        <Breadcrumb title="免責事項" path="disclaimer" />
-        <PageTitle title="免責事項" Icon={ExclamationCircleIcon} />
-        <FixedDateContainer date={formattedDate} />
-        <Markdown content={DISCLAIMER_CONTENT} />
-      </div>
-    </div>
+    <MainContainer>
+      <Breadcrumb title="免責事項" path="disclaimer" />
+      <PageTitle title="免責事項" Icon={ExclamationCircleIcon} />
+      <FixedDateContainer date={formattedDate} />
+      <Markdown content={DISCLAIMER_CONTENT} />
+    </MainContainer>
   );
 }

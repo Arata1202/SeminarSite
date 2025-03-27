@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Common/BreadCrumb';
 import PageTitle from '@/components/Common/PageTitle';
 import FixedDateContainer from '@/components/Common/Layouts/Container/FixedDateContainer';
 import Markdown from '@/components/Common/Markdown';
+import MainContainer from '@/components/Common/Layouts/Container/MainContainer';
 
 export default function CopyrightPage() {
   const dummyDate = new Date(2024, 9, 18);
@@ -14,16 +15,11 @@ export default function CopyrightPage() {
   });
 
   return (
-    <div className="MainLayout">
-      <div
-        className="mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
-        style={{ marginTop: '80px' }}
-      >
-        <Breadcrumb title="著作権" path="copyright" />
-        <PageTitle title="著作権" Icon={DocumentTextIcon} />
-        <FixedDateContainer date={formattedDate} />
-        <Markdown content={COPYRIGHT_CONTENT} />
-      </div>
-    </div>
+    <MainContainer>
+      <Breadcrumb title="著作権" path="copyright" />
+      <PageTitle title="著作権" Icon={DocumentTextIcon} />
+      <FixedDateContainer date={formattedDate} />
+      <Markdown content={COPYRIGHT_CONTENT} />
+    </MainContainer>
   );
 }

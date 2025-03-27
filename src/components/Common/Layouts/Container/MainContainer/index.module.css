@@ -1,0 +1,27 @@
+.container {
+  padding: 24px 0 !important;
+}
+
+.subContainer {
+  margin-top: 50px !important;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 24px !important;
+  }
+
+  .subContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 50px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .subContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 50px !important;
+  }
+}

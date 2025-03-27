@@ -4,6 +4,7 @@ import Markdown from '@/components/Common/Markdown';
 import Breadcrumb from '@/components/Common/BreadCrumb';
 import PageTitle from '@/components/Common/PageTitle';
 import FixedDateContainer from '@/components/Common/Layouts/Container/FixedDateContainer';
+import MainContainer from '@/components/Common/Layouts/Container/MainContainer';
 
 export default function LinkPage() {
   const dummyDate = new Date(2024, 9, 18);
@@ -14,16 +15,11 @@ export default function LinkPage() {
   });
 
   return (
-    <div className="MainLayout">
-      <div
-        className="top_title mx-auto max-w-7xl px-6 lg:px-8 main_side top_title"
-        style={{ marginTop: '80px' }}
-      >
-        <Breadcrumb title="リンク" path="link" />
-        <PageTitle title="リンク" Icon={LinkIcon} />
-        <FixedDateContainer date={formattedDate} />
-        <Markdown content={LINK_CONTENT} />
-      </div>
-    </div>
+    <MainContainer>
+      <Breadcrumb title="リンク" path="link" />
+      <PageTitle title="リンク" Icon={LinkIcon} />
+      <FixedDateContainer date={formattedDate} />
+      <Markdown content={LINK_CONTENT} />
+    </MainContainer>
   );
 }
