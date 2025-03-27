@@ -1,7 +1,7 @@
 /* タブボックス (メリット) */
 .tab_merit_box {
   padding: 10px;
-  background-color: #ecffe9;
+  background-color: #eaf4fc;
   display: flex;
   margin-bottom: 2.5rem;
   margin-top: 2.5rem;
@@ -13,7 +13,7 @@
 }
 
 .tab_merit_box_icon {
-  color: #00d084;
+  color: #4682b4;
   margin-left: 10px;
 }
 
@@ -58,7 +58,7 @@
 /* タブボックス (汎用) */
 .tab_common_box {
   padding: 10px;
-  background-color: #eaf4fc;
+  background-color: #ecffe9;
   display: flex;
   margin-bottom: 2.5rem;
   margin-top: 2.5rem;
@@ -70,7 +70,7 @@
 }
 
 .tab_common_box_icon {
-  color: #4682b4;
+  color: #00d084;
   margin-left: 10px;
 }
 
@@ -78,7 +78,7 @@
   /* タブボックス (メリット) */
   .tab_merit_box {
     padding: 10px;
-    background-color: #ecffe9;
+    background-color: #eaf4fc;
     display: flex;
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
@@ -90,7 +90,7 @@
   }
 
   .tab_merit_box_icon {
-    color: #00d084;
+    color: #4682b4;
     margin-left: 5px;
   }
 
@@ -135,7 +135,7 @@
   /* タブボックス (汎用) */
   .tab_common_box {
     padding: 10px;
-    background-color: #eaf4fc;
+    background-color: #ecffe9;
     display: flex;
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
@@ -147,7 +147,7 @@
   }
 
   .tab_common_box_icon {
-    color: #4682b4;
+    color: #00d084;
     margin-left: 5px;
   }
 }
