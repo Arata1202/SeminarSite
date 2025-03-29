@@ -3,6 +3,13 @@
 }
 
 .logo {
-  height: 24px;
-  width: auto;
+  height: 30px;
+}
+
+.menu {
+  background-color: #017247;
+}
+
+.mobileItemIcon {
+  margin-top: 2px;
 }

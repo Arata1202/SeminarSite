@@ -2,23 +2,18 @@
 
 import Link from 'next/link';
 import { Fragment, useState } from 'react';
-import styles from './index.module.css';
 import { Dialog, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
-
+import styles from './index.module.css';
+import { HEADER_MENU } from '@/constants/data';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className={`${styles.header} fixed top-0 left-0 w-full z-50 bg-white`}>
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between py-6 px-6 lg:px-8"
-        aria-label="Global"
-      >
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-6 px-6 lg:px-8">
         <Link href="/" className="-m-1.5 p-1.5 hover:scale-110 transition-transform">
-          <span className="sr-only">Your Company</span>
-          <img alt="" src="/images/icons/logo.jpeg" className="w-auto" style={{ height: '30px' }} />
+          <img alt="ロゴ" src="/images/icons/logo.jpeg" className={`${styles.logo} w-auto`} />
         </Link>
         <div className="flex lg:hidden">
           {mobileMenuOpen ? (
@@ -27,8 +22,7 @@ export default function Header() {
               className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="sr-only">Close main menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-6 w-6" />
             </button>
           ) : (
             <div className="flex">
@@ -37,39 +31,26 @@ export default function Header() {
                 className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 ml-1`}
                 onClick={() => setMobileMenuOpen(true)}
               >
-                <span className="sr-only">Open main menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                <Bars3Icon className="h-6 w-6" />
               </button>
             </div>
           )}
         </div>
-
         <div className="hidden lg:flex lg:gap-x-12 font-bold">
-          <Link href="/" className="text-sm font-semibold leading-6 hover:text-green-500">
-            ホーム
-          </Link>
-          <Link href="/activity" className="text-sm font-semibold leading-6 hover:text-green-500">
-            活動内容
-          </Link>
-          <Link href="/member" className="text-sm font-semibold leading-6 hover:text-green-500">
-            組織
-          </Link>
-          <Link href="/selection" className="text-sm font-semibold leading-6 hover:text-green-500">
-            選考
-          </Link>
-          <Link href="/blog" className="text-sm font-semibold leading-6 hover:text-green-500">
-            ブログ
-          </Link>
-          <Link
-            href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
-            target="_blank"
-            className="flex text-sm font-semibold leading-6 hover:text-green-500"
-          >
-            インスタグラム
-            <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-1" aria-hidden="true" />
-          </Link>
+          {HEADER_MENU.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              target={item.target}
+              className="flex text-sm font-semibold leading-6 hover:text-green-500"
+            >
+              {item.name}
+              {item.icon && <item.icon className="h-5 w-5 ml-1" />}
+            </Link>
+          ))}
         </div>
       </nav>
+
       <Transition.Root show={mobileMenuOpen} as={Fragment}>
         <Dialog as="div" className="relative lg:hidden z-50" onClose={setMobileMenuOpen}>
           <Transition.Child
@@ -102,76 +83,27 @@ export default function Header() {
                   className="-ml-2 flex items-center justify-end p-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <XMarkIcon className={`h-6 w-6" aria-hidden="true`} />
-                  <span className="sr-only">Close menu</span>
+                  <XMarkIcon className={`h-6 w-6`} />
                 </button>
-                <div
-                  className="text-white text-center py-2 text-xl font-bold"
-                  style={{ backgroundColor: '#017247' }}
-                >
+                <div className={`${styles.menu} text-white text-center py-2 text-xl font-bold`}>
                   Menu
                 </div>
                 <ul className="mt-5 space-y-6">
-                  <li>
-                    <Link
-                      href="/"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block font-semibold text-lg hover:text-green-500"
-                    >
-                      ▶︎ ホーム
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/activity"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block font-semibold text-lg hover:text-green-500"
-                    >
-                      ▶︎ 活動内容
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/member"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block font-semibold text-lg hover:text-green-500"
-                    >
-                      ▶︎ 組織
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/selection"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block font-semibold text-lg hover:text-green-500"
-                    >
-                      ▶︎ 選考
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/blog"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block font-semibold text-lg hover:text-green-500"
-                    >
-                      ▶︎ ブログ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.instagram.com/szk_seminar/?igsh=MWt5M3Bqb2Q3ZHR6bw%3D%3D"
-                      onClick={() => setMobileMenuOpen(false)}
-                      target="_blank"
-                      className="flex font-semibold text-lg hover:text-green-500"
-                    >
-                      ▶︎ インスタグラム
-                      <ArrowTopRightOnSquareIcon
-                        className="h-5 w-5 ml-1"
-                        style={{ marginTop: '2px' }}
-                        aria-hidden="true"
-                      />
-                    </Link>
-                  </li>
+                  {HEADER_MENU.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        target={item.target}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex font-semibold text-lg hover:text-green-500"
+                      >
+                        {item.name}
+                        {item.icon && (
+                          <item.icon className={`${styles.mobileItemIcon} h-5 w-5 ml-1`} />
+                        )}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Dialog.Panel>
