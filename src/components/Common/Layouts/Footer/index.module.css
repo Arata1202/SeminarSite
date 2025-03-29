@@ -1,3 +1,16 @@
 .footer {
   box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  padding-bottom: calc(40px + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 767px) {
+  .align {
+    text-align: center !important;
+  }
+
+  .justify {
+    display: flex;
+    justify-content: center;
+  }
 }

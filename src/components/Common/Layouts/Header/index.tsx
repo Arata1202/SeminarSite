@@ -5,7 +5,8 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import styles from './index.module.css';
-import { HEADER_MENU } from '@/constants/data';
+import { HEADER_MENU, APP_LOGO } from '@/constants/data';
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -13,7 +14,14 @@ export default function Header() {
     <header className={`${styles.header} fixed top-0 left-0 w-full z-50 bg-white`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between py-6 px-6 lg:px-8">
         <Link href="/" className="-m-1.5 p-1.5 hover:scale-110 transition-transform">
-          <img alt="ロゴ" src="/images/icons/logo.jpeg" className={`${styles.logo} w-auto`} />
+          {APP_LOGO.map((item) => (
+            <img
+              key={item.path}
+              src={`/images/icons/${item.path}`}
+              alt={item.alt}
+              className={`${styles.logo} w-auto`}
+            />
+          ))}
         </Link>
         <div className="flex lg:hidden">
           {mobileMenuOpen ? (
