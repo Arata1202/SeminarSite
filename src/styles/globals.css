@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 640px) {
-  .mobile {
-    display: none !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .pc {
-    display: none !important;
-  }
-}
-
 h2 {
   font-size: 1.6rem;
   font-weight: bold;
