@@ -10,11 +10,11 @@ type Props = {
 export default function Schedule({ title, Icon }: Props) {
   return (
     <div className="mx-auto max-w-7xl">
-      <ScrollAnimation variant="fadeInUp">
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
         <PageTitle title={title} Icon={Icon} />
       </ScrollAnimation>
 
-      <ScrollAnimation variant="fadeInScale" delay={0.3}>
+      <ScrollAnimation variant="fadeInScale" duration={1.0}>
         <img
           className={`${styles.pc} block mt-10`}
           src="/images/activity/pc.png"
@@ -22,7 +22,7 @@ export default function Schedule({ title, Icon }: Props) {
         />
       </ScrollAnimation>
 
-      <ScrollAnimation variant="fadeInScale" delay={0.3}>
+      <ScrollAnimation variant="fadeInScale" duration={1.0}>
         <img
           className={`${styles.mobile} block mt-10`}
           src="/images/activity/mobile.png"

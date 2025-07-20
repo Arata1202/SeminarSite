@@ -10,7 +10,7 @@ type Props = {
 export default function Grade({ title, data, imagePath }: Props) {
   return (
     <>
-      <ScrollAnimation variant="fadeInScale" delay={0.2}>
+      <ScrollAnimation variant="fadeInScale" duration={1.0}>
         <div className="mt-10 xl:mx-auto xl:max-w-7xl relative">
           <img
             alt={title}
@@ -23,12 +23,12 @@ export default function Grade({ title, data, imagePath }: Props) {
         </div>
       </ScrollAnimation>
 
-      <ScrollAnimation variant="fadeInUp" delay={0.5}>
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
         <div className="mt-10">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {data.map((item, index) => (
-                <ScrollAnimation key={item.name} variant="fadeInUp" delay={0.6 + index * 0.1}>
+                <ScrollAnimation key={item.name} variant="fadeInUp" delay={index * 0.3}>
                   <div className="text-left">
                     <time
                       dateTime={item.dateTime}
