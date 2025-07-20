@@ -5,6 +5,7 @@ import PageTitle from '@/components/Common/PageTitle';
 import FixedDateContainer from '@/components/Common/Layouts/Container/FixedDateContainer';
 import Markdown from '@/components/Common/Markdown';
 import MainContainer from '@/components/Common/Layouts/Container/MainContainer';
+import ScrollAnimation from '@/components/Common/Animation/ScrollAnimation';
 
 export default function PrivacyPage() {
   const dummyDate = new Date(2024, 9, 18);
@@ -18,8 +19,12 @@ export default function PrivacyPage() {
     <MainContainer>
       <Breadcrumb title="プライバシーポリシー" path="privacy" />
       <PageTitle title="プライバシーポリシー" Icon={LockClosedIcon} />
-      <FixedDateContainer date={formattedDate} />
-      <Markdown content={PRIVACY_CONTENT} />
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
+        <FixedDateContainer date={formattedDate} />
+      </ScrollAnimation>
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
+        <Markdown content={PRIVACY_CONTENT} />
+      </ScrollAnimation>
     </MainContainer>
   );
 }

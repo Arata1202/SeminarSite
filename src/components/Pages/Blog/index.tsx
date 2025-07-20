@@ -5,6 +5,7 @@ import ArticleList from '@/components/Common/ArticleList';
 import Breadcrumb from '@/components/Common/BreadCrumb';
 import PageTitle from '@/components/Common/PageTitle';
 import MainContainer from '@/components/Common/Layouts/Container/MainContainer';
+import ScrollAnimation from '@/components/Common/Animation/ScrollAnimation';
 
 type Props = {
   articles: Article[];
@@ -18,8 +19,12 @@ export default async function BlogPage({ articles, totalCount, current }: Props)
       <MainContainer>
         <Breadcrumb title="ブログ" path="blog" />
         <PageTitle title="ブログ" Icon={BellAlertIcon} />
-        <ArticleList articles={articles} />
-        <Pagination totalCount={totalCount} current={current} />
+        <ScrollAnimation variant="fadeInUp" duration={1.0}>
+          <ArticleList articles={articles} />
+        </ScrollAnimation>
+        <ScrollAnimation variant="fadeInUp" duration={1.0}>
+          <Pagination totalCount={totalCount} current={current} />
+        </ScrollAnimation>
       </MainContainer>
     </>
   );

@@ -4,12 +4,15 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Doughnut } from 'react-chartjs-2';
 import styles from './index.module.css';
 import PageTitle from '@/components/Common/PageTitle';
+import ScrollAnimation from '@/components/Common/Animation/ScrollAnimation';
 import { GENDER, GRADE } from '@/constants/member';
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 export default function Chart() {
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       datalabels: {
         font: {
@@ -26,14 +29,20 @@ export default function Chart() {
   return (
     <>
       <PageTitle title="人数比" Icon={UserGroupIcon} />
-      <div className={`${styles.container} justify-center mt-10 gap-x-16`}>
-        <div className={`${styles.chart} flex justify-center items-center`}>
-          <Doughnut data={GRADE} options={options} width={300} height={300} />
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
+        <div className={`${styles.container} justify-center mt-10 gap-x-16`}>
+          <div className={`${styles.chart} flex justify-center items-center`}>
+            <ScrollAnimation variant="fadeInUp">
+              <Doughnut data={GRADE} options={options} width={300} height={300} />
+            </ScrollAnimation>
+          </div>
+          <div className={`${styles.chart} flex justify-center items-center`}>
+            <ScrollAnimation variant="fadeInUp" duration={1.0}>
+              <Doughnut data={GENDER} options={options} width={300} height={300} />
+            </ScrollAnimation>
+          </div>
         </div>
-        <div className={`${styles.chart} flex justify-center items-center`}>
-          <Doughnut data={GENDER} options={options} width={300} height={300} />
-        </div>
-      </div>
+      </ScrollAnimation>
     </>
   );
 }
