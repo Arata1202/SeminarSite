@@ -28,16 +28,18 @@ export default function Chart() {
 
   return (
     <>
-      <ScrollAnimation variant="fadeInUp">
-        <PageTitle title="人数比" Icon={UserGroupIcon} />
-      </ScrollAnimation>
-      <ScrollAnimation variant="fadeInUp" delay={0.1}>
+      <PageTitle title="人数比" Icon={UserGroupIcon} />
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
         <div className={`${styles.container} justify-center mt-10 gap-x-16`}>
           <div className={`${styles.chart} flex justify-center items-center`}>
-            <Doughnut data={GRADE} options={options} width={300} height={300} />
+            <ScrollAnimation variant="fadeInUp">
+              <Doughnut data={GRADE} options={options} width={300} height={300} />
+            </ScrollAnimation>
           </div>
           <div className={`${styles.chart} flex justify-center items-center`}>
-            <Doughnut data={GENDER} options={options} width={300} height={300} />
+            <ScrollAnimation variant="fadeInUp" delay={0.3}>
+              <Doughnut data={GENDER} options={options} width={300} height={300} />
+            </ScrollAnimation>
           </div>
         </div>
       </ScrollAnimation>

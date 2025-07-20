@@ -6,13 +6,11 @@ import ScrollAnimation from '@/components/Common/Animation/ScrollAnimation';
 export default function Teacher() {
   return (
     <>
-      <ScrollAnimation variant="fadeInUp">
-        <PageTitle title="教授" Icon={AcademicCapIcon} />
-      </ScrollAnimation>
+      <PageTitle title="教授" Icon={AcademicCapIcon} />
       <div className="mt-10 mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
         <ScrollAnimation
           variant="fadeInLeft"
-          delay={0.1}
+          duration={1.0}
           className="flex max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:col-span-2 xl:col-auto text-left items-end"
         >
           <h1 className="flex max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:col-span-2 xl:col-auto text-left items-end">
@@ -22,7 +20,8 @@ export default function Teacher() {
 
         <ScrollAnimation
           variant="fadeInLeft"
-          delay={0.2}
+          duration={1.0}
+          delay={0.3}
           className={`${styles.description} mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1`}
         >
           <div>
@@ -43,7 +42,8 @@ export default function Teacher() {
 
         <ScrollAnimation
           variant="fadeInScale"
-          delay={0.3}
+          duration={1.0}
+          delay={0.6}
           className={`${styles.image} aspect-[6/5] w-full max-w-lg rounded-2xl object-cover lg:max-w-none xl:row-span-2 xl:row-end-2`}
         >
           <img
