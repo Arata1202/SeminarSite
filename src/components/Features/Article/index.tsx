@@ -27,19 +27,19 @@ export default function ArticleFeature({ article }: Props) {
     <>
       <BlogMainContainer>
         <BlogContentContainer>
-          <ScrollAnimation variant="fadeInUp">
+          <ScrollAnimation variant="fadeInUp" duration={1.0}>
             <h1 className={`${styles.title} mt-5`}>{article.title}</h1>
           </ScrollAnimation>
 
-          <ScrollAnimation variant="fadeInUp" delay={0.5}>
+          <ScrollAnimation variant="fadeInLeft" duration={1.0}>
             <WebpImage article={article} />
           </ScrollAnimation>
 
-          <ScrollAnimation variant="fadeInLeft" delay={0.3}>
+          <ScrollAnimation variant="fadeInUp" duration={1.0}>
             <DoubleDate article={article} />
           </ScrollAnimation>
 
-          <ScrollAnimation variant="fadeInUp" delay={0.7}>
+          <ScrollAnimation variant="fadeInUp" duration={1.0}>
             <div className={styles.content}>
               {article.introduction_blocks.map((block, index) => (
                 <div key={index}>
@@ -59,12 +59,12 @@ export default function ArticleFeature({ article }: Props) {
           </ScrollAnimation>
 
           {headings.length > 0 && (
-            <ScrollAnimation variant="slideInFromBottom" delay={0.9}>
+            <ScrollAnimation variant="slideInFromBottom" duration={1.0}>
               <TableOfContents headings={headings} />
             </ScrollAnimation>
           )}
 
-          <ScrollAnimation variant="fadeInUp" delay={1.1}>
+          <ScrollAnimation variant="fadeInUp" duration={1.0}>
             <div className={styles.content}>
               {article.content_blocks.map((block, index) => (
                 <div key={index}>
