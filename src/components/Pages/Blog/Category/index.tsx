@@ -5,6 +5,7 @@ import ArticleList from '@/components/Common/ArticleList';
 import Breadcrumb from '@/components/Common/BreadCrumb';
 import PageTitle from '@/components/Common/PageTitle';
 import MainContainer from '@/components/Common/Layouts/Container/MainContainer';
+import ScrollAnimation from '@/components/Common/Animation/ScrollAnimation';
 
 type Props = {
   articles: Article[];
@@ -19,12 +20,16 @@ export default async function CategoryPage({ articles, totalCount, category, cur
       <MainContainer>
         <Breadcrumb title={category.name} path={`blog/category/${category.id}`} blog />
         <PageTitle title={category.name} Icon={FolderOpenIcon} />
-        <ArticleList articles={articles} />
-        <Pagination
-          totalCount={totalCount}
-          current={current}
-          basePath={`/categories/${category.id}`}
-        />
+        <ScrollAnimation variant="fadeInUp" duration={1.0}>
+          <ArticleList articles={articles} />
+        </ScrollAnimation>
+        <ScrollAnimation variant="fadeInUp" duration={1.0}>
+          <Pagination
+            totalCount={totalCount}
+            current={current}
+            basePath={`/categories/${category.id}`}
+          />
+        </ScrollAnimation>
       </MainContainer>
     </>
   );
