@@ -27,11 +27,11 @@ export default function ArticleFeature({ article }: Props) {
     <>
       <BlogMainContainer>
         <BlogContentContainer>
-          <ScrollAnimation variant="fadeInUp" duration={1.0}>
+          <ScrollAnimation variant="fadeInLeft" duration={1.0}>
             <h1 className={`${styles.title} mt-5`}>{article.title}</h1>
           </ScrollAnimation>
 
-          <ScrollAnimation variant="fadeInLeft" duration={1.0}>
+          <ScrollAnimation variant="fadeInScale" duration={1.0}>
             <WebpImage article={article} />
           </ScrollAnimation>
 
