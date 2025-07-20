@@ -11,8 +11,8 @@ export default function Navigation({ items }: Props) {
   return (
     <ScrollAnimation variant="staggerContainer" duration={1.0}>
       <div className="mt-20 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
-        {items.map((item, index) => (
-          <ScrollAnimation key={item.name} variant="staggerItem" delay={index * 0.3}>
+        {items.map((item) => (
+          <ScrollAnimation key={item.name} variant="staggerItem" duration={1.0}>
             <HoverScale scale={1.08} rotateOnHover={true}>
               <div className="group relative">
                 <div className="h-full w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">

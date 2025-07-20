@@ -27,8 +27,8 @@ export default function Grade({ title, data, imagePath }: Props) {
         <div className="mt-10">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
-              {data.map((item, index) => (
-                <ScrollAnimation key={item.name} variant="fadeInUp" delay={index * 0.3}>
+              {data.map((item) => (
+                <ScrollAnimation key={item.name} variant="fadeInUp" duration={1.0}>
                   <div className="text-left">
                     <time
                       dateTime={item.dateTime}

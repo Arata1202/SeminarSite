@@ -37,7 +37,7 @@ export default function Chart() {
             </ScrollAnimation>
           </div>
           <div className={`${styles.chart} flex justify-center items-center`}>
-            <ScrollAnimation variant="fadeInUp" delay={0.3}>
+            <ScrollAnimation variant="fadeInUp" duration={1.0}>
               <Doughnut data={GENDER} options={options} width={300} height={300} />
             </ScrollAnimation>
           </div>

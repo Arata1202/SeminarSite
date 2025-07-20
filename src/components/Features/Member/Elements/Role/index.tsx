@@ -10,8 +10,8 @@ export default function Role() {
       <PageTitle title="役割" Icon={CheckBadgeIcon} />
       <ScrollAnimation variant="staggerContainer" duration={1.0}>
         <ul className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-          {PEOPLE.map((item, index) => (
-            <ScrollAnimation key={item.name} variant="staggerItem" delay={index * 0.3}>
+          {PEOPLE.map((item) => (
+            <ScrollAnimation key={item.name} variant="staggerItem" duration={1.0}>
               <li className="h-full rounded-2xl px-8 py-10 border border-gray-300 flex flex-col">
                 <img
                   alt="人物"

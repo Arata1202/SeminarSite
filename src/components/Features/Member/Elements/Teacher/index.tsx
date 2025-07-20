@@ -21,7 +21,6 @@ export default function Teacher() {
         <ScrollAnimation
           variant="fadeInLeft"
           duration={1.0}
-          delay={0.3}
           className={`${styles.description} mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1`}
         >
           <div>
@@ -43,7 +42,6 @@ export default function Teacher() {
         <ScrollAnimation
           variant="fadeInScale"
           duration={1.0}
-          delay={0.6}
           className={`${styles.image} aspect-[6/5] w-full max-w-lg rounded-2xl object-cover lg:max-w-none xl:row-span-2 xl:row-end-2`}
         >
           <img
