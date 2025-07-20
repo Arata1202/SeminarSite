@@ -23,7 +23,7 @@ export default function LargeSlider({ items }: Props) {
   };
 
   return (
-    <ScrollAnimation variant="fadeInScale" duration={1.2}>
+    <ScrollAnimation variant="fadeInScale" duration={1.3}>
       <Slider {...settings}>
         {items.map((item) => (
           <div key={item.mobile} className="relative">

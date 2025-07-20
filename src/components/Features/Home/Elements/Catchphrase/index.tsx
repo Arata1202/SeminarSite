@@ -9,10 +9,10 @@ type Props = {
 export default function Catchphrase({ title, description }: Props) {
   return (
     <>
-      <ScrollAnimation variant="fadeInUp" delay={0.1}>
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
         <div className={`${styles.title} mt-20 font-bold text-center`}>{title}</div>
       </ScrollAnimation>
-      <ScrollAnimation variant="fadeInUp" delay={0.3}>
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
         <div className={`${styles.description} m-auto mt-5`}>{description}</div>
       </ScrollAnimation>
     </>
