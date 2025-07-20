@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Common/BreadCrumb';
 import PageTitle from '@/components/Common/PageTitle';
 import FixedDateContainer from '@/components/Common/Layouts/Container/FixedDateContainer';
 import MainContainer from '@/components/Common/Layouts/Container/MainContainer';
+import ScrollAnimation from '@/components/Common/Animation/ScrollAnimation';
 
 export default function LinkPage() {
   const dummyDate = new Date(2024, 9, 18);
@@ -18,8 +19,12 @@ export default function LinkPage() {
     <MainContainer>
       <Breadcrumb title="リンク" path="link" />
       <PageTitle title="リンク" Icon={LinkIcon} />
-      <FixedDateContainer date={formattedDate} />
-      <Markdown content={LINK_CONTENT} />
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
+        <FixedDateContainer date={formattedDate} />
+      </ScrollAnimation>
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
+        <Markdown content={LINK_CONTENT} />
+      </ScrollAnimation>
     </MainContainer>
   );
 }
