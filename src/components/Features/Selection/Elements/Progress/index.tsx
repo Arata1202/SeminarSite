@@ -4,7 +4,7 @@ import ScrollAnimation from '@/components/Common/Animation/ScrollAnimation';
 export default function Progress() {
   return (
     <nav className="mt-10">
-      <ScrollAnimation variant="fadeInUp" delay={0.05}>
+      <ScrollAnimation variant="fadeInUp" duration={1.0}>
         <ol className="divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0">
           {STEP.map((item, index) => (
             <li key={item.id} className="relative md:flex md:flex-1">

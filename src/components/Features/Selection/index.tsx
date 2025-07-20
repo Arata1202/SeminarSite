@@ -7,7 +7,7 @@ export default function SelectionFeature() {
   return (
     <>
       <Progress />
-      <ScrollAnimation variant="fadeInUp" delay={0.8}>
+      <ScrollAnimation variant="fadeInUp" duration={1.0} delay={0.3}>
         <Markdown content={SELECTION_CONTENT} />
       </ScrollAnimation>
     </>
